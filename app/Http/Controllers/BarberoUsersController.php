@@ -55,6 +55,8 @@ class BarberoUsersController extends Controller
         }*/
        
 
+        $entrada['password']=bcrypt($request->password);
+
         User::create($entrada);
 
         return redirect('/barbero/users');
