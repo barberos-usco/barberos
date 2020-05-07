@@ -37,7 +37,28 @@ class BarberoUsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*User::create( $request->all());
+
+        return redirect('/barbero/users');*/
+
+        $entrada=$request->all();
+
+/*        if($archivo=$request->file('url_fotoPerfil')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            $foto=User::create(['url_fotoPerfil'=>$nombre]);
+
+            $entrada['url_fotoPerfil']=$foto->id;
+        }*/
+       
+
+        User::create($entrada);
+
+        return redirect('/barbero/users');
+        //return $request->all();
     }
 
 

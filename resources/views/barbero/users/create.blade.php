@@ -18,7 +18,7 @@
 </head>
 <body>
     <h1>Para crear un usuario, no lo usaré igual </h1>
-    {!! Form::open(['method'=>'POST', 'action'=>'BarberoUsersController@create']) !!}
+    {!! Form::open(['method'=>'POST', 'action'=>'BarberoUsersController@store', 'files'=>true]) !!}
         <table>
             <tr>
                 <td>
@@ -92,6 +92,7 @@
                     {!! Form::text('ubicacion') !!}
                 </td>
             </tr>
+            
             
             <tr>
                 <td>
