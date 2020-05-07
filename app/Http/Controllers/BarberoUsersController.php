@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
 class BarberoUsersController extends Controller
 {
     /**
@@ -13,7 +15,8 @@ class BarberoUsersController extends Controller
      */
     public function index()
     {
-        return view('barbero.users.index');
+        $users=User::all();
+        return view('barbero.users.index', compact('users'));
     }
 
     /**
