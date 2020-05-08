@@ -49,7 +49,7 @@
                     {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento: ') !!}
                 </td>
                 <td>
-                    {!! Form::date('fecha_nacimiento', \Carbon\Carbon::now()) !!}
+                    {!! Form::date('fecha_nacimiento') !!}
                 </td>
             </tr>
             <tr>

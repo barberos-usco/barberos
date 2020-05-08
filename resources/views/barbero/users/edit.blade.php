@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Para modificar el perfil del barbero</h1>
-    {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
+    {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true]) !!}
         <table>
             <tr>
                 <td>
@@ -20,26 +20,26 @@
             </tr>
             <tr>
                 <td>
-                    {!! Form::label('password', 'Password: ') !!}
+                    {!! Form::label('apellidos', 'Apellidos: ') !!}
                 </td>
                 <td>
-                    {!! Form::text('password') !!}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {!! Form::label('email', 'E-Mail: ') !!}
-                </td>
-                <td>
-                    {!! Form::text('email') !!}
+                    {!! Form::text('apellidos') !!}
                 </td>
             </tr>
             <tr>
                 <td>
-                    {!! Form::label('email', 'Verificar E-Mail: ') !!}
+                    {!! Form::label('genero', 'Género: ') !!}
                 </td>
                 <td>
-                    {!! Form::text('email_verified_at') !!}
+                    {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino']) !!}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento: ') !!}
+                </td>
+                <td>
+                    {!! Form::date('fecha_nacimiento') !!}
                 </td>
             </tr>
             <tr>
@@ -50,6 +50,15 @@
                     {!! Form::text('role_id') !!}
                 </td>
             </tr>
+            <tr>
+                <td>
+                    {!! Form::label('ubicacion', 'Ubicación: ') !!}
+                </td>
+                <td>
+                    {!! Form::text('ubicacion') !!}
+                </td>
+            </tr>
+            
             
             <tr>
                 <td>

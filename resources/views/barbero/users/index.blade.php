@@ -40,7 +40,7 @@
                     <td>{{ $user->fecha_nacimiento }}</td>
                     <td>{{ $user->role_id }}</td>
                     <td>{{ $user->ubicacion }}</td>
-                    <td><button type="button" class="btn btn-success">Editar</button></td>
+                    <td><a class="btn btn-success" href="{{ route('users.edit', $user->id) }}">Editar</a></td>
                 </tr>
                 
             @endforeach
