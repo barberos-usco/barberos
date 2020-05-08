@@ -97,7 +97,16 @@ class BarberoUsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=User::findOrFail($id);
+
+        $entrada=$request->all();
+
+        $user->update($entrada);
+
+
+
+        return redirect('/barbero/users');
+
     }
 
     /**
