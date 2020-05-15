@@ -23,3 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('barbero/users', 'BarberoUsersController');
+
+
+Route::get('/barbero/users/inicio', function () {
+    return view('barbero.users.inicio');
+});
