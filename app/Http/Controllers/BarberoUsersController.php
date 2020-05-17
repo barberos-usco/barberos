@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Foto;
 
 class BarberoUsersController extends Controller
 {
@@ -43,16 +44,26 @@ class BarberoUsersController extends Controller
 
         $entrada=$request->all();
 
-/*        if($archivo=$request->file('url_fotoPerfil')){
+        if($archivo=$request->file('url_fotoPerfil')){
 
             $nombre=$archivo->getClientOriginalName();
             
             $archivo->move('images', $nombre);
 
-            $foto=User::create(['url_fotoPerfil'=>$nombre]);
+            $foto=Foto::create(['ruta_foto'=>$nombre]);
 
             $entrada['url_fotoPerfil']=$foto->id;
-        }*/
+        }
+        if($archivo=$request->file('url_wallpa')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            $foto=Foto::create(['ruta_foto'=>$nombre]);
+
+            $entrada['url_wallpa']=$foto->id;
+        }
        
 
         $entrada['password']=bcrypt($request->password);

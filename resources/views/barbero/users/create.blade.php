@@ -85,6 +85,22 @@
                                     {!! Form::text('ubicacion') !!}
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    {!! Form::label('url_fotoPerfil', 'Foto Perfil: ') !!}
+                                </td>
+                                <td>
+                                    {!! Form::file('url_fotoPerfil') !!}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {!! Form::label('url_wallpa', 'Foto Perfil: ') !!}
+                                </td>
+                                <td>
+                                    {!! Form::file('url_wallpa') !!}
+                                </td>
+                            </tr>
                             
                             
                             <tr>
