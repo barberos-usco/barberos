@@ -1,17 +1,26 @@
-@extends('layouts.app')
-@extends('barbero.users.barra-lateral')
+@extends('layouts.main')
+@section('title','Editar Perfil')
+
+
 @section('content')
 
+@include('barbero.users.partials.barra-lateral')
     <main id="main">
-        <h1>Para modificar el perfil del barbero</h1>
+        <div class="container">
+            <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid rounded sombreado " alt="Responsive image" width="1100" >
+        
+            <div class="caja">
         {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true]) !!}
+            <div class="section-title">
+                <h2>Editar Perfil</h2>
+            </div>
             <table>
                 <tr>
                     <td>
                         {!! Form::label('name', 'Nombre: ') !!}
                     </td>
                     <td>
-                        {!! Form::text('name') !!}
+                        {!! Form::text('name',null, ['class'=>'form-control']) !!}
                     </td>
                 </tr>
                 <tr>
@@ -19,7 +28,7 @@
                         {!! Form::label('apellidos', 'Apellidos: ') !!}
                     </td>
                     <td>
-                        {!! Form::text('apellidos') !!}
+                        {!! Form::text('apellidos',null, ['class'=>'form-control']) !!}
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +36,7 @@
                         {!! Form::label('genero', 'Género: ') !!}
                     </td>
                     <td>
-                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino']) !!}
+                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino'],null, ['class'=>'form-control']) !!}
                     </td>
                 </tr>
                 <tr>
@@ -35,23 +44,16 @@
                         {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento: ') !!}
                     </td>
                     <td>
-                        {!! Form::date('fecha_nacimiento') !!}
+                        {!! Form::date('fecha_nacimiento',null, ['class'=>'form-control']) !!}
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        {!! Form::label('role_id', 'Role: ') !!}
-                    </td>
-                    <td>
-                        {!! Form::text('role_id') !!}
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         {!! Form::label('ubicacion', 'Ubicación: ') !!}
                     </td>
                     <td>
-                        {!! Form::text('ubicacion') !!}
+                        {!! Form::text('ubicacion',null, ['class'=>'form-control']) !!}
                     </td>
                 </tr>
                 
@@ -67,5 +69,8 @@
                 
 
             </table>
+            <div
+        </div>
     </main>
+@include('barbero.users.partials.footer')
 @endsection
