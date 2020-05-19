@@ -15,6 +15,20 @@ body {
 .fondo{
   background-color: #8F7960;
 }
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+.links > a {
+  color: #fff;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
 a {
   color: #149ddd;
@@ -225,9 +239,47 @@ h1, h2, h3, h4, h5, h6 {
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
+.caja-clara{
+  
+  background: rgba(187, 156, 138, 0.52);	
+  
+  height: 80%;
+  width: 40%;
+  padding: 0px;
+  margin-right: 160px;
+  margin-top: 50px;
+  float: right;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+-moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+}
+
+
+
+.imagen-logo{
+  width: 30%;
+  
+  margin-left: 8%;
+  margin-top: 3%;
+}
+.color-botom{
+  background-color: rgba(70,49,37,1);
+  color: white;
+  
+}
+.color-registrate{
+  
+  color: rgba(0,0,102,1);
+  text-decoration: underline;
+  
+}
+
 .sombreado{
   -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgb(70, 49, 37);
 }
 .titulo{
   color: white;
@@ -331,6 +383,13 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: white;
+  
+}
+.section-title-welcome {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
   color: white;
   
 }
