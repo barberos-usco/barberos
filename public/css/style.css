@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+html {
+  height: 100%
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -246,8 +250,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   height: 80%;
   width: 40%;
   padding: 0px;
-  margin-right: 160px;
-  margin-top: 50px;
+  margin-right: 11%;
+  margin-top: 5%;
   float: right;
   border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;

@@ -11,7 +11,7 @@
     
     
 </head>
-<body style="background-image: url('{{ asset('images/barberia-welcome.jpg')}}');background-size: cover; " >
+<body style="background-image: url('{{ asset('images/barberia-welcome.jpg')}}');background-size: 100% 100%;background-repeat: no-repeat; " >
 
     <!-- ======= Mobile nav toggle button ======= -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
