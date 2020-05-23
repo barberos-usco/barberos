@@ -32,9 +32,7 @@ Route::resource('cliente/users', 'ClienteUsersController', [
 ]);
 
 
-Route::get('/pepito/perez', function() {
-    return "Hola";
-});
+Route::get('barbero/users/{user}/edit/especialidad', 'BarberoUsersController@especialidad')->name('barbero.users.edit.especialidad');
 
 
 

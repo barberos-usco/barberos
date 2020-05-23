@@ -86,6 +86,14 @@ class BarberoUsersController extends Controller
         //
     }
 
+    public function especialidad($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.editar_especialidad', compact('user'));
+    }
+
+
     /**
      * Show thesds form for editing the specified resource.
      *

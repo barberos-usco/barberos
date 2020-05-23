@@ -43,10 +43,15 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -244,6 +249,20 @@ h1, h2, h3, h4, h5, h6 {
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
+.caja-especialidad{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.21);
+  height: 80%;
+  width: 96.9%;
+  padding: 0px;
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+-moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+}
 .subcaja{
   border: 0px solid #7F6953;
   background: rgba(70,49,37,0.30);
@@ -294,6 +313,19 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 .letras{
   color: rgba(216,216,216,1);
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  
+}
+.columna {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  
 }
 
 
@@ -419,6 +451,7 @@ section {
 .section-title {
   padding-bottom: 30px;
 }
+
 
 .section-title h2 {
   font-size: 32px;
