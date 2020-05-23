@@ -25,5 +25,6 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/iconos.js') }}" crossorigin="anonymous"></script>
+    
 </body>
 </html>

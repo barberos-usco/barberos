@@ -14,6 +14,15 @@
         
         <li><a href="#about"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
         <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
+        
+       
+
+      
+
+
+        
+
+
       </ul>
     </nav><!-- .nav-menu -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -35,6 +44,7 @@
   
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
+    
 
 
 

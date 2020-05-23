@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -231,11 +232,42 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .caja{
   border: 0px solid #7F6953;
-  background: #7F6953;
+  background: rgba(70,49,37,0.21);
   height: 80%;
   width: 96.9%;
   padding: 10px;
   margin: 10px;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+-moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+}
+.subcaja{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: 1000%;
+  width: 45%;
+  padding: 25px;
+  margin: 0%;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+-moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+}
+.subcaja2{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: 80%;
+  width: 30%;
+  padding: 0px;
+  
+  margin-right: 15%;
+  margin-top: -450.5px;
+  float: right;
   border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
@@ -260,7 +292,9 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
-
+.letras{
+  color: rgba(216,216,216,1);
+}
 
 
 .imagen-logo{
@@ -271,6 +305,11 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 .color-botom{
   background-color: rgba(70,49,37,1);
+  color: white;
+
+}
+.color-botom-borrar{
+  background-color: rgba(125,109,96,1);
   color: white;
   
 }
