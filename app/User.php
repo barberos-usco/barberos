@@ -42,8 +42,12 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
     public function foto(){
-
+        
         return $this->belongsTo('App\Foto');
     }
+    
+    public function horario(){
 
+        return $this->belongsTo('App\Horario');
+    }
 }

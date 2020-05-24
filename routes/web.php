@@ -35,6 +35,9 @@ Route::resource('cliente/users', 'ClienteUsersController', [
 Route::get('barbero/users/{user}/edit/especialidad', 'BarberoUsersController@especialidad')->name('barbero.users.edit.especialidad');
 
 
+Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
+
+
 
 
 
