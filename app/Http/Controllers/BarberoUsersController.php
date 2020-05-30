@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\Foto;
+use App\Horario;
 
 class BarberoUsersController extends Controller
 {
@@ -91,6 +92,15 @@ class BarberoUsersController extends Controller
         $user=User::findOrFail($id);
 
         return view('barbero.users.editar_especialidad', compact('user'));
+    }
+    
+    public function horario($id)
+    {
+        /*$user=User::findOrFail($id);
+
+        return view('barbero.users.editar_especialidad', compact('user'));*/
+
+
     }
 
     public function servicio($id)

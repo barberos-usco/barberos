@@ -37,7 +37,7 @@
                                     <td>{{ $user->genero }}</td>
                                     <td>{{ $user->fecha_nacimiento }}</td>
                                     <td>{{ $user->role_id }}</td>
-                                    <td>{{ $user->ubicacion }}</td>
+                                    <td>{{  json_encode($user->foto->ruta_foto) }}</td>
                                     <td><a class="btn btn-success" href="{{ route('barbero.users.edit', $user->id) }}">Editar</a></td>
                                 </tr>
                                 

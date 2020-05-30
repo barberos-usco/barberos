@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','apellidos','genero','fecha_nacimiento','ubicacion','role_id','url_fotoPerfil','url_wallpa'
+        'name', 'email', 'password','apellidos','genero','fecha_nacimiento','ubicacion','role_id','url_fotoPerfil','url_wallpa', 'horario_id'
     ];
 
     /**
@@ -43,7 +43,7 @@ class User extends Authenticatable
     }
     public function foto(){
         
-        return $this->belongsTo('App\Foto');
+        return $this->belongsTo('App\Foto', 'id');
     }
     
     public function horario(){
