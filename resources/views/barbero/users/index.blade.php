@@ -2,7 +2,7 @@
 
 {{-- @include('barbero.users.barra-lateral') --}}
 @section('title','Home')
-    
+
 
 
 @section('content')
@@ -36,14 +36,14 @@
                                     <td>{{ $user->apellidos }}</td>
                                     <td>{{ $user->genero }}</td>
                                     <td>{{ $user->fecha_nacimiento }}</td>
-                                    <td>{{ $user->role_id }}</td>
-                                    <td>{{  json_encode($user->foto->ruta_foto) }}</td>
+                                    <td>{{ $user->role['nombre_rol'] }}</td>
+                                    <td><img style="width: 100px; height: 100px" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"></td>
                                     <td><a class="btn btn-success" href="{{ route('barbero.users.edit', $user->id) }}">Editar</a></td>
                                 </tr>
-                                
+
                             @endforeach
                         @endif
-                        
+
                     </table>
                 </div>
             </div>
@@ -51,24 +51,24 @@
     </section>
 
     <section id="cards">
-      
+
         @if ($users)
           @foreach ($users as $user)
-          
+
           @endforeach
-        @endif 
+        @endif
 
     </section>
-   
-    
-  
+
+
+
 </main><!-- End #main -->
-  
 
-  
-    
 
-  
-            
+
+
+
+
+
 @include('barbero.users.partials.footer')
 @endsection
