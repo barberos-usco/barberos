@@ -311,15 +311,79 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
+.caja-oscura{
+  
+  background: rgba(107, 87, 66, 0.52);	
+  height: 1000%;
+  width: 80%;
+  padding: 25px;
+  margin: 0%;
+  margin-left: 10%;
+  
+  
+  
+  
+  border-radius: 15px;
+}
 .letras{
   color: rgba(216,216,216,1);
 }
 .boton-centrado{
-  margin-left: 200px;
-  margin-top: 170px;
+  margin-left:10%;
+  margin-top: 80px;
   
 }
+/*--------------------------------------------------------------
+# Caja de texto editar servicio por especialidad
+--------------------------------------------------------------*/
 
+.caja-texto{
+  border-radius: 15px;
+}
+
+.blanco{
+  color:#463125;
+}
+
+.blanco-close{
+  color:#ffff;
+}
+.cafe{
+  color:#463125;
+}
+
+/*--------------------------------------------------------------
+# Modals 
+--------------------------------------------------------------*/
+
+.modal{
+  border-radius: 10px;
+}
+
+.modal-header
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #463125;
+        background-color: #61574A;
+    }
+
+.modal-body
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #463125;
+        background-color: #7F6953;
+    }
+.modal-footer
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #7F6953;
+        background-color: #463125;
+    }
+
+
+
+
+    
 .column {
   float: left;
   width: 25%;
@@ -328,7 +392,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 .column3 {
   float: left;
-  width: 50%;
+  width: 33.3%;
   padding: 10px;
   
 }
@@ -348,6 +412,11 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 .color-botom{
   background-color: rgba(70,49,37,1);
+  color: white;
+
+}
+.color-botom-2{
+  background-color:#7F6953;
   color: white;
 
 }

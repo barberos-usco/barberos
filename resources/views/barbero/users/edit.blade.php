@@ -52,7 +52,7 @@
                             <a class="btn color-botom sombreado" href="{{ route('barbero.users.edit.especialidad', $user->id) }}">Editar</a>
                         </div>
                         <div class="col-md-12 card-body  ">
-                            {!! Form::label('editar-trabajos', 'Editar Trabajos: ',['class'=>'letras']) !!}</br>
+                            {!! Form::label('editar-trabajos', 'Editar Servicios por Especialidad: ',['class'=>'letras']) !!}</br>
                             <a class="btn color-botom sombreado" href="{{ route('barbero.users.edit.servicios', $user->id) }}">Editar</a>
                         </div>
                     </div>

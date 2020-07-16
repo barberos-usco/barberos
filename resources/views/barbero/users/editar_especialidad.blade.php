@@ -102,7 +102,7 @@
                                {!! Form::radio('Cejas', 'Cejas') !!} Cejas
                             </div>
                             <div>
-                               {!! Form::radio('Reporalizacion', 'Reporalizacion') !!} Reporalizacion
+                               {!! Form::radio('Reporalizacion', 'Reporalizacion') !!} Reporalización
                             </div>
                             <div>
                                {!! Form::radio('Tratamiento Capilar', 'Tratamiento Capilar') !!} Tratamiento Capilar
