@@ -290,8 +290,8 @@
                 {!! Form::close() !!}</br>  
             </div>
         </div>
-    </div>
-  
-</main>  <br><br><br><br><br>
-@include('barbero.users.partials.footer')
+    </div><br><br><br><br><br>
+    @include('barbero.users.partials.footer')
+</main>  
+
 @endsection

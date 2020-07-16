@@ -61,14 +61,8 @@
     </section>
 
 
+    @include('barbero.users.partials.footer')
 
 </main><!-- End #main -->
 
-
-
-
-
-
-
-@include('barbero.users.partials.footer')
 @endsection

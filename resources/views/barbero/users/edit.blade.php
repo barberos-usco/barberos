@@ -65,6 +65,8 @@
                 
             </div>
         </div>
+        
+        @include('barbero.users.partials.footer')
     </main>
-@include('barbero.users.partials.footer')
+
 @endsection
