@@ -41,7 +41,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_peluqueria',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Peluqueria',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -78,7 +78,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_rasurado',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Rasurado',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -115,7 +115,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_masajes_faciales',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Masajes_faciales',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_cejas',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Cejas',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -189,7 +189,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_repolarizacion',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Repolarizacion',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -226,7 +226,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_tratamiento_capilar',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Tratamiento_capilar',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -263,7 +263,7 @@
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
-                                                    {!! Form::file('foto',['class'=>'form-control-file']) !!}<br>
+                                                    {!! Form::file('foto_depilacion_cera',['class'=>'form-control-file']) !!}<br>
                                                     {!! Form::textarea('Depilacion_cera',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
@@ -292,6 +292,6 @@
         </div>
     </div>
   
-</main>       
+</main>  <br><br><br><br><br>
 @include('barbero.users.partials.footer')
 @endsection
