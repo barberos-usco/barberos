@@ -320,20 +320,96 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   padding: 25px;
   margin: 0%;
   margin-left: 10%;
-  
-  
-  
-  
   border-radius: 15px;
 }
+.caja-oscura_perfil_info{
+  
+  background: rgba(107, 87, 66, 0.52);	
+  height: 40%;
+  width: 40%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 5%;
+  border-radius: 15px;
+}
+
+.caja-interna_perfil_titulo{
+  
+  background: rgba(97, 87, 74, 1);	
+  height: 10%;
+  width: 50%;
+  padding: 7px;
+  margin: 2%;
+  margin-left: 25%;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+
+.caja-interna_perfil_info{
+  
+  background: rgba(97, 87, 74, 1);	
+  height: 10%;
+  width: 40%;
+  padding: 7px;
+  margin: 2%;
+  margin-left: 5%;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.caja-oscura_perfil_especialidad_horario{
+  
+  background: rgba(107, 87, 66, 0.52);	
+  height: 40%;
+  width: 47%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 2%;
+  border-radius: 15px;
+}
+
+
+
+
+
+
 .letras{
   color: rgba(216,216,216,1);
+}
+.tamaño{
+  font-size: 16px;
+}
+
+.celda-larga{
+  width:140%;
 }
 .boton-centrado{
   margin-left:10%;
   margin-top: 80px;
   
 }
+
+/*--------------------------------------------------------------
+# Imagen en perfil
+--------------------------------------------------------------*/
+.img-fluid-perfil {
+  max-width: 30%;
+  height: auto;
+}
+
+.profile-perfil img {
+  margin: 15px auto;
+  display: block;
+  width: auto;
+  border: 4px solid #463125;
+  margin-top: -34%;
+  margin-left: 65%;
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Caja de texto editar servicio por especialidad
 --------------------------------------------------------------*/
@@ -382,7 +458,14 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
     }
 
 
-
+.mapa_google{
+  border-radius: 15px;
+  height: 70%;
+  width: 30%;
+  margin-left: 50%;
+  margin-top: 0%;
+  
+}
 
     
 .column {
