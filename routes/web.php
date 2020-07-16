@@ -37,6 +37,7 @@ Route::get('barbero/users/{user}/edit/especialidad', 'BarberoUsersController@esp
 
 Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
 
+Route::get('barbero/users/{user}/perfil','BarberoUsersController@perfil')->name('barbero.users.perfil');
 
 
 

@@ -12,7 +12,7 @@
       <ul>
         <li><a href="{{ route('barbero.users.index') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-home"></i></span> <span>Inicio</span></a></li>
         
-        <li><a href="#about"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
+        <li><a href="{{ route('barbero.users.perfil', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
         <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
         
        

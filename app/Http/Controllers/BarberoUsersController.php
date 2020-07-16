@@ -124,6 +124,14 @@ class BarberoUsersController extends Controller
         return view('barbero.users.edit', compact('user'));
     }
 
+
+    public function perfil($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.perfil', compact('user'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
