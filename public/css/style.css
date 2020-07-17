@@ -369,13 +369,35 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 
+.caja-oscura_perfil_foto_ubicacion{
+  
+  background: rgba(107, 87, 66, 0.52);	
+  height: 40%;
+  width: 47%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 51%;
+  margin-top: -720px;
+  border-radius: 15px;
+}
 
-
+.comentarios{
+  
+  background: rgba(255, 255, 255, 0.7);	
+  width: 100%;
+  padding: 7px;
+  margin: 1%;
+  margin-left: 0%;
+  border-radius: 15px;
+}
 
 
 
 .letras{
   color: rgba(216,216,216,1);
+}
+.letras-negras{
+  color: rgb(65, 52, 10);
 }
 .tamaño{
   font-size: 16px;
@@ -460,11 +482,16 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 
 .mapa_google{
   border-radius: 15px;
-  height: 70%;
-  width: 30%;
-  margin-left: 50%;
+  width: 100%;
+  margin-left: 0%;
   margin-top: 0%;
-  
+ 
+}
+
+.foto_local{
+  width: 100%; 
+  border-radius: 15px;
+  margin: 0%;
 }
 
     
