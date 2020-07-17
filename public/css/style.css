@@ -377,8 +377,22 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   padding: 25px;
   margin: 2%;
   margin-left: 51%;
-  margin-top: -720px;
+  margin-top: -860px;
   border-radius: 15px;
+}
+
+
+.caja-perfil{
+  border: 0px solid #7F6953;
+  background: rgba(107, 87, 66, 0.52);
+  
+  width: 96%;
+  padding: 25px;
+  margin: 2%;
+  border-radius: 15px;
+  margin-left: 2%;
+  margin-top: 17%;
+  
 }
 
 .comentarios{
@@ -391,7 +405,10 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 
-
+.checked {
+  color: orange;
+  
+}
 
 .letras{
   color: rgba(216,216,216,1);
@@ -530,11 +547,12 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 .color-botom{
   background-color: rgba(70,49,37,1);
   color: white;
-
+border-radius: 12px;
 }
 .color-botom-2{
   background-color:#7F6953;
   color: white;
+  border-radius: 12px;
 
 }
 .color-botom-borrar{

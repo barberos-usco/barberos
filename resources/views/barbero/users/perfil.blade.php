@@ -13,7 +13,7 @@
     <div class="caja-oscura_perfil_info row">
         
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
-              <b>  {{ Auth::user()->name }}  </b>
+              <b>  {{ Auth::user()->name ." ". Auth::user()->apellidos }}  </b>
             </div>
             <div class="caja-interna_perfil_info letras  col-md-6 text-center sombreado" >
                 <b>Edad:</b> {{ Auth::user()->fecha_nacimiento }}
@@ -43,31 +43,55 @@
                </tr>
                <tr>
                    <td class="tamaño">Masajes faciales</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">No disponible.</td>
                </tr>
                <tr>
                    <td class="tamaño">Cejas</td>
                    <td class="tamaño">10.000 - 25.000</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Repolarización</td>
+                   <td class="tamaño">No disponible.</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Tratamiento Capilar</td>
+                   <td class="tamaño">10.000 - 25.000</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Depilación con Cera</td>
+                   <td class="tamaño">No disponible.</td>
                </tr>
             </table>
             <br><br><br>
            <h2>Horarios</h2>
            <table class="celda-larga">
                <tr>
-                   <td class="tamaño">Peluquería</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">Lunes</td>
+                   <td class="tamaño">8:00 am - 5:30 pm</td>
                </tr>
                <tr>
-                   <td class="tamaño">Rasurado</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">Martes</td>
+                   <td class="tamaño">8:00 am - 5:30 pm</td>
                </tr>
                <tr>
-                   <td class="tamaño">Masajes faciales</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">Miércoles</td>
+                   <td class="tamaño">8:00 am - 5:30 pm</td>
                </tr>
                <tr>
-                   <td class="tamaño">Cejas</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">Jueves</td>
+                   <td class="tamaño">8:00 am - 5:30 pm</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Viérnes</td>
+                   <td class="tamaño">8:00 am - 5:30 pm</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Sábado</td>
+                   <td class="tamaño">10:00 am - 3:30 pm</td>
+               </tr>
+               <tr>
+                   <td class="tamaño">Domingo</td>
+                   <td class="tamaño">1:00 pm - 4:00 pm</td>
                </tr>
             </table>
         
@@ -104,20 +128,34 @@
                     </div>
                     
                     <!-- Modal footer -->
-                    <div class="modal-footer">
+                    <div class="modal-footer ">
                     <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                     </div>
                     
                 </div>
             </div>
+        </div><br>
+
+        <div class="calificacion">
+            <h2>Valoración</h2>
+            <center>
+            <span class="fa fa-star fa-3x checked"></span>
+            <span class="fa fa-star fa-3x checked"></span>
+            <span class="fa fa-star fa-3x checked"></span>
+            <span class="fa fa-star fa-3x"></span>
+            <span class="fa fa-star fa-3x"></span>
+            </center>
         </div>
+        
+
+    
         
     </div>
 
 
 
 
-    <div class="caja-oscura_perfil_especialidad_horario letras sombreado">
+    <div class="caja-perfil letras sombreado">
         
     </div>
     <br><br>
