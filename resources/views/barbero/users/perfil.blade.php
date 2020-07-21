@@ -146,6 +146,56 @@
             <span class="fa fa-star fa-3x"></span>
             </center>
         </div>
+
+        <div class="trabajos"><br>
+            <h2>Trabajos</h2>
+            <div class="comentarios letras-negras btn sombreado" data-toggle="modal" data-target="#myModa2">Click para ver los trabajos.</div>
+            <!-- The Modal -->
+            <div class="modal" id="myModa2">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title">Trabajos</h4>
+                        <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="First slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Second slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Third slide">
+                                  </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer ">
+                        <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div><br>          
+
+        </div>
         
 
     

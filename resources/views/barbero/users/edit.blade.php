@@ -40,14 +40,18 @@
                                         {!! Form::text('ubicacion',null, ['class'=>'form-control sombreado']) !!}
                                     </div><br>
 
-                                    <div class="col-md-12">
-                                        {!! Form::label('Foto_perfil', 'Foto Perfil: ',['class'=>'letras']) !!}
-                                        {!! Form::file('url_fotoPerfil',['class'=>'']) !!}
+                                    <div class="col-md-12"><br>
+                                        <div class="comentarios btn sombreado">
+                                            {!! Form::label('Foto_perfil', 'Foto Perfil: ',['class'=>'letras-negras']) !!}
+                                            {!! Form::file('url_fotoPerfil',['class'=>'']) !!}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"><br>
+                                        <div class="comentarios btn sombreado">
+                                            {!! Form::label('Foto_perfil', 'Foto Local: ',['class'=>'letras-negras']) !!}
+                                            {!! Form::file('url_wallpa',['class'=>'']) !!}
+                                        </div>
                                     </div><br>
-                                    <div class="col-md-12">
-                                        {!! Form::label('Foto_wallpa', 'Foto del Local: ',['class'=>'letras']) !!}
-                                        {!! Form::file('url_wallpa',['class'=>'']) !!}
-                                    </div><br><br>
                                         
                                     <div class="col-md-11"><br>
                                         {!! Form::submit('Actualizar', ['class'=>'btn color-botom sombreado ']) !!}
