@@ -10,7 +10,9 @@
 @include('barbero.users.partials.barra-lateral')
 <main id="main">
 
-    <section id="about" class="about">
+    <div class="container">
+        <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid  radio_logo sombreado " alt="Responsive image" width="1100" >
+        
         <div class="caja">
             <div class="container">
                 <div class="section-title">
@@ -48,7 +50,8 @@
                 </div>
             </div>
         </div>
-    </section>
+        
+    </div>
 
     <section id="cards">
 

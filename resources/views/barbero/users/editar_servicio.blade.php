@@ -10,7 +10,7 @@
 @include('barbero.users.partials.barra-lateral')
 <main id="main">
     <div class="container">
-        <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid rounded sombreado " alt="Responsive image" width="1100" >
+        <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid radio_logo sombreado " alt="Responsive image" width="1100" >
         <div class="caja-especialidad container sombreado">
             <div class="card-body ">
                 {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}

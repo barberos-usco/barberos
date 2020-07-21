@@ -506,6 +506,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 
+
 .mapa_google{
   border-radius: 15px;
   width: 100%;
@@ -513,7 +514,9 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-top: 0%;
  
 }
-
+.radio_logo{
+  border-radius: 15px;
+}
 .foto_local{
   width: 100%; 
   border-radius: 15px;
