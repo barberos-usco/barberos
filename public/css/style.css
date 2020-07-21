@@ -391,7 +391,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin: 2%;
   border-radius: 15px;
   margin-left: 2%;
-  margin-top: 17%;
+  margin-top: 170px;
   
 }
 
@@ -496,6 +496,15 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
         background-color: #463125;
     }
 
+.mensaje_perfil{
+  text-align: justify;
+  font-size: 15px;
+  margin: 15px;
+  margin-left: 0%;
+  margin-right: 20%;
+  line-height: 1.2em;
+}
+
 
 .mapa_google{
   border-radius: 15px;
@@ -509,6 +518,11 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   width: 100%; 
   border-radius: 15px;
   margin: 0%;
+}
+.foto_servicio_perfil{
+  width: 80%; 
+  border-radius: 15px;
+  margin: 1%;
 }
 
     

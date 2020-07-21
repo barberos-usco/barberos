@@ -43,7 +43,7 @@
                </tr>
                <tr>
                    <td class="tamaño">Masajes faciales</td>
-                   <td class="tamaño">No disponible.</td>
+                   <td class="tamaño">35.000 - 50.000</td>
                </tr>
                <tr>
                    <td class="tamaño">Cejas</td>
@@ -55,7 +55,7 @@
                </tr>
                <tr>
                    <td class="tamaño">Tratamiento Capilar</td>
-                   <td class="tamaño">10.000 - 25.000</td>
+                   <td class="tamaño">No disponible.</td>
                </tr>
                <tr>
                    <td class="tamaño">Depilación con Cera</td>
@@ -136,7 +136,7 @@
             </div>
         </div><br>
 
-        <div class="calificacion">
+        <div class="calificacion"><br>
             <h2>Valoración</h2>
             <center>
             <span class="fa fa-star fa-3x checked"></span>
@@ -156,7 +156,25 @@
 
 
     <div class="caja-perfil letras sombreado">
-        
+        <h2 class="text-center">Servicios por Especialidad</h2><br><br><br>
+        <div class="row">
+            <div class="column2 letras  " >
+                <h3>Peluquería</h3><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea; 
+                    sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo 
+                    a mi cliente satisfecho.</p>
+            </div>
+            <div class="column2 letras  " >
+                <h3>Rasurado</h3><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+            </div>
+            <div class="column2 letras  " >
+                <h3>Cejas</h3><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+            </div>
+        </div>
+
     </div>
     <br><br>
     @include('barbero.users.partials.footer')
