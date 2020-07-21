@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 {{-- @include('barbero.users.barra-lateral') --}}
-@section('title','Home')
+@section('title','Perfil')
 
 
 
