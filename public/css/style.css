@@ -501,7 +501,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   font-size: 15px;
   margin: 15px;
   margin-left: 0%;
-  margin-right: 20%;
+  margin-right: 0%;
   line-height: 1.2em;
 }
 
@@ -520,7 +520,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin: 0%;
 }
 .foto_servicio_perfil{
-  width: 80%; 
+  width: 100%; 
   border-radius: 15px;
   margin: 1%;
 }
@@ -542,6 +542,13 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   float: left;
   width: 40%;
   padding: 10px;
+  
+}
+.column2-perfil {
+  float: left;
+  width: 40%;
+  padding: 2%;
+  margin-left: 5%;
   
 }
 .columna {

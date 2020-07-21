@@ -158,20 +158,27 @@
     <div class="caja-perfil letras sombreado">
         <h2 class="text-center">Servicios por Especialidad</h2><br><br><br>
         <div class="row">
-            <div class="column2 letras  " >
+            <div class="column2-perfil letras  " >
                 <h3>Peluquería</h3><br>
                 <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
                 <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea; 
                     sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo 
                     a mi cliente satisfecho.</p>
             </div>
-            <div class="column2 letras  " >
+            <div class="column2-perfil letras  " >
                 <h3>Rasurado</h3><br>
                 <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <p class="mensaje_perfil">Utilizo productos para suavizar la piel de mis clientes y la tradicional toalla con agua caliente. Diseño y corte de barba y bigote, recordando que para cada tipo de rostro hay un tipo de corte de barba y de bigote adecuado.</p>
             </div>
-            <div class="column2 letras  " >
+            <div class="column2-perfil letras  " >
+                <h3>Masajes Faciales</h3><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <p class="mensaje_perfil">Si quieres disminuir los efectos de factores como la contaminación, estrés y el inevitable paso de los años, además de verse atractivos para sus momentos importantes.</p>
+            </div>
+            <div class="column2-perfil letras  " >
                 <h3>Cejas</h3><br>
                 <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <p class="mensaje_perfil">Tengo gran experiencia en la depilación de cejas para hombre, con los mejores productos para que puedas lucirla correctamente, dependiendo de la forma de tu cara.</p>
             </div>
         </div>
 
