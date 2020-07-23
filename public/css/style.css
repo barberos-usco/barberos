@@ -615,6 +615,26 @@ button:nth-child(5):hover ~ button {
   color: var(--color-hover);
   transform: rotate(360deg);
 }
+
+
+.valoracion2 {
+  display: flex;
+  display: inline-block;
+  direction: rtl;/* right to left */
+  unicode-bidi: bidi-override;/* bidi de bidireccional */
+  margin-left: 5%;
+}
+.valoracion2 button {
+  background-color: initial;
+  border: 0;
+  color: var(--color-inactivo);
+  transition: 1s all;
+}
+.valoracion2 button:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+  transform: rotate(360deg);
+}
     
 .column {
   float: left;

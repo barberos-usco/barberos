@@ -7,7 +7,7 @@
 
 @section('content')
 
-@include('barbero.users.partials.barra-lateral')
+@include('partials.barra-lateral')
 
 <main id="main">
     <div class="container">
@@ -128,6 +128,6 @@
             </div>
         </div>
     </div>
-    @include('barbero.users.partials.footer')
+    
 </main>
 @endsection

@@ -7,7 +7,7 @@
 
 @section('content')
 
-@include('barbero.users.partials.barra-lateral')
+@include('partials.barra-lateral')
 <main id="main">
     <div class="container">
         <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid radio_logo sombreado " alt="Responsive image" width="1100" >
@@ -291,7 +291,7 @@
             </div>
         </div>
     </div><br><br><br><br><br>
-    @include('barbero.users.partials.footer')
+    
 </main>  
 
 @endsection
