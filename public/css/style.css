@@ -523,6 +523,12 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   background-color: #7F6953;
   border-bottom:1px solid #463125;
 }
+.card-home{
+  border-radius: 15px;
+  background-color: #c3a585;
+  border-bottom:1px solid #463125;
+  
+}
 
 .card-body-registro {
   flex: 1 1 auto;
@@ -616,13 +622,20 @@ button:nth-child(5):hover ~ button {
   transform: rotate(360deg);
 }
 
+.card-footer-home {
+  padding: 0.75rem 1.25rem;
+  background-color: #463125;
+  
+  border-radius: 13px;
+}
 
 .valoracion2 {
   display: flex;
   display: inline-block;
   direction: rtl;/* right to left */
   unicode-bidi: bidi-override;/* bidi de bidireccional */
-  margin-left: 5%;
+  display: flex;
+  justify-content: center;
 }
 .valoracion2 button {
   background-color: initial;
@@ -647,6 +660,17 @@ button:nth-child(5):hover ~ button {
   width: 33.3%;
   padding: 10px;
   
+}
+.column4 {
+  float: left;
+  width: 20%;
+  padding: 0px;
+  margin: 1%;
+  margin-left: 3.4%;
+  
+}
+.tamaño-home{
+  width: 100%;
 }
 .column2 {
   float: left;
@@ -684,6 +708,15 @@ border-radius: 12px;
   background-color:#7F6953;
   color: white;
   border-radius: 12px;
+
+}
+.color-botom-home{
+  background-color:#7F6953;
+  color: white;
+  border-radius: 12px;
+  /*margin-left: 22%;*/
+  display: flex;
+  justify-content: center;
 
 }
 .color-botom-borrar{
