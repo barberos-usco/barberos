@@ -1,4 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.main')
+
+{{-- @include('barbero.users.barra-lateral') --}}
+@section('title','Iniciar Sesión')
+
+
 
 @section('content')
 <div class="container">
