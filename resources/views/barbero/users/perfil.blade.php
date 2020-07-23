@@ -136,15 +136,37 @@
             </div>
         </div><br>
 
-        <div class="calificacion"><br>
+        <div><br>
             <h2>Valoración</h2>
-            <center>
-            <span class="fa fa-star fa-3x checked"></span>
-            <span class="fa fa-star fa-3x checked"></span>
-            <span class="fa fa-star fa-3x checked"></span>
-            <span class="fa fa-star fa-3x"></span>
-            <span class="fa fa-star fa-3x"></span>
-            </center>
+            <div class="valoracion">
+                <center>
+                <!-- Estrella 1 -->
+                <button>
+                    <i class="fas fa-star fa-3x"></i>
+                </button>
+
+                <!-- Estrella 2 -->
+                <button>
+                    <i class="fas fa-star fa-3x"></i>
+                </button>
+
+                <!-- Estrella 3 -->
+                <button>
+                    <i class="fas fa-star fa-3x"></i>
+                </button>
+
+                <!-- Estrella 4 -->
+                <button>
+                    <i class="fas fa-star fa-3x"></i>
+                </button>
+
+                <!-- Estrella 5 -->
+                <button>
+                    <i class="fas fa-star fa-3x"></i>
+                </button>
+                
+                </center>
+            </div>
         </div>
 
         <div class="trabajos"><br>
