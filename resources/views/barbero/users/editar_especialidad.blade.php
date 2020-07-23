@@ -18,7 +18,7 @@
                 @if ($user)
                     
                 
-                {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@horario', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}
+                {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@especialidad', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}
                     <div class="section-title">
                         <h2>Editar Horario</h2>
                     </div>
@@ -109,7 +109,7 @@
                             </div>
                             <div>
                                {!! Form::radio('Depilación con Cera', 'Depilación con Cera') !!} Depilación con Cera
-                            </div>
+                            </div><br><br>
                             {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                             {!! Form::reset('Borrar', ['class'=>'btn color-botom-borrar sombreado']) !!}
                         </div>

@@ -20,24 +20,24 @@
                                 <div class="subcaja sombreado row">
                                     <div class="col-md-12">
                                         {!! Form::label('name', 'Nombre: ',['class'=>'letras']) !!}
-                                        {!! Form::text('name',null, ['class'=>'form-control sombreado']) !!}
+                                        {!! Form::text('name',null, ['class'=>'form-control sombreado redondeo']) !!}
                                     </div><br>
                                     <div class="col-md-12">
                                         {!! Form::label('apellidos', 'Apellidos: ',['class'=>'letras']) !!}  
-                                        {!! Form::text('apellidos',null, ['class'=>'form-control sombreado']) !!}
+                                        {!! Form::text('apellidos',null, ['class'=>'form-control sombreado redondeo']) !!}
                                     </div><br>
                                     <div class="col-md-12">
                                         {!! Form::label('genero', 'Género: ',['class'=>'letras']) !!}
-                                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino'],null, ['class'=>'form-control sombreado']) !!}
+                                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino', 'Otro' => 'Otro'],null, ['class'=>'form-control sombreado redondeo']) !!}
                                     </div><br>
                                     <div class="col-md-12">
                                         {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento: ',['class'=>'letras']) !!}
-                                        {!! Form::date('fecha_nacimiento',null, ['class'=>'form-control sombreado']) !!}
+                                        {!! Form::date('fecha_nacimiento',null, ['class'=>'form-control sombreado redondeo']) !!}
                                     </div><br>
                                         
                                     <div class="col-md-12">
                                         {!! Form::label('ubicacion', 'Ubicación: ',['class'=>'letras']) !!}
-                                        {!! Form::text('ubicacion',null, ['class'=>'form-control sombreado']) !!}
+                                        {!! Form::text('ubicacion',null, ['class'=>'form-control sombreado redondeo']) !!}
                                     </div><br>
 
                                     <div class="col-md-12"><br>
