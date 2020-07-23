@@ -36,11 +36,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right redondeo" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item redondeo" href="{{ route('password.update') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fa fa-unlock-alt"></i></span>
+                                        {{ __('Cambiar Contraseña') }}
+                                    </a>
+                                    
                                     <a class="dropdown-item redondeo" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-sign-out-alt"></i></span>
                                         {{ __('Cerrar Sesión') }}
                                     </a>
+                                   
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

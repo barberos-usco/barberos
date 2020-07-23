@@ -1,9 +1,4 @@
-@extends('layouts.main')
-
-{{-- @include('barbero.users.barra-lateral') --}}
-@section('title','Restablecer Contraseña')
-
-
+@extends('layouts.app')
 
 @section('content')
 

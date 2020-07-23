@@ -305,12 +305,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-right: 11%;
   margin-top: 5%;
   float: right;
-  border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
--webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
--moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+  border-radius: 15px;
 }
 .caja-oscura{
   
@@ -797,7 +792,7 @@ section {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: rgb(41, 38, 29);
   
 }
 
