@@ -632,8 +632,7 @@ button:nth-child(5):hover ~ button {
 .valoracion2 {
   display: flex;
   display: inline-block;
-  direction: rtl;/* right to left */
-  unicode-bidi: bidi-override;/* bidi de bidireccional */
+  
   display: flex;
   justify-content: center;
 }

@@ -17,29 +17,29 @@
                                     <!-- La idea es porner un foreach para que se haga las estrellas que tenga en la valoracion ;) -->
 
                                     <!-- Estrella 1 -->
-                                    <button>
-                                        <i class="fas fa-star "></i>
-                                    </button>
+                                    
+                                        <i class="fas fa-star checked"></i>
+                                    
                     
                                     <!-- Estrella 2 -->
-                                    <button>
-                                        <i class="fas fa-star"></i>
-                                    </button>
+                                    
+                                        <i class="fas fa-star checked"></i>
+                                    
                     
                                     <!-- Estrella 3 -->
-                                    <button>
-                                        <i class="fas fa-star "></i>
-                                    </button>
+                                    
+                                        <i class="fas fa-star checked"></i>
+                                    
                     
                                     <!-- Estrella 4 -->
-                                    <button>
-                                        <i class="fas fa-star "></i>
-                                    </button>
+                                    
+                                        <i class="fas fa-star checked"></i>
+                                    
                     
                                     <!-- Estrella 5 -->
-                                    <button>
+                                    
                                         <i class="fas fa-star "></i>
-                                    </button>
+                                    
                                     
                                     
                                 </div></p>
