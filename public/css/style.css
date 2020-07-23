@@ -404,6 +404,15 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-left: 0%;
   border-radius: 15px;
 }
+.comentarios-nav{
+  
+  background: rgba(107, 87, 66, 0.52);
+  width: 100%;
+  padding: auto;
+  margin: 10%;
+  margin-left: 0%;
+  border-radius: 15px;
+}
 
 .checked {
   color: orange;
@@ -427,6 +436,9 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-left:10%;
   margin-top: 80px;
   
+}
+.redondeo{
+  border-radius: 15px;
 }
 
 /*--------------------------------------------------------------
