@@ -512,6 +512,34 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
       max-width: 50% !important;
 }
 
+
+
+.card-header-registro {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #61574A;
+  border-bottom:1px solid #463125;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 15px;
+}
+
+.card{
+  border-radius: 15px;
+  background-color: #7F6953;
+  border-bottom:1px solid #463125;
+}
+
+.card-body-registro {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  border-bottom:1px solid #463125;
+  background-color: #7F6953;
+  border-radius: 15px;
+}
+
+
+
 .mensaje_perfil{
   text-align: justify;
   font-size: 15px;
