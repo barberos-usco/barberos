@@ -96,9 +96,9 @@ class BarberoUsersController extends Controller
     
     public function horario($id)
     {
-        /*$user=User::findOrFail($id);
+        $user=User::findOrFail($id);
 
-        return view('barbero.users.editar_especialidad', compact('user'));*/
+        return view('barbero.users.editar_especialidad', compact('user'));
 
 
     }

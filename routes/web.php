@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::resource('cliente/users', 'ClienteUsersController');
+Route::resource('cliente/users', 'ClienteUsersController');
 
 Route::resource('barbero/users', 'BarberoUsersController', [
     'as' => 'barbero'
