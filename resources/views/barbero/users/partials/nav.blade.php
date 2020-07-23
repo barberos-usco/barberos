@@ -14,7 +14,7 @@
                             <nav class="navbar navbar-dark " style="background-color: #463125;">
                                 <form class="form-inline">
                                 <input class="form-control mr-sm-2 redondeo" type="search" placeholder="Buscar" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0 redondeo" style="color:#fffff;" type="submit">Buscar</button>
+                                <button class="btn color-botom-2 my-2 my-sm-0 redondeo" style="color:#fffff;" type="submit">Buscar</button>
                                 </form>
                             </nav>
                     @endguest

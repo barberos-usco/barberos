@@ -63,6 +63,36 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Género') }}</label>
+
+                            <div class="col-md-6">
+                                <select type="text" class="form-control redondeo" name="genero">
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                                @if ($errors->has('genero'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('genero') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Fecha Nacimiento') }}</label>
+
+                            <div class="col-md-6">
+                                {!! Form::date('fecha_nacimiento',null, ['class'=>'form-control sombreado redondeo']) !!}
+                                @if ($errors->has('genero'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('genero') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
@@ -85,7 +115,7 @@
                         </div>
 
                        <div class="form-group row">
-                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Eres:') }}</label>
+                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Eres') }}</label>
 
                             <div class="col-md-6">
                                 <select type="text" class="form-control redondeo" name="role_id">
