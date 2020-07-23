@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="shortcut icon" href="{{{ asset('/images/favicon.ico') }}}">
 </head>
 <body class="fondo">
     <!-- ======= Mobile nav toggle button ======= -->
@@ -17,7 +18,7 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/iconos.js') }}" crossorigin="anonymous"></script>
     <main id="main">
-        @include('partials.footer')
+        
     </main>
 </body>
 </html>

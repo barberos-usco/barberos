@@ -99,7 +99,7 @@
 
 
     <div class="caja-oscura_perfil_foto_ubicacion letras sombreado">
-        <img class="foto_local sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br><br>
+        <img class="foto_local sombreado" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Foto barbero"><br><br>
         <h2>Ubicación</h2><br>
         <iframe class="mapa_google sombreado" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15938.151498328249!2d-75.3062321!3d2.948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1594932655980!5m2!1ses!2sco"  allowfullscreen="" aria-hidden="true" tabindex="0"></iframe><br><br>
         <h2>Comentarios</h2>
@@ -188,13 +188,13 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="First slide">
+                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="First slide">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Second slide">
+                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Second slide">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Third slide">
+                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Third slide">
                                   </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -232,24 +232,24 @@
         <div class="row">
             <div class="column2-perfil letras  " >
                 <h3>Peluquería</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Foto barbero"><br>
                 <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea;
                     sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo
                     a mi cliente satisfecho.</p>
             </div>
             <div class="column2-perfil letras  " >
                 <h3>Rasurado</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <img class="foto_servicio_perfil sombreado" src="{{  url('/images/IMG_20200210_183357.jpg') }}" alt="Foto barbero"><br>
                 <p class="mensaje_perfil">Utilizo productos para suavizar la piel de mis clientes y la tradicional toalla con agua caliente. Diseño y corte de barba y bigote, recordando que para cada tipo de rostro hay un tipo de corte de barba y de bigote adecuado.</p>
             </div>
             <div class="column2-perfil letras  " >
                 <h3>Masajes Faciales</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <img class="foto_servicio_perfil sombreado" src="{{  url('/images/IMG_20200210_183357.jpg')  }}" alt="Foto barbero"><br>
                 <p class="mensaje_perfil">Si quieres disminuir los efectos de factores como la contaminación, estrés y el inevitable paso de los años, además de verse atractivos para sus momentos importantes.</p>
             </div>
             <div class="column2-perfil letras  " >
                 <h3>Cejas</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
+                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/IMG_20200210_183357.jpg')  }}" alt="Foto barbero"><br>
                 <p class="mensaje_perfil">Tengo gran experiencia en la depilación de cejas para hombre, con los mejores productos para que puedas lucirla correctamente, dependiendo de la forma de tu cara.</p>
             </div>
         </div>

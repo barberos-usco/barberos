@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/perfil', 'HomeController@perfil')->name('perfil');
+
 Route::resource('cliente/users', 'ClienteUsersController');
 
 Route::resource('barbero/users', 'BarberoUsersController', [
@@ -38,6 +40,8 @@ Route::get('barbero/users/{user}/edit/especialidad', 'BarberoUsersController@esp
 Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
 
 Route::get('barbero/users/{user}/perfil','BarberoUsersController@perfil')->name('barbero.users.perfil');
+
+Route::get('cliente/users/{user}/perfil','ClienteUsersController@perfil')->name('cliente.users.perfil');
 
 
 

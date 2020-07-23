@@ -25,6 +25,13 @@ class ClienteUsersController extends Controller
         return view('cliente.users.index', compact('users'));
     }
 
+    public function perfil($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('cliente.users.perfil', compact('user'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -43,6 +43,23 @@ class HomeController extends Controller
             return 'Error 404';
         }
     }
+    public function perfil($esBarbero = false)
+    {
+        // Barberos
+        if(Auth::user()->role_id === 1){
+            $users=User::all();
+            return view('perfil', compact('users'));
+        }else if(Auth::user()->role_id === 1 && $esBarbero === true){
+            $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])->get();
+            return view('perfil', compact( 'users'));
+        }// Clientes
+        else if(Auth::user()->role_id === 2){
+            $users=User::where('role_id', 1)->get();
+            return view('perfil', compact( 'users'));
+        }else{
+            return 'Error 404';
+        }
+    }
 
     public function listarBarberos(){
         return self::index(true);
