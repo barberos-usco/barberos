@@ -1,7 +1,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="">
         <div class="container">
-            
+
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">

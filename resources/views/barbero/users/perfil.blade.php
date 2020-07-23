@@ -7,11 +7,11 @@
 
 @section('content')
 
-@include('barbero.users.partials.barra-lateral')
+@include('partials.barra-lateral')
 <main id="main">
 
     <div class="caja-oscura_perfil_info row">
-        
+
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
               <b>  {{ Auth::user()->name ." ". Auth::user()->apellidos }}  </b>
             </div>
@@ -27,7 +27,7 @@
             <div class="profile-perfil sombreado">
                 <img src="{{ asset('images/profile-img.jpg') }}" alt="" class="img-fluid-perfil rounded-circle sombreado">
             </div>
-        
+
     </div>
     <div class="caja-oscura_perfil_especialidad_horario letras sombreado">
             <br>
@@ -94,7 +94,7 @@
                    <td class="tamaño">1:00 pm - 4:00 pm</td>
                </tr>
             </table>
-        
+
     </div>
 
 
@@ -108,13 +108,13 @@
         <div class="modal" id="myModal">
             <div class="modal-dialog">
                 <div class="modal-content">
-                
+
                     <!-- Modal Header -->
                     <div class="modal-header">
                     <h4 class="modal-title">Comentarios</h4>
                     <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                     </div>
-                    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <div class="comentarios letras-negras sombreado">
@@ -126,12 +126,12 @@
                             Un patán, me trasquiló, cero estrellas.
                         </div>
                     </div>
-                    
+
                     <!-- Modal footer -->
                     <div class="modal-footer ">
                     <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div><br>
@@ -154,13 +154,13 @@
             <div class="modal" id="myModa2">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                    
+
                         <!-- Modal Header -->
                         <div class="modal-header">
                         <h4 class="modal-title">Trabajos</h4>
                         <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                         </div>
-                        
+
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -185,21 +185,21 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Modal footer -->
                         <div class="modal-footer ">
                         <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                         </div>
-                        
+
                     </div>
                 </div>
-            </div><br>          
+            </div><br>
 
         </div>
-        
 
-    
-        
+
+
+
     </div>
 
 
@@ -211,8 +211,8 @@
             <div class="column2-perfil letras  " >
                 <h3>Peluquería</h3><br>
                 <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$user->foto['ruta_foto']) }}" alt="Foto barbero"><br>
-                <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea; 
-                    sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo 
+                <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea;
+                    sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo
                     a mi cliente satisfecho.</p>
             </div>
             <div class="column2-perfil letras  " >
@@ -234,8 +234,6 @@
 
     </div>
     <br><br>
-    @include('barbero.users.partials.footer')
-
 </main><!-- End #main -->
 
 @endsection
