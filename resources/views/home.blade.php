@@ -5,7 +5,11 @@
 <main id="main">
     <div class="container">
         @if (Auth::user()->role_id === 1 /*Barberos*/)
-            @include('barbero.dashboard')
+            @if($ocultarDashboard)
+                @include('cliente.dashboard')
+            @else
+                @include('barbero.dashboard')
+            @endif
         @endif
         @if (Auth::user()->role_id === 2 /*Clientes*/)
             @include('cliente.dashboard')
