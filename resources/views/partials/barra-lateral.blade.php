@@ -4,15 +4,18 @@
 
     <div class="profile">
       <img src="{{ asset('images/profile-img.jpg') }}" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="{{ route('barbero.users.index') }}"> {{ Auth::user()->name }}</a></h1>
-      
+      <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name }}</a></h1>
+
     </div>
 
     <nav class="nav-menu">
       <ul>
+        @if(Auth::user()->role_id === 1)
+          <li><a href="{{ route('barberos') }}"><span style="font-size: 1.2em; color: #463125;"><i class="  fas fa-home"></i></span> <span>Barberos</span></a></li>
+        @endif
         <li><a href="{{ route('home') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-home"></i></span> <span>Inicio</span></a></li>
-        
-        <li><a href="{{ route('perfil') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
+
+        <li><a href="{{ route('perfil', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
         <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -27,15 +30,15 @@
           &copy; Copyright <strong><span>Byakoxx</span></strong>
         </div>
         <div class="credits">
-         
+
           Desarrollado por:  <a href="#">Helmer Torres</a>
         </div>
       </div>
     </footer><!-- End  Footer -->
-  
+
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-    
+
 
 
 
