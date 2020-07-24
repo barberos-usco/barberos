@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\UpdateRequest;
 use App\User;
 
 class ClienteUsersController extends Controller
@@ -114,7 +114,11 @@ class ClienteUsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => ['required', 'string', 'max:100'],
+            'apellidos' => ['required', 'string', 'max:100'],
+            
+        ]);
     }
 
     /**
