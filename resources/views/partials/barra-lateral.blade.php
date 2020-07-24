@@ -10,11 +10,10 @@
 
     <nav class="nav-menu">
       <ul>
-        @if(Auth::user()->role_id === 1)
-          <li><a href="{{ route('barberos') }}"><span style="font-size: 1.2em; color: #463125;"><i class="  fas fa-home"></i></span> <span>Barberos</span></a></li>
-        @endif
         <li><a href="{{ route('home') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-home"></i></span> <span>Inicio</span></a></li>
-
+        @if(Auth::user()->role_id === 1)
+          <li><a href="{{ route('barberos') }}"><span style="font-size: 1.2em; color: #463125;"><i class="  fas fa-users"></i></span> <span>Barberos</span></a></li>
+        @endif
         <li><a href="{{ route('perfil', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
         <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
       </ul>

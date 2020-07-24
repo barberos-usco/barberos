@@ -1,8 +1,18 @@
 <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid  radio_logo sombreado " alt="Responsive image" width="1100" >
 <div class="caja">
 
+    
+        <form class="form-inline buscador">
+        <input class="form-control mr-sm-2 redondeo alargar_buscador" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn color-botom-2 my-2 my-sm-0 redondeo letras" type="submit">Buscar</button>
+        
+        <hr></form>
+        
+    
+       
+    
         <div class="row">
-
+            
 
                 @if ($users)
                     @foreach ($users as $user)
