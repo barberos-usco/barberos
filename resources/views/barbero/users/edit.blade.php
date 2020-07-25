@@ -28,7 +28,7 @@
                                     </div><br>
                                     <div class="col-md-12">
                                         {!! Form::label('genero', 'Género: ',['class'=>'letras']) !!}
-                                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino', 'Otro' => 'Otro'],null, ['class'=>'form-control sombreado redondeo']) !!}
+                                        {!! Form::select('genero', ['Femenino' => 'Femenino', 'Masculino' => 'Masculino', 'Otro' => 'Otro'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}
                                     </div><br>
                                     <div class="col-md-12">
                                         {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento: ',['class'=>'letras']) !!}

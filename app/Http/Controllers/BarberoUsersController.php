@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\UpdateRequest;
 use App\User;
 use App\Foto;
 use App\Horario;
@@ -139,17 +139,18 @@ class BarberoUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $user=User::findOrFail($id);
 
+        
         $entrada=$request->all();
 
         $user->update($entrada);
 
 
 
-        return redirect('/barbero/users');
+        return redirect('/home');
 
     }
 

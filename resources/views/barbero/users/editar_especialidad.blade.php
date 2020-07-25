@@ -26,43 +26,43 @@
                         <div class="column letras" >
                             <h2>Lunes</h2>
                             <div>
-                                {!! Form::select('lunes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('lunes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Martes</h2>
                             <div>
-                                {!! Form::select('martes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('martes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Miércoles</h2>
                             <div>
-                                {!! Form::select('miercoles', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('miercoles', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Jueves</h2>
                             <div>
-                                {!! Form::select('jueves', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('jueves', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Viernes</h2>
                             <div>
-                                {!! Form::select('viernes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('viernes', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Sábado</h2>
                             <div>
-                                {!! Form::select('sabado', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('sabado', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '2:00 pm - 6:00 pm' => '2:00 am - 6:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
                             <h2>Domingo</h2>
                             <div>
-                                {!! Form::select('domingo', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '1:00 pm - 4:00 pm' => '1:00 am - 4:00 pm'],null, ['class'=>'form-control sombreado']) !!}
+                                {!! Form::select('domingo', ['Cerrado' => 'Cerrado','6:00 am - 6:00 pm' => '6:00 am - 6:00 pm', '8:00 am - 5:30 pm' => '8:00 am - 5:30 pm', '10:00 am - 5:30 pm' => '10:00 am - 5:30 pm', '1:00 pm - 4:00 pm' => '1:00 am - 4:00 pm'],null, ['class'=>'form-control sombreado redondeo']) !!}
                             </div>
                         </div>
                         <div class="column letras" >
@@ -90,25 +90,25 @@
                                 <h2>Editar Especialidades</h2>
                             </div>
                             <div>
-                               {!! Form::radio('Peluqueria', 'Peluqueria') !!} Peluqueria
+                               {!! Form::checkbox('Peluqueria', 'Peluqueria') !!} Peluqueria
                             </div>
                             <div>
-                               {!! Form::radio('Rasurado', 'Rasurado') !!} Rasurado
+                               {!! Form::checkbox('Rasurado', 'Rasurado') !!} Rasurado
                             </div>
                             <div>
-                               {!! Form::radio('Masajes y faciales', 'Masajes y faciales') !!} Masajes y faciales
+                               {!! Form::checkbox('Masajes y faciales', 'Masajes y faciales') !!} Masajes y faciales
                             </div>
                             <div>
-                               {!! Form::radio('Cejas', 'Cejas') !!} Cejas
+                               {!! Form::checkbox('Cejas', 'Cejas') !!} Cejas
                             </div>
                             <div>
-                               {!! Form::radio('Reporalizacion', 'Reporalizacion') !!} Reporalización
+                               {!! Form::checkbox('Reporalizacion', 'Reporalizacion') !!} Reporalización
                             </div>
                             <div>
-                               {!! Form::radio('Tratamiento Capilar', 'Tratamiento Capilar') !!} Tratamiento Capilar
+                               {!! Form::checkbox('Tratamiento Capilar', 'Tratamiento Capilar') !!} Tratamiento Capilar
                             </div>
                             <div>
-                               {!! Form::radio('Depilación con Cera', 'Depilación con Cera') !!} Depilación con Cera
+                               {!! Form::checkbox('Depilación con Cera', 'Depilación con Cera') !!} Depilación con Cera
                             </div><br><br>
                             {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                             {!! Form::reset('Borrar', ['class'=>'btn color-botom-borrar sombreado']) !!}
