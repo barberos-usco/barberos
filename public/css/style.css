@@ -33,6 +33,15 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+hr{
+  background-color: #463125;
+  position: absolute;
+  display: block;
+  top: 324px;
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+}
 
 a {
   color: #149ddd;
@@ -691,7 +700,12 @@ button:nth-child(5):hover ~ button {
   
 }
 
-
+.alargar_buscador{
+  width: 230px !important;
+}
+.buscador{
+  padding: 20px;
+}
 .imagen-logo{
   width: 30%;
   
@@ -704,10 +718,9 @@ button:nth-child(5):hover ~ button {
 border-radius: 12px;
 }
 .color-botom-2{
-  background-color:#7F6953;
+  background-color:rgba(70,49,37,1);
   color: white;
   border-radius: 12px;
-
 }
 .color-botom-home{
   background-color:#7F6953;
