@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Portafolio;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,14 +35,17 @@ class HomeController extends Controller
         if(Auth::user()->role_id === 1){
             if($ocultarDashboard === false){
                 // Hacer consulta para traer toda la info del dashboard del barbero
-                $users=User::find(Auth::user()->id);
+                $portafolio = Portafolio::withoutTrashed()
+                    ->where(['barbero_id' => Auth::user()->id, 'activo' => '1'])
+                    ->get();
+                    return view('home', ["portafolio"=>$portafolio, "ocultarDashboard"=>$ocultarDashboard, "activo"=>'active', 'sumador'=> '0']);
             }else{
-                $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])
+                $users=User::where('role_id', 1)
                     ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    ->get();
+                    ->get()->whereNotIn('id', [Auth::user()->id]);
+                    return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
-            return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
         }// Clientes
         else if(Auth::user()->role_id === 2){
             $users=User::where('role_id', 1)
