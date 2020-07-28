@@ -586,10 +586,20 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 .foto_local{
-  width: 510px; 
+  width: 445px; 
   border-radius: 15px;
   margin: 0%;
   height: 300px;
+}
+
+.tamaño-espacio-nav{
+  width: 170px !important;
+  
+}
+
+.centro{
+  text-align: center;
+  font-size: 15px !important;
 }
 .foto_servicio_perfil{
   width: 350px; 

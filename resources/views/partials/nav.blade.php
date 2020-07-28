@@ -19,12 +19,12 @@
                             </li>
                         @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle comentarios-nav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                            <li class="nav-item dropdown  tamaño-espacio-nav">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle comentarios-nav text-center" style="font-size: 13px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name . " ". Auth::user()->apellidos}} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right redondeo" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right redondeo" style="font-size: 13px;" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item redondeo" href="{{ route('password.update') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fa fa-unlock-alt"></i></span>
                                         {{ __('Cambiar Contraseña') }}
                                     </a>
