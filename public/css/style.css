@@ -457,7 +457,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 .img-foto-perfil{
-  height: 120px !important;
+  height: 150px !important;
   width: 120px !important;
 }
 
@@ -697,7 +697,17 @@ button:nth-child(5):hover ~ button {
 
 }
 .tamaño-home{
-  width: 100%;
+  width: 200px;
+    height: 250px;
+    
+    
+    
+    
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+   
 }
 .column2 {
   float: left;

@@ -44,15 +44,14 @@ class HomeController extends Controller
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
                     
                     
-                    ->get()->where('role_id', 1)->whereNotIn('id', [Auth::user()->id]);
+                    ->get()->whereNotIn('id', [Auth::user()->id])->where('role_id', 1);
                     return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
         }// Clientes
         else if(Auth::user()->role_id === 2){
-            $users=User::where('role_id', 1)
-                ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+            $users=User::where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                 ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                ->get();
+                ->get()->where('role_id', 1);
             return view('home', ["users"=>$users,"buscar"=>$query]);
         }else{
             return 'Error 404';

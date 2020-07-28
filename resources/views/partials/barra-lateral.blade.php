@@ -3,7 +3,13 @@
   <div class="d-flex flex-column">
 
     <div class="profile">
-      <img src="{{ asset('images/'.Auth::user()->url_fotoPerfil ) }}" alt="" class="img-fluid rounded-circle " style="width:150px; height:150px;">
+      @if(Auth::user()->url_fotoPerfil == null)
+                        <img src="{{ asset('images/profile.png') }}" alt="" class="img-fluid rounded-circle " style="width:150px; height:150px;">
+                    
+                    @else
+                    <img src="{{ asset('images/'.Auth::user()->url_fotoPerfil ) }}" alt="" class="img-fluid rounded-circle " style="width:150px; height:170px;">
+                    @endif
+      
       <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name . " " .Auth::user()->apellidos}}</a></h1>
 
     </div>
