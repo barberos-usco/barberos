@@ -241,6 +241,8 @@ h2 {
   color: #fff;
 }
 
+
+
 /*--------------------------------------------------------------
 # Cajas contenedoras
 --------------------------------------------------------------*/
@@ -451,6 +453,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 .img-fluid-perfil {
   max-width: 30%;
   height: auto;
+  width: 150px;
+  height: 150px;
 }
 
 .profile-perfil img {
