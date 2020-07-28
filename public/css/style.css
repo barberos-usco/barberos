@@ -470,6 +470,30 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-left: 25%;
 }
 
+.fondo-pg{
+  background-color: red;
+}
+
+.foto_wallpa_cliente{
+  width: 570px; 
+  height: 290px;
+  padding: 0px;
+  margin: 0%;
+  margin-left: 43.5%;
+  margin-top: -360px;
+  border-radius: 15px;
+}
+
+.caja-oscura_perfil_info_cliente{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 40%;
+  padding: 25px;
+  margin: 2%;
+  
+  border-radius: 15px;
+}
 
 
 
@@ -720,6 +744,13 @@ button:nth-child(5):hover ~ button {
   width: 40%;
   padding: 2%;
   margin-left: 5%;
+
+}
+.column2-perfil-cliente {
+  float: left;
+  width: 45%;
+  padding: 2%;
+  margin-left: 2.5%;
 
 }
 .columna {
