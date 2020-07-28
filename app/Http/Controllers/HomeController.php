@@ -43,9 +43,8 @@ class HomeController extends Controller
                 $users=User::where('role_id', 1)
                     ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    ->get()->whereNotIn('id',[Auth::user()->id]);
-            
-                    
+                    ->get()->whereNotIn('id', [Auth::user()->id]);
+                    return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
         }// Clientes
         else if(Auth::user()->role_id === 2){
