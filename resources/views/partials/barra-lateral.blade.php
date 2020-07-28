@@ -4,7 +4,7 @@
 
     <div class="profile">
       <img src="{{ asset('images/'.Auth::user()->url_fotoPerfil ) }}" alt="" class="img-fluid rounded-circle " style="width:150px; height:150px;">
-      <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name }}</a></h1>
+      <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name . " " .Auth::user()->apellidos}}</a></h1>
 
     </div>
 
