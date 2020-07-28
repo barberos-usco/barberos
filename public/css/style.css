@@ -281,7 +281,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   width: 100%;
   padding: 25px;
   margin: 10px;
-   
+
   border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
@@ -295,7 +295,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   height: auto;
   width: auto;
   padding: 25px;
-  
+
   margin-left: 10%;
   margin-top: 33%;
   float: right;
@@ -307,9 +307,9 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 .caja-clara{
-  
-  background: rgba(187, 156, 138, 0.52);	
-  
+
+  background: rgba(187, 156, 138, 0.52);
+
   height: 80%;
   width: 40%;
   padding: 0px;
@@ -319,8 +319,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 .caja-oscura{
-  
-  background: rgba(107, 87, 66, 0.52);	
+
+  background: rgba(107, 87, 66, 0.52);
   height: 1000%;
   width: 80%;
   padding: 25px;
@@ -329,8 +329,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 .caja-oscura_perfil_info{
-  
-  background: rgba(107, 87, 66, 0.52);	
+
+  background: rgba(107, 87, 66, 0.52);
   height: 40%;
   width: 40%;
   padding: 25px;
@@ -340,8 +340,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 .caja-interna_perfil_titulo{
-  
-  background: rgba(97, 87, 74, 1);	
+
+  background: rgba(97, 87, 74, 1);
   height: 10%;
   width: 50%;
   padding: 7px;
@@ -353,8 +353,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 
 
 .caja-interna_perfil_info{
-  
-  background: rgba(97, 87, 74, 1);	
+
+  background: rgba(97, 87, 74, 1);
   height: 10%;
   width: 40%;
   padding: 7px;
@@ -365,8 +365,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 .caja-oscura_perfil_especialidad_horario{
-  
-  background: rgba(107, 87, 66, 0.52);	
+
+  background: rgba(107, 87, 66, 0.52);
   height: 40%;
   width: 47%;
   padding: 25px;
@@ -376,8 +376,8 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 .caja-oscura_perfil_foto_ubicacion{
-  
-  background: rgba(107, 87, 66, 0.52);	
+
+  background: rgba(107, 87, 66, 0.52);
   height: 40%;
   width: 47%;
   padding: 25px;
@@ -391,19 +391,19 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 .caja-perfil{
   border: 0px solid #7F6953;
   background: rgba(107, 87, 66, 0.52);
-  
+
   width: 96%;
   padding: 25px;
   margin: 2%;
   border-radius: 15px;
   margin-left: 2%;
   margin-top: 100px;
-  
+
 }
 
 .comentarios{
-  
-  background: rgba(255, 255, 255, 0.7);	
+
+  background: rgba(255, 255, 255, 0.7);
   width: 100%;
   padding: 7px;
   margin: 1%;
@@ -411,7 +411,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 .comentarios-nav{
-  
+
   background: rgba(107, 87, 66, 0.52);
   width: 100%;
   padding: auto;
@@ -422,7 +422,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 
 .checked {
   color: orange;
-  
+
 }
 
 .letras{
@@ -441,7 +441,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 .boton-centrado{
   margin-left:10%;
   margin-top: 80px;
-  
+
 }
 .redondeo{
   border-radius: 15px;
@@ -493,7 +493,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
 
 /*--------------------------------------------------------------
-# Modals 
+# Modals
 --------------------------------------------------------------*/
 
 .modal{
@@ -544,7 +544,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
   background-color: #c3a585;
   border-bottom:1px solid #463125;
-  
+
 }
 
 .card-body-registro {
@@ -580,7 +580,7 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   width: 100%;
   margin-left: 0%;
   margin-top: 0%;
- 
+
 }
 .radio_logo{
   border-radius: 15px;
@@ -653,14 +653,14 @@ button:nth-child(5):hover ~ button {
 .card-footer-home {
   padding: 0.75rem 1.25rem;
   background-color: #463125;
-  
+
   border-radius: 13px;
 }
 
 .valoracion2 {
   display: flex;
   display: inline-block;
-  
+
   display: flex;
   justify-content: center;
 }
@@ -675,18 +675,18 @@ button:nth-child(5):hover ~ button {
   color: var(--color-hover);
   transform: rotate(360deg);
 }
-    
+
 .column {
   float: left;
   width: 25%;
   padding: 10px;
-  
+
 }
 .column3 {
   float: left;
   width: 33.3%;
   padding: 10px;
-  
+
 }
 .column4 {
   float: left;
@@ -694,7 +694,7 @@ button:nth-child(5):hover ~ button {
   padding: 0px;
   margin: 1%;
   margin-left: 3.4%;
-  
+
 }
 .tamaño-home{
   width: 100%;
@@ -703,20 +703,20 @@ button:nth-child(5):hover ~ button {
   float: left;
   width: 40%;
   padding: 10px;
-  
+
 }
 .column2-perfil {
   float: left;
   width: 40%;
   padding: 2%;
   margin-left: 5%;
-  
+
 }
 .columna {
   float: left;
   width: 33.3%;
   padding: 10px;
-  
+
 }
 
 .alargar_buscador{
@@ -727,7 +727,7 @@ button:nth-child(5):hover ~ button {
 }
 .imagen-logo{
   width: 30%;
-  
+
   margin-left: 8%;
   margin-top: 3%;
 }
@@ -753,13 +753,13 @@ border-radius: 12px;
 .color-botom-borrar{
   background-color: rgba(125,109,96,1);
   color: white;
-  
+
 }
 .color-registrate{
-  
+
   color: rgba(0,0,102,1);
   text-decoration: underline;
-  
+
 }
 
 .sombreado{
@@ -776,7 +776,7 @@ footer {
   padding: 3px;
   background-color: #463125;
   color: white;
-  
+
 }
 
 /*--------------------------------------------------------------
@@ -870,14 +870,14 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: white;
-  
+
 }
 .section-title-welcome {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
   color: rgb(41, 38, 29);
-  
+
 }
 
 .section-title h2::after {
@@ -889,7 +889,7 @@ section {
   background: #463125;
   bottom: 0;
   left: 0;
-  
+
 }
 
 .section-title p {
@@ -1689,4 +1689,7 @@ section {
 }
 .card img{
   width:100%;
+}
+.portfolio-image {
+  height: 350px;
 }
