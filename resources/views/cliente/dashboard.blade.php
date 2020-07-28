@@ -1,18 +1,19 @@
 <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid  radio_logo sombreado " alt="Responsive image" width="1100" >
 <div class="caja">
 
-    
-        <form class="form-inline buscador">
-        <input class="form-control mr-sm-2 redondeo alargar_buscador" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn color-botom-2 my-2 my-sm-0 redondeo letras" type="submit">Buscar</button>
-        
-        <hr></form>
-        
-    
-       
-    
+        {!! Form::open(array('url'=>(Auth::user()->role_id === 1) ? 'barberos' : 'home','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
+            <div class="form-inline buscador">
+                <input class="form-control mr-sm-2 redondeo alargar_buscador" type="search" placeholder="Buscar" aria-label="Search" name="buscar" value="{{$buscar}}">
+                <button class="btn color-botom-2 my-2 my-sm-0 redondeo letras" type="submit">Buscar</button>
+            </div>
+        {{Form::close()}}
+
+
+
+
+
         <div class="row">
-            
+
 
                 @if ($users)
                     @foreach ($users as $user)
@@ -60,7 +61,12 @@
                         </div>
                     @endforeach
                 @endif
-
         </div>
+        @if(count($users)<= 0 && $buscar != '')
+            <h3 style="color: #900">No existen coincidencias para '{{$buscar}}'</h3>
+        @endif
+        @if(count($users)<= 0 && $buscar == '')
+            <h3 style="color: #900">No hay registros</h3>
+        @endif
 
 </div>

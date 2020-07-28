@@ -26,29 +26,34 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($ocultarDashboard = false)
+    public function index(Request $request, $ocultarDashboard = false)
     {
+        $query = trim($request->get('buscar'));
         // Barberos
         if(Auth::user()->role_id === 1){
             if($ocultarDashboard === false){
                 // Hacer consulta para traer toda la info del dashboard del barbero
                 $users=User::find(Auth::user()->id);
             }else{
-                $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])->get();
+                $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])
+                    ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+                    ->get();
             }
-            return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard]);
+            return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
         }// Clientes
         else if(Auth::user()->role_id === 2){
-            $users=User::where('role_id', 1)->get();
-            return view('home', compact( 'users'));
+            $users=User::where('role_id', 1)
+                ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+                ->get();
+            return view('home', ["users"=>$users,"buscar"=>$query]);
         }else{
             return 'Error 404';
         }
     }
 
-    public function listarBarberos()
+    public function listarBarberos(Request $request)
     {
-        return self::index(true);
+        return self::index($request, true);
     }
 
     public function perfil($id)
