@@ -40,10 +40,11 @@ class HomeController extends Controller
                     ->get();
                     return view('home', ["portafolio"=>$portafolio, "ocultarDashboard"=>$ocultarDashboard, "activo"=>'active', 'sumador'=> '0']);
             }else{
-                $users=User::where('role_id', 1)
-                    ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+                $users=User::where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    ->get()->whereNotIn('id', [Auth::user()->id]);
+                    
+                    
+                    ->get()->where('role_id', 1)->whereNotIn('id', [Auth::user()->id]);
                     return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
         }// Clientes

@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
+Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
 
 Route::resource('cliente/users', 'ClienteUsersController');
 
