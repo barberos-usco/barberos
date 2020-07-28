@@ -19,7 +19,7 @@
                     @foreach ($users as $user)
 
                         <div class="card-home column4" style="">
-                            <img src="{{ asset('/images/profile-img.jpg') }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
+                            <img src="{{ asset('/images/'.$user->url_fotoPerfil) }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
                             <div class="card-body">
                                 <h5 class="card-title text-center" style="color: #352c23;"><b>{{ $user->name ." " . $user->apellidos  }}</b></h5>
                                 <div class="border-top my-3"></div>

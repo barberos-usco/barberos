@@ -36,10 +36,12 @@ class HomeController extends Controller
                 // Hacer consulta para traer toda la info del dashboard del barbero
                 $users=User::find(Auth::user()->id);
             }else{
-                $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])
+                $users=User::where('role_id', 1)
                     ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    ->get();
+                    ->get()->whereNotIn('id',[Auth::user()->id]);
+            
+                    
             }
             return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
         }// Clientes
