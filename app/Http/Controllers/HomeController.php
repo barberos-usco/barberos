@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 //use App\Foto;
 
 
@@ -37,6 +38,7 @@ class HomeController extends Controller
             }else{
                 $users=User::where('role_id', 1)->whereNotIn('id', [Auth::user()->id])
                     ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+                    ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
                     ->get();
             }
             return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
@@ -44,6 +46,7 @@ class HomeController extends Controller
         else if(Auth::user()->role_id === 2){
             $users=User::where('role_id', 1)
                 ->where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
+                ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
                 ->get();
             return view('home', ["users"=>$users,"buscar"=>$query]);
         }else{
