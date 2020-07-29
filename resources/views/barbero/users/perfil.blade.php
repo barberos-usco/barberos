@@ -22,7 +22,11 @@
                 <b>Género:</b> {{ $user->genero }}
             </div>
             <div class="caja-interna_perfil_info letras col-md-6 text-center sombreado" >
-                <b>Rol:</b> {{ $user->role['nombre_rol'] }}
+                @if( $user->genero == 'Femenino')
+                    <b>Rol:</b> Barbera
+                @else
+                    <b>Rol:</b> {{ $user->role['nombre_rol'] }}
+                @endif
             </div>
             <div class="profile-perfil ">
                 

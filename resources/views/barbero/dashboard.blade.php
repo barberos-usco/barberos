@@ -64,7 +64,8 @@
 	            <i class="fas fa-star checked"></i>
 	            <i class="fas fa-star checked"></i>
 	            <i class="fas fa-star "></i>
-    		</div>
+			</div>
+			{{ Auth::user() }}
     	</p>
 	</div>
 </div>
