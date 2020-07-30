@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
 Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
