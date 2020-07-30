@@ -23,6 +23,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
 Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
+Route::get('/portafolio/create', 'PortafolioController@create')->name('portafolio.create');
+Route::get('/portafolio/edit/{id}', 'PortafolioController@edit')->name('portafolio.edit');
+Route::post('/portafolio', 'PortafolioController@store')->name('portafolio.store');
+Route::patch('/portafolio/{id}', 'PortafolioController@update')->name('portafolio.update');
+Route::delete('/portafolio/{id}', 'PortafolioController@destroy')->name('portafolio.destroy');
 
 Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
 
