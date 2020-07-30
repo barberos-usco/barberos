@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-              <h3 class="letras">Portafolio | <a href="{{route('portafolio.create')}}"><button class="btn btn-success">Agregar</button></a></h3>
+              <h3 class="letras">Portafolio | <a href="{{route('portafolio.create')}}"><button class="btn color-botom">Agregar</button></a></h3>
             </div>
           </div><br/>
 
@@ -42,7 +42,7 @@
                     </td>
                     @endif
                     <td>
-                      <a href="{{URL::action('PortafolioController@edit',$item->id)}}"><button class="btn btn-info">Editar</button></a>
+                      <a href="{{URL::action('PortafolioController@edit',$item->id)}}"><button class="btn color-botom-home">Editar</button></a>
                       <div class="letras btn color-botom sombreado" data-toggle="modal" data-target="#myModa2">Eliminar</div>
                       <!-- The Modal -->
                       <div class="modal" id="myModa2">

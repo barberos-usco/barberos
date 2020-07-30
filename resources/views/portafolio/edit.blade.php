@@ -25,7 +25,7 @@
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
                   <label for="imagen" class="letras">Imagen</label>
-                  <input type="file" name="imagen" class="form-control">
+                  <input type="file" name="imagen" class="form-control" value="{{$portafolio->ruta_foto}}">
                 </div>
               </div>
 
@@ -52,13 +52,16 @@
 
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <button class="btn btn-primary" type="submit">Guardar</button>
-                  <button class="btn btn-danger" type="reset">Limpiar</button>
+                  <button class="btn color-botom" type="submit">Guardar</button>
+                  <button class="btn color-botom" type="reset">Limpiar</button>
+                  <a href="{{ redirect('HomeController@index')}}"><button class="btn color-botom">Atras</button></a>
+                  
                 </div>
               </div>
 
             </div>
       {!!Form::close()!!}
+      
     </div>
 </main>
 @endsection
