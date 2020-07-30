@@ -55,7 +55,6 @@
                   <button class="btn color-botom" type="submit">Guardar</button>
                   <button class="btn color-botom" type="reset">Limpiar</button>
                   <a href="{{ redirect('HomeController@index')}}"><button class="btn color-botom">Atras</button></a>
-
                 </div>
               </div>
 

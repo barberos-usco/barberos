@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Validator;
+use App\Horario;
 
 
 
@@ -92,6 +93,15 @@ class HomeController extends Controller
         $comentario->save();
 
         return self::perfil($request->get('user_id'));
+    }
+
+    public function horario($id)
+    {
+        $user=User::findOrFail($id);
+        $horario = Horario::where('barbero', $user->id)->get();
+        
+
+        return view('barbero.users.edit.especialidad', compact('user'));
     }
 
     public function password()

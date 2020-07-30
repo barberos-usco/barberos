@@ -46,10 +46,11 @@ Route::resource('cliente/users', 'ClienteUsersController', [
 ]);
 
 
-Route::get('barbero/users/{user}/edit/especialidad', 'BarberoUsersController@especialidad')->name('barbero.users.edit.especialidad');
+Route::get('barbero/users/{user}/edit/especialidad', 'HorarioController@edit')->name('barbero.users.edit.especialidad');
+Route::patch('barbero/users/{user}/edit/especialidad', 'HorarioController@update')->name('barbero.users.update.especialidad');
 
 
-Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
+Route::patch('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
 
 Route::get('barbero/users/{user}/perfil','BarberoUsersController@perfil')->name('barbero.users.perfil');
 
