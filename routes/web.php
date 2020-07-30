@@ -24,6 +24,9 @@ Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
 Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
 
+Route::get('/password', 'HomeController@password')->name('barbero.users.password');
+Route::post('/updatepassword', 'HomeController@updatePassword');
+
 Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
 
 Route::resource('cliente/users', 'ClienteUsersController');
