@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Comentario;
+use App\Http\Requests\ComentarioFormRequest;
 use App\Portafolio;
 use App\User;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-//use App\Foto;
-use Hash;
 use Validator;
 
 
@@ -36,16 +37,17 @@ class HomeController extends Controller
         // Barberos
         if(Auth::user()->role_id === 1){
             if($ocultarDashboard === false){
-                // Hacer consulta para traer toda la info del dashboard del barbero
+                // Info para Dashboard del barbero
                 $portafolio = Portafolio::withoutTrashed()
                     ->where(['barbero_id' => Auth::user()->id, 'activo' => '1'])
                     ->get();
-                    return view('home', ["portafolio"=>$portafolio, "ocultarDashboard"=>$ocultarDashboard, "activo"=>'active', 'sumador'=> '0']);
+                $comentarios = Comentario::with('cliente')->where('barbero_id', Auth::user()->id)
+                ->orderBy('created_at', 'DESC')->limit(3)->get();
+                    return view('home', ["portafolio"=>$portafolio, "comentarios" => $comentarios, "ocultarDashboard"=>$ocultarDashboard, "activo"=>'active', 'sumador'=> '0']);
             }else{
+                // Ver barberos
                 $users=User::where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                     ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    
-                    
                     ->get()->whereNotIn('id', [Auth::user()->id])->where('role_id', 1);
                     return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
@@ -68,10 +70,28 @@ class HomeController extends Controller
     public function perfil($id)
     {
         $user=User::findOrFail($id);
-        $portafolio = Portafolio::withoutTrashed()->where('barbero_id', $user->id)->get();
-        
+        $portafolio = Portafolio::withoutTrashed()
+            ->where(['barbero_id' => $user->id, 'activo' => 1])->get();
 
-        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0']);
+        if($user->role_id === 1){
+            $comentarios = Comentario::with('cliente')->where('barbero_id', $user->id)
+                ->orderBy('created_at', 'DESC')->limit(5)->get();
+        }else{
+            $comentarios = Comentario::with('barbero')->where('cliente_id', $user->id)
+                ->orderBy('created_at', 'DESC')->limit(5)->get();
+        }
+
+        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios]);
+    }
+
+    public function guardarComentario(ComentarioFormRequest $request){
+        $comentario = new Comentario;
+        $comentario->cliente_id = Auth::user()->id;
+        $comentario->barbero_id = $request->get('user_id');
+        $comentario->comentario = $request->get('comentario');
+        $comentario->save();
+
+        return self::perfil($request->get('user_id'));
     }
 
     public function password()
@@ -85,7 +105,7 @@ class HomeController extends Controller
             'mypassword' => 'required',
             'password' => 'required|confirmed|min:6|max:18',
         ];
-        
+
         $messages = [
             'mypassword.required' => 'El campo es requerido',
             'password.required' => 'El campo es requerido',
@@ -93,7 +113,7 @@ class HomeController extends Controller
             'password.min' => 'El mínimo permitido son 6 caracteres',
             'password.max' => 'El máximo permitido son 18 caracteres',
         ];
-        
+
         $validator = Validator::make($request->all(), $rules, $messages);
         if ($validator->fails()){
             return redirect('/password')->withErrors($validator);
