@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-              <h3 class="letras">Portafolio | <a href=""><button class="btn btn-success">Agregar</button></a></h3>
+              <h3 class="letras">Portafolio |  <a href=""><button class="btn color-botom">Agregar</button></a></h3>
             </div>
           </div><br/>
 
@@ -42,8 +42,33 @@
                     </td>
                     @endif
                     <td>
-                      <a href=""><button class="btn btn-info">Editar</button></a>
-                      <a href="" data-target="#modal-delete-{{$item->id}}" data-toggle="modal"><button class="btn btn-success">Eliminar</button></a>
+                      <a href=""><button class="btn color-botom-home">Editar</button></a>
+                      <div class="letras btn color-botom sombreado" data-toggle="modal" data-target="#myModa2">Eliminar</div>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModa2">
+                        <div class="modal-dialog letras">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title">Eliminar</h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  ¿Seguro que desea eliminar esta imagen?
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">Cerrar</button>
+                                <a href="" data-target="#modal-delete-{{$item->id}}" data-toggle="modal"><button class="btn color-botom-home">Eliminar</button></a>
+                                </div>
+
+                            </div>
+                        </div>
+                      </div><br>
                     </td>
                   </tr>
                   @endforeach
@@ -54,3 +79,7 @@
     </div>
 </main>
 @endsection
+
+
+
+            
