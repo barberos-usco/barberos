@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 //use App\Foto;
 use Hash;
 use Validator;
+use App\Horario;
 
 
 
@@ -72,6 +73,15 @@ class HomeController extends Controller
         
 
         return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0']);
+    }
+
+    public function horario($id)
+    {
+        $user=User::findOrFail($id);
+        $horario = Horario::where('barbero', $user->id)->get();
+        
+
+        return view('barbero.users.edit.especialidad', compact('user'));
     }
 
     public function password()

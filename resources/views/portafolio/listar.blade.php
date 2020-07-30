@@ -32,13 +32,13 @@
                     @if($item->activo == '1')
                     <td>
                         <div align="center">
-                          <img src="{{url('img/activo.png')}}" alt="Activo" title="Activo">
+                          <i class="fa fa-check fa-3x" aria-hidden="true" style="color:rgb(40, 200, 40);"></i>
                         </div>
                     </td>
                     @else
                     <td>
                         <div align="center">
-                          <img src="{{url('img/inactivo.png')}}" alt="Inactivo" title="Inactivo">
+                          <i class="fa fa-times fa-3x" aria-hidden="true" style="color:rgb(168, 22, 22);"></i>
                         </div>
                     </td>
                     @endif
