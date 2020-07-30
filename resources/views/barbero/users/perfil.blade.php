@@ -230,27 +230,40 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            @if (count($portafolio) > 0)
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    @if ($portafolio)
+                                        @foreach ($portafolio as $item)
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="{{$sumador}}" class="{{$activo}}"></li>
+                                        @endforeach
+                                    @endif
+                                </ol>
                                 <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="First slide">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Second slide">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{ url('/images/IMG_20200210_183357.jpg') }}" alt="Third slide">
-                                  </div>
+                                    @if ($portafolio)
+                                        @foreach ($portafolio as $item)
+                                            <div class="carousel-item {{$activo}}">
+                                            <img class="d-block w-100 portfolio-image" src="{{ url('/images/'.$item->ruta_foto) }}" alt="">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p>{{$item->descripcion}}</p>
+                                            </div>
+                                            </div>
+                                            {{$activo = ''}}
+                                        @endforeach
+                                    @endif
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
                                 </a>
-                            </div>
+                                </div>
+                            @else
+                                <h3 class="letras">No hay imágenes en el portafolio.</h3><br/>
+                            @endif
                         </div>
 
                         <!-- Modal footer -->

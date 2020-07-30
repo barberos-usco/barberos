@@ -25,7 +25,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right redondeo" style="font-size: 13px;" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item redondeo" href="{{ route('password.update') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fa fa-unlock-alt"></i></span>
+                                    <a class="dropdown-item redondeo" href="{{ route('barbero.users.password') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fa fa-unlock-alt"></i></span>
                                         {{ __('Cambiar Contraseña') }}
                                     </a>
                                     

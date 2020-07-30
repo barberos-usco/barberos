@@ -43,7 +43,33 @@
                     @endif
                     <td>
                       <a href="{{URL::action('PortafolioController@edit',$item->id)}}"><button class="btn btn-info">Editar</button></a>
-                      <a href="" data-target="#modal-delete-{{$item->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+                      <div class="letras btn color-botom sombreado" data-toggle="modal" data-target="#myModa2">Eliminar</div>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModa2">
+                        <div class="modal-dialog letras">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title">Eliminar</h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+                                {{Form::Open(array('action'=>array('PortafolioController@destroy',$item->id),'method'=>'delete'))}}
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  ¿Seguro que desea eliminar esta imagen?
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">No</button>
+                                <button type="submit" class="btn color-botom-home">Sí</button>
+                                {{Form::Close()}}
+                                </div>
+
+                            </div>
+                        </div>
+                      </div><br>
                     </td>
                   </tr>
                   @endforeach
@@ -54,3 +80,7 @@
     </div>
 </main>
 @endsection
+
+
+
+

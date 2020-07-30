@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
 Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
@@ -28,6 +28,9 @@ Route::get('/portafolio/edit/{id}', 'PortafolioController@edit')->name('portafol
 Route::post('/portafolio', 'PortafolioController@store')->name('portafolio.store');
 Route::patch('/portafolio/{id}', 'PortafolioController@update')->name('portafolio.update');
 Route::delete('/portafolio/{id}', 'PortafolioController@destroy')->name('portafolio.destroy');
+
+Route::get('/password', 'HomeController@password')->name('barbero.users.password');
+Route::post('/updatepassword', 'HomeController@updatePassword');
 
 Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
 
