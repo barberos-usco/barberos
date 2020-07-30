@@ -183,37 +183,35 @@
             </div><br>
         @endif
 
-        <div><br>
-            <h2>Valoración</h2>
-            <div class="valoracion">
-                <center>
-                <!-- Estrella 1 -->
-                <button>
-                    <i class="fas fa-star fa-3x"></i>
-                </button>
-
-                <!-- Estrella 2 -->
-                <button>
-                    <i class="fas fa-star fa-3x"></i>
-                </button>
-
-                <!-- Estrella 3 -->
-                <button>
-                    <i class="fas fa-star fa-3x"></i>
-                </button>
-
-                <!-- Estrella 4 -->
-                <button>
-                    <i class="fas fa-star fa-3x"></i>
-                </button>
-
-                <!-- Estrella 5 -->
-                <button>
-                    <i class="fas fa-star fa-3x"></i>
-                </button>
-                
-                </center>
-            </div>
+        <div><br><br>
+            @if(Auth::user()->role_id == 1)
+                <h2>Valoración del Barbero</h2>
+                <div class="valoracion">
+                    <i class="fas fa-star fa-3x checked"></i>
+                    <i class="fas fa-star fa-3x checked"></i>
+                    <i class="fas fa-star fa-3x checked"></i>
+                    <i class="fas fa-star fa-3x checked"></i>
+                    <i class="fas fa-star fa-3x checked"></i>
+                </div>
+            @else
+                <h2>Valoración cliente</h2>
+                <div class="valoracion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+                    <label for="radio1"><i class="fas fa-star "></i></label>
+                    
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+                    <label for="radio2"><i class="fas fa-star"></i></label>
+                    
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+                    <label for="radio3"><i class="fas fa-star "></i></label>
+                    
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+                    <label for="radio4"><i class="fas fa-star "></i></label>
+                    
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+                    <label for="radio5"><i class="fas fa-star "></i></label>
+                </div>
+            @endif
         </div>
 
         <div class="trabajos"><br>

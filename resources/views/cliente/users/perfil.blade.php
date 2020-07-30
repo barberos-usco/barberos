@@ -39,7 +39,7 @@
 
     <div class="">
         @if ($user->url_wallpa == null)
-            <img class="foto_wallpa_cliente sombreado" src="{{ url('/images/local-pre.png') }}" alt="Foto barbero"><br><br>
+            <img class="foto_wallpa_cliente sombreado" src="{{ url('/images/pre-wallpa.jpg') }}" alt="Foto barbero"><br><br>
         @else
             <img class="foto_wallpa_cliente sombreado" src="{{ url('/images/'. $user->url_wallpa) }}" alt="Foto barbero"><br><br>
         @endif

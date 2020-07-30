@@ -640,42 +640,29 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   --color-hover: #ffa400;
 }
 .valoracion {
-  display: flex;
+  position: relative;
+  overflow: hidden;
   display: inline-block;
-  direction: rtl;/* right to left */
-  unicode-bidi: bidi-override;/* bidi de bidireccional */
-  margin-left: 20%;
+  unicode-bidi: bidi-override;
+  margin-left: 27%;
 }
-.valoracion button {
-  background-color: initial;
-  border: 0;
-  color: var(--color-inactivo);
-  transition: 1s all;
+
+.valoracion input {
+  position: absolute;
+  top: -100px;
 }
-.valoracion button:hover {
-  cursor: pointer;
-  color: var(--color-hover);
-  transform: rotate(360deg);
+
+
+.valoracion label {
+  float: right;
+  color: #ccb75b;
+  font-size: 30px; 
 }
-button:nth-child(1):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(2):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(3):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(4):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(5):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
+
+.valoracion label:hover,
+.valoracion label:hover ~ label,
+.valoracion input:checked ~ label {
+  color: #ff9100;
 }
 
 .card-footer-home {
