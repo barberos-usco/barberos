@@ -241,6 +241,8 @@ h2 {
   color: #fff;
 }
 
+
+
 /*--------------------------------------------------------------
 # Cajas contenedoras
 --------------------------------------------------------------*/
@@ -297,12 +299,16 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-left: 10%;
   margin-top: 33%;
   float: right;
-  border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
--webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
--moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+  border-radius: 15px,
+}
+.subcaja3{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: auto;
+  width: 50%;
+  padding: 5%;
+  margin: auto;
+  border-radius: 15px;
 }
 .caja-clara{
 
@@ -451,6 +457,12 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 .img-fluid-perfil {
   max-width: 30%;
   height: auto;
+  
+}
+
+.img-foto-perfil{
+  height: 150px !important;
+  width: 120px !important;
 }
 
 .profile-perfil img {
@@ -458,10 +470,34 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   display: block;
   width: auto;
   border: 4px solid #463125;
-  margin-top: -34%;
-  margin-left: 65%;
+  margin-top: -74%;
+  margin-left: 25%;
 }
 
+.fondo-pg{
+  background-color: red;
+}
+
+.foto_wallpa_cliente{
+  width: 570px; 
+  height: 290px;
+  padding: 0px;
+  margin: 0%;
+  margin-left: 43.5%;
+  margin-top: -360px;
+  border-radius: 15px;
+}
+
+.caja-oscura_perfil_info_cliente{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 40%;
+  padding: 25px;
+  margin: 2%;
+  
+  border-radius: 15px;
+}
 
 
 
@@ -578,13 +614,24 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 15px;
 }
 .foto_local{
-  width: 100%;
+  width: 445px; 
   border-radius: 15px;
   margin: 0%;
+  height: 300px;
+}
+
+.tamaño-espacio-nav{
+  width: 170px !important;
+  
+}
+
+.centro{
+  text-align: center;
+  font-size: 15px !important;
 }
 .foto_servicio_perfil{
-  width: 100%;
-  border-radius: 15px;
+  width: 350px; 
+  border-radius: 30px;
   margin: 1%;
 }
 
@@ -593,42 +640,29 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   --color-hover: #ffa400;
 }
 .valoracion {
-  display: flex;
+  position: relative;
+  overflow: hidden;
   display: inline-block;
-  direction: rtl;/* right to left */
-  unicode-bidi: bidi-override;/* bidi de bidireccional */
-  margin-left: 20%;
+  unicode-bidi: bidi-override;
+  margin-left: 27%;
 }
-.valoracion button {
-  background-color: initial;
-  border: 0;
-  color: var(--color-inactivo);
-  transition: 1s all;
+
+.valoracion input {
+  position: absolute;
+  top: -100px;
 }
-.valoracion button:hover {
-  cursor: pointer;
-  color: var(--color-hover);
-  transform: rotate(360deg);
+
+
+.valoracion label {
+  float: right;
+  color: #ccb75b;
+  font-size: 30px; 
 }
-button:nth-child(1):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(2):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(3):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(4):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
-}
-button:nth-child(5):hover ~ button {
-  color: var(--color-hover);
-  transform: rotate(360deg);
+
+.valoracion label:hover,
+.valoracion label:hover ~ label,
+.valoracion input:checked ~ label {
+  color: #ff9100;
 }
 
 .card-footer-home {
@@ -678,7 +712,17 @@ button:nth-child(5):hover ~ button {
 
 }
 .tamaño-home{
-  width: 100%;
+  width: 200px;
+    height: 250px;
+    
+    
+    
+    
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+   
 }
 .column2 {
   float: left;
@@ -691,6 +735,13 @@ button:nth-child(5):hover ~ button {
   width: 40%;
   padding: 2%;
   margin-left: 5%;
+
+}
+.column2-perfil-cliente {
+  float: left;
+  width: 45%;
+  padding: 2%;
+  margin-left: 2.5%;
 
 }
 .columna {
@@ -744,7 +795,7 @@ border-radius: 12px;
 }
 
 .sombreado{
-  -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+  -moz-box-shadow: 15px 15px 15px -15px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgb(70, 49, 37);
 }
 .titulo{
@@ -841,6 +892,7 @@ section {
 
 .section-title {
   padding-bottom: 30px;
+  padding: 2%;
 }
 
 

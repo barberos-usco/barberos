@@ -11,7 +11,7 @@
                             
                         @endif
                         @else
-            @include('barbero.users.partials.barra-lateral')
+            @include('partials.barra-lateral')
             <main id="main"> 
         
 @endguest

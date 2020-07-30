@@ -51,9 +51,9 @@ class BarberoUsersController extends Controller
             
             $archivo->move('images', $nombre);
 
-            $foto=Foto::create(['ruta_foto'=>$nombre]);
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
 
-            $entrada['url_fotoPerfil']=$foto->id;
+            $entrada['url_fotoPerfil']=$nombre;
         }
         if($archivo=$request->file('url_wallpa')){
 
@@ -61,9 +61,9 @@ class BarberoUsersController extends Controller
             
             $archivo->move('images', $nombre);
 
-            $foto=Foto::create(['ruta_foto'=>$nombre]);
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
 
-            $entrada['url_wallpa']=$foto->id;
+            $entrada['url_wallpa']=$nombre;
         }
        
 
@@ -145,6 +145,27 @@ class BarberoUsersController extends Controller
 
         
         $entrada=$request->all();
+
+        if($archivo=$request->file('url_fotoPerfil')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
+
+            $entrada['url_fotoPerfil']=$nombre;
+        }
+        if($archivo=$request->file('url_wallpa')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
+
+            $entrada['url_wallpa']=$nombre;
+        }
 
         $user->update($entrada);
 

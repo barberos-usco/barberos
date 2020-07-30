@@ -112,13 +112,40 @@ class ClienteUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
-        $this->validate($request, [
-            'name' => ['required', 'string', 'max:100'],
-            'apellidos' => ['required', 'string', 'max:100'],
+        
+        $user=User::findOrFail($id);
+
+        
+        $entrada=$request->all();
+
+        if($archivo=$request->file('url_fotoPerfil')){
+
+            $nombre=$archivo->getClientOriginalName();
             
-        ]);
+            $archivo->move('images', $nombre);
+
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
+
+            $entrada['url_fotoPerfil']=$nombre;
+        }
+        if($archivo=$request->file('url_wallpa')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
+
+            $entrada['url_wallpa']=$nombre;
+        }
+
+        $user->update($entrada);
+
+
+
+        return redirect('/home');
     }
 
     /**

@@ -3,8 +3,14 @@
   <div class="d-flex flex-column">
 
     <div class="profile">
-      <img src="{{ asset('images/profile-img.jpg') }}" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name }}</a></h1>
+      @if(Auth::user()->url_fotoPerfil == null)
+                        <img src="{{ asset('images/profile.png') }}" alt="" class="img-fluid rounded-circle " style="width:140px; height:170px;">
+                    
+                    @else
+                    <img src="{{ asset('images/'.Auth::user()->url_fotoPerfil ) }}" alt="" class="img-fluid rounded-circle " style="width:140px; height:170px;">
+                    @endif
+      
+      <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name . " " .Auth::user()->apellidos}}</a></h1>
 
     </div>
 
@@ -15,7 +21,13 @@
           <li><a href="{{ route('barberos') }}"><span style="font-size: 1.2em; color: #463125;"><i class="  fas fa-users"></i></span> <span>Barberos</span></a></li>
         @endif
         <li><a href="{{ route('perfil', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a></li>
-        <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
+        @if(Auth::user()->role_id === 1)
+          <li><a href="{{ route('barbero.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
+        @else
+          <li><a href="{{ route('cliente.users.edit', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-edit"></i></span>Editar Perfil</a></li>
+        @endif
+        
+        
       </ul>
     </nav><!-- .nav-menu -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>

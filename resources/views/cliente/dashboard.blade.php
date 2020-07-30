@@ -19,7 +19,12 @@
                     @foreach ($users as $user)
 
                         <div class="card-home column4" style="">
-                            <img src="{{ asset('/images/profile-img.jpg') }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
+                            @if ($user->url_fotoPerfil == null) 
+                                <img src="{{ asset('images/profile.png') }}" class="img-fluid  radio_logo sombreado tamaño-home "  > 
+                            @else
+                                <img src="{{ asset('images/'. $user->url_fotoPerfil) }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
+                            @endif
+                            
                             <div class="card-body">
                                 <h5 class="card-title text-center" style="color: #352c23;"><b>{{ $user->name ." " . $user->apellidos  }}</b></h5>
                                 <div class="border-top my-3"></div>
