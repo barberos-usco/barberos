@@ -22,6 +22,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/barberos', 'HomeController@listarBarberos')->name('barberos');
 Route::get('/perfil/{id}', 'HomeController@perfil')->name('perfil');
+Route::get('/portafolio', 'PortafolioController@index')->name('portafolio');
+
 Route::get('/edit/{id}', 'BarberoUsersController@update')->name('edit');
 
 Route::resource('cliente/users', 'ClienteUsersController');

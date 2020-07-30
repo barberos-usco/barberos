@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a07765f-e057-4b7b-8ac5-1ef2d4d84813" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/6b80b9965b1ec4d47c31d7eccf8ce4b0-icono-de-rayo-amarillo-by-vexels.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Ceja.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/IMG_20200304_100131.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Masaje_Facial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Peluqueria.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Rasurado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/como-construir-una-jaula-de-Faraday-2-680x350.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/denkikouz3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/descargar (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/descargar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/img006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/local-pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pre-wallpa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarberoUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarberoUsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteUsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barbero/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barbero/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barbero/users/perfil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barbero/users/perfil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cliente/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cliente/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cliente/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cliente/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cliente/users/perfil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cliente/users/perfil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/barra-lateral.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/barra-lateral.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/perfil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/perfil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fPU7AuUYv0Ulx9lA84qHKVvlrX" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a07765f-e057-4b7b-8ac5-1ef2d4d84813" name="Default Changelist" comment="" />
+      <created>1596119051601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596119051601</updated>
+      <workItem from="1596119052958" duration="45000" />
+    </task>
+    <servers />
+  </component>
+</project>
