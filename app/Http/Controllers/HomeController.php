@@ -68,7 +68,10 @@ class HomeController extends Controller
     public function perfil($id)
     {
         $user=User::findOrFail($id);
-        return view('perfil', compact('user'));
+        $portafolio = Portafolio::withoutTrashed()->where('barbero_id', $user->id)->get();
+        
+
+        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0']);
     }
 
     public function password()
