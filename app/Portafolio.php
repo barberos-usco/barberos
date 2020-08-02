@@ -11,7 +11,7 @@ class Portafolio extends Model
 {
     use Notifiable, SoftDeletes;
 
-    protected $table = 'Portafolio';
+    protected $table = 'portafolio';
     public $timestamps = true;
 
     protected $dates = ['deleted_at'];

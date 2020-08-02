@@ -9,7 +9,7 @@
 
 @include('partials.barra-lateral')
 <main id="main">
-    
+
     <div class="caja-oscura_perfil_info_cliente row">
 
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
@@ -25,10 +25,10 @@
                 <b>Rol:</b> {{ $user->role['nombre_rol'] }}
             </div>
             <div class="profile-perfil ">
-                
+
                     @if($user->url_fotoPerfil == null)
                         <img src="{{ asset('images/profile.png') }}" alt=""  class="rounded-circle img-foto-perfil ">
-                    
+
                     @else
                         <img src="{{ asset('images/'. $user->url_fotoPerfil) }}" alt=""  class="rounded-circle img-foto-perfil ">
                     @endif
@@ -44,12 +44,12 @@
             <img class="foto_wallpa_cliente sombreado" src="{{ url('/images/'. $user->url_wallpa) }}" alt="Foto barbero"><br><br>
         @endif
     </div>
-        
 
 
 
 
-    
+
+
 
 
 
@@ -57,17 +57,19 @@
     <div class="caja letras sombreado"><br>
         <h1 class="text-center"><b>Interacción</b></h1><br>
         <div class="row">
-            
+
             <div class="column2-perfil-cliente letras  caja" >
                 <h2>Comentarios</h2>
-                <div class="comentarios letras-negras sombreado">
-                    <b>Andrés: </b><br>
-                    Me gustó el pelukeado, buen servicio.
-                </div>
-                <div class="comentarios letras-negras sombreado">
-                    <b>Camilo: </b><br>
-                    Un patán, me trasquiló, cero estrellas.
-                </div>
+                @if(count($comentarios) > 0)
+                    @foreach($comentarios as $comentario)
+                        <div class="comentarios letras-negras sombreado" style="overflow-wrap: break-word; word-wrap: break-word; width: 100%;">
+                            <b>{{ $comentario->barbero->name." ".$comentario->barbero->apellidos }} </b><br>
+                            <p>{{ $comentario->comentario }}</p>
+                        </div>
+                    @endforeach
+                @else
+                    <h5 class="letras">No hay comentarios.</h5>
+                @endif
             </div>
             <div class="column2-perfil-cliente letras  caja" >
                 <h2>Valoraciones</h2>
@@ -92,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>

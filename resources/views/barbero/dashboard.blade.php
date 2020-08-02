@@ -48,20 +48,18 @@
 	</div>
 	<div class="caja col-3">
 		<h2 class="letras">Comentarios</h2>
-        <div class="comentarios letras-negras sombreado">
-        	<h5><b>Pepito Pérez</b></h5>
-        	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Un buen servicio, me dio agua.
-        	</p>
-        	<h5><b>Pepito Pérez</b></h5>
-        	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Buena mano el señor barbero.
-        	</p>
-        	<h5><b>Pepito Pérez</b></h5>
-        	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Lo recomiendo, 10/10.
-        	</p>
-  		</div>
+		@if(count($comentarios) > 0)
+			@foreach($comentarios as $comentario)
+				<div class="comentarios letras-negras sombreado" style="overflow-wrap: break-word; word-wrap: break-word; width: 100%;">
+	        	<h5>{{ $comentario->cliente->name." ".$comentario->cliente->apellidos }}</h5>
+	        	<p style="font-size: 13px;">
+	        		{{ $comentario->comentario }}
+	        	</p>
+	        	</div>
+        	@endforeach
+		@else
+			<h5 class="letras">No hay comentarios.</h5>
+		@endif
   		<br/>
   		<h2 class="letras">Valoración</h2>
 		<p class="card-text">

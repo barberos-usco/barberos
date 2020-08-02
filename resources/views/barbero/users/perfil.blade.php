@@ -9,7 +9,6 @@
 
 @include('partials.barra-lateral')
 <main id="main">
-
     <div class="caja-oscura_perfil_info row">
 
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
@@ -29,10 +28,10 @@
                 @endif
             </div>
             <div class="profile-perfil ">
-                
+
                     @if($user->url_fotoPerfil == null)
                         <img src="{{ asset('images/profile.png') }}" alt=""  class="rounded-circle img-foto-perfil ">
-                    
+
                     @else
                         <img src="{{ asset('images/'. $user->url_fotoPerfil) }}" alt=""  class="rounded-circle img-foto-perfil ">
                     @endif
@@ -132,14 +131,16 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <div class="comentarios letras-negras sombreado">
-                                <b>Andrés: </b><br>
-                                Me gustó el pelukeado, buen servicio.
-                            </div>
-                            <div class="comentarios letras-negras sombreado">
-                                <b>Camilo: </b><br>
-                                Un patán, me trasquiló, cero estrellas.
-                            </div>
+                          @if(count($comentarios) > 0)
+                            @foreach($comentarios as $comentario)
+                              <div class="comentarios letras-negras sombreado" style="overflow-wrap: break-word;word-wrap: break-word; width: 100%;">
+                                <b>{{ $comentario->cliente->name." ".$comentario->cliente->apellidos }}: </b><br>
+                                <p>{{ $comentario->comentario }}</p>
+                              </div>
+                            @endforeach
+                          @else
+                            <h5 class="letras">No hay comentarios.</h5>
+                          @endif
                         </div>
 
                         <!-- Modal footer -->
@@ -163,19 +164,20 @@
                         <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <!-- Modal body -->
+                        {!!Form::open(array('url'=>'/comentario','method'=>'POST'))!!}
+                        {{Form::token()}}
                         <div class="modal-body">
                             <div class="comentarios letras-negras sombreado"><br>
+                              <input type="hidden" readonly="readonly" value="{{$user->id}}" name="user_id">
                                 <b>{{ Auth::user()->name }}: </b><br><br>
-                                {!! Form::textarea('Depilacion_cera',null,['class'=>'form-control caja-texto']) !!}
+                                <textarea class="form-control caja-texto" maxlength="150" name="comentario"></textarea>
                             </div>
-                            
                         </div>
-
                         <!-- Modal footer -->
                         <div class="modal-footer ">
                         <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">Guardar</button>
+                        <button type="submit" class="btn color-botom-home sombreado">Guardar</button>
+                        {{Form::Close()}}
                         </div>
 
                     </div>
@@ -198,16 +200,16 @@
                 <div class="valoracion">
                     <input id="radio1" type="radio" name="estrellas" value="5">
                     <label for="radio1"><i class="fas fa-star "></i></label>
-                    
+
                     <input id="radio2" type="radio" name="estrellas" value="4">
                     <label for="radio2"><i class="fas fa-star"></i></label>
-                    
+
                     <input id="radio3" type="radio" name="estrellas" value="3">
                     <label for="radio3"><i class="fas fa-star "></i></label>
-                    
+
                     <input id="radio4" type="radio" name="estrellas" value="2">
                     <label for="radio4"><i class="fas fa-star "></i></label>
-                    
+
                     <input id="radio5" type="radio" name="estrellas" value="1">
                     <label for="radio5"><i class="fas fa-star "></i></label>
                 </div>

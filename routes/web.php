@@ -28,6 +28,7 @@ Route::get('/portafolio/edit/{id}', 'PortafolioController@edit')->name('portafol
 Route::post('/portafolio', 'PortafolioController@store')->name('portafolio.store');
 Route::patch('/portafolio/{id}', 'PortafolioController@update')->name('portafolio.update');
 Route::delete('/portafolio/{id}', 'PortafolioController@destroy')->name('portafolio.destroy');
+Route::post('/comentario', 'HomeController@guardarComentario')->name('guardarcomentario');
 
 Route::get('/password', 'HomeController@password')->name('barbero.users.password');
 Route::post('/updatepassword', 'HomeController@updatePassword');
