@@ -7,7 +7,6 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
               <h3 class="letras">Portafolio | <a href="{{route('portafolio.create')}}"><button class="btn color-botom">Agregar</button></a></h3>
-
             </div>
           </div><br/>
 
@@ -55,7 +54,7 @@
                                 <h4 class="modal-title">Eliminar</h4>
                                 <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                 </div>
-
+                                {{Form::Open(array('action'=>array('PortafolioController@destroy',$item->id),'method'=>'delete'))}}
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                   ¿Seguro que desea eliminar esta imagen?
@@ -63,8 +62,9 @@
 
                                 <!-- Modal footer -->
                                 <div class="modal-footer ">
-                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">Cerrar</button>
-                                <a href="" data-target="#modal-delete-{{$item->id}}" data-toggle="modal"><button class="btn color-botom-home">Eliminar</button></a>
+                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">No</button>
+                                <button type="submit" class="btn color-botom-home">Sí</button>
+                                {{Form::Close()}}
                                 </div>
 
                             </div>
@@ -83,4 +83,4 @@
 
 
 
-            
+

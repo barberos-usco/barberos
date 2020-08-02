@@ -49,17 +49,17 @@
 	<div class="caja col-3">
 		<h2 class="letras">Comentarios</h2>
         <div class="comentarios letras-negras sombreado">
-        	<h5>Pepito Pérez</h5>
+        	<h5><b>Pepito Pérez</b></h5>
         	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda.
+        		Un buen servicio, me dio agua.
         	</p>
-        	<h5>Pepito Pérez</h5>
+        	<h5><b>Pepito Pérez</b></h5>
         	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda.
+        		Buena mano el señor barbero.
         	</p>
-        	<h5>Pepito Pérez</h5>
+        	<h5><b>Pepito Pérez</b></h5>
         	<p style="margin-left: 5%; text-align: justify; font-size: 13px;">
-        		Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda. Servicio de mierda.
+        		Lo recomiendo, 10/10.
         	</p>
   		</div>
   		<br/>

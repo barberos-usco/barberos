@@ -46,7 +46,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-group">
                   <label for="descripcion" class="letras">Descripción</label>
-                  <input type="text" name="descripcion" value="{{$portafolio->descripcion}}" class="form-control" placeholder="Descripción...">
+                  <input type="text" name="descripcion" maxlength="40" value="{{$portafolio->descripcion}}" class="form-control" placeholder="Descripción...">
                 </div>
               </div>
 
@@ -54,14 +54,15 @@
                 <div class="form-group">
                   <button class="btn color-botom" type="submit">Guardar</button>
                   <button class="btn color-botom" type="reset">Limpiar</button>
-                  <a href="{{ redirect('/porta')}}"><button class="btn color-botom">Atras</button></a>
+
+                  <a href="{{ redirect('HomeController@index')}}"><button class="btn color-botom">Atras</button></a>
                   
                 </div>
               </div>
 
             </div>
       {!!Form::close()!!}
-      
+
     </div>
 </main>
 @endsection

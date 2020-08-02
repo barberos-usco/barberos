@@ -41,7 +41,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-group">
                   <label for="descripcion" class="letras">Descripción</label>
-                  <input type="text" name="descripcion" value="{{old('descripcion')}}" class="form-control" placeholder="Descripción...">
+                  <input type="text" name="descripcion" maxlength="40" value="{{old('descripcion')}}" class="form-control" placeholder="Descripción...">
                 </div>
               </div>
 

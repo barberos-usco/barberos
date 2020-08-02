@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PortafolioFormRequest;
+use App\Http\Requests\PortafolioUpdateFormRequest;
 use App\Portafolio;
 use App\User;
 use Illuminate\Http\Request;
@@ -41,7 +42,7 @@ class PortafolioController extends Controller
     	return view("portafolio.edit",["portafolio"=>$portafolio]);
     }
 
-    public function update(PortafolioFormRequest $request, $id){
+    public function update(PortafolioUpdateFormRequest $request, $id){
     	$item = Portafolio::findOrFail($id);
     	$item->descripcion = $request->get('descripcion');
     	$item->activo = $request->get('estado');
