@@ -73,5 +73,5 @@
         @if(count($users)<= 0 && $buscar == '')
             <h3 style="color: #900">No hay registros</h3>
         @endif
-
+        
 </div>

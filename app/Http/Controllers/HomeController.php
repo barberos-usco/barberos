@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comentario;
+use App\Hoario;
 use App\Http\Requests\ComentarioFormRequest;
 use App\Portafolio;
 use App\User;
@@ -77,12 +78,14 @@ class HomeController extends Controller
         if($user->role_id === 1){
             $comentarios = Comentario::with('cliente')->where('barbero_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
+            $horarios = Horario::withoutTrashed()->where('id_barbero' , $user->id)->first();
         }else{
             $comentarios = Comentario::with('barbero')->where('cliente_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
+            $horarios = 1;
         }
 
-        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios]);
+        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios, "horarios" => $horarios]);
     }
 
     public function guardarComentario(ComentarioFormRequest $request){

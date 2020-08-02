@@ -50,7 +50,8 @@ Route::get('barbero/users/{user}/edit/especialidad', 'HorarioController@edit')->
 Route::patch('barbero/users/{user}/edit/especialidad', 'HorarioController@update')->name('barbero.users.update.especialidad');
 
 
-Route::patch('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
+Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
+Route::patch('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.update.servicios');
 
 Route::get('barbero/users/{user}/perfil','BarberoUsersController@perfil')->name('barbero.users.perfil');
 

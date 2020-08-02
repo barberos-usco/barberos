@@ -76,31 +76,31 @@
            <table class="celda-larga">
                <tr>
                    <td class="tamaño">Lunes</td>
-                   <td class="tamaño">8:00 am - 5:30 pm</td>
+                   <td class="tamaño">{{ $horarios->lunes }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Martes</td>
-                   <td class="tamaño">8:00 am - 5:30 pm</td>
+                   <td class="tamaño">{{ $horarios->martes }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Miércoles</td>
-                   <td class="tamaño">8:00 am - 5:30 pm</td>
+                   <td class="tamaño">{{ $horarios->miercoles }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Jueves</td>
-                   <td class="tamaño">8:00 am - 5:30 pm</td>
+                   <td class="tamaño">{{ $horarios->jueves }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Viérnes</td>
-                   <td class="tamaño">8:00 am - 5:30 pm</td>
+                   <td class="tamaño">{{ $horarios->viernes }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Sábado</td>
-                   <td class="tamaño">10:00 am - 3:30 pm</td>
+                   <td class="tamaño">{{ $horarios->sabado }}</td>
                </tr>
                <tr>
                    <td class="tamaño">Domingo</td>
-                   <td class="tamaño">1:00 pm - 4:00 pm</td>
+                   <td class="tamaño">{{ $horarios->domingo }}</td>
                </tr>
             </table>
 
@@ -145,7 +145,7 @@
 
                         <!-- Modal footer -->
                         <div class="modal-footer ">
-                        <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">Cerrar</button>
                         </div>
 
                     </div>
@@ -316,6 +316,7 @@
 
     </div>
     <br><br>
+    @include('partials.footer')
 </main><!-- End #main -->
 
 @endsection

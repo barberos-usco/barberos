@@ -7,6 +7,7 @@
     <title>@yield('title','Default') | BarbApp</title>
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="shortcut icon" href="{{{ asset('/images/favicon.ico') }}}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     
     

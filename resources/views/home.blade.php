@@ -15,5 +15,6 @@
             @include('cliente.dashboard')
         @endif
     </div>
+    @include('partials.footer')
 </main>
 @endsection

@@ -99,6 +99,7 @@
 
     </div>
     <br><br>
+    @include('partials.footer')
 </main><!-- End #main -->
 
 @endsection
