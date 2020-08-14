@@ -41,6 +41,33 @@
                                     </form>
                                 </div>
                             </li>
+                            <li>
+                                <div class="btn color-manual-nav redondeo sombreado" data-toggle="modal" data-target="#myModal0"> ?</div>
+                                <!-- The Modal para barberos -->
+                                <div class="modal" id="myModal0">
+                                    <div class="modal-dialog modal-large">
+                                        <div class="modal-content letras ">
+                    
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title"><b>Barra de navegación</b></h4>
+                                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                            </div>
+                    
+                                            <!-- Modal body -->
+                                            <div class="modal-body text-justify">
+                                              <h4><p>Donde el usuario podrá hacer dos acciones, al dar click en su nombre o flecha, se le dará la opción de cambio de contraseña o de cerrar sesión, los llevará a la vista correspondiente.</p></h4>
+                                            </div>
+                    
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer ">
+                                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                     @endguest
                 </ul>
             </div>

@@ -145,21 +145,21 @@
 			</p>
 			<div class="card-footer-home">
 				<a href="{{ route('portafolio') }}" class="btn color-botom-home text-center" >Personalizar portafolio</a>
-				<div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal"> ?</div>
+				<div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal3"> ?</div>
                                 <!-- The Modal para barberos -->
-                                <div class="modal" id="myModal">
+                                <div class="modal" id="myModal3">
                                     <div class="modal-dialog modal-large">
                                         <div class="modal-content letras ">
                     
                                             <!-- Modal Header -->
                                             <div class="modal-header">
-                                            <h4 class="modal-title">Incio Sesión</h4>
+                                            <h4 class="modal-title"><b>Personalizar portafolio</b></h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
                     
                                             <!-- Modal body -->
                                             <div class="modal-body text-justify">
-                                              <h4><p>Para iniciar sesión, se debe colocar el correo electrónico y la contraseña. <br> Si no tiene una cuenta, puede registrarse.</p></h4>
+                                              <h4><p>Por este enlace, se da la gestión de las imágenes que suba y el estado de ellas.</p></h4>
                                             </div>
                     
                                             <!-- Modal footer -->

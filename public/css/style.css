@@ -680,6 +680,15 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   font-size: 10px;
   padding: 4px;
 }
+.color-manual-nav{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+  margin-top: 100%;
+}
 
 .valoracion2 {
   display: flex;
@@ -803,6 +812,7 @@ border-radius: 12px;
 .color-botom-borrar{
   background-color: rgba(125,109,96,1);
   color: white;
+  border-radius: 15px;
 
 }
 .color-registrate{
