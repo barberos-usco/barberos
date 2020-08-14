@@ -13,6 +13,31 @@
 
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
               <b>  {{ $user->name ." ". $user->apellidos }}  </b>
+              <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal1">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Información del Barbero</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Aquí se puede encontrar los datos básicos del usuario-barbero, como su edad, género, rol y una imagen del usuario.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="caja-interna_perfil_info letras  col-md-6 text-center sombreado" >
                 <b>Edad:</b> {{ $user->fecha_nacimiento }}
@@ -40,7 +65,33 @@
     </div>
     <div class="caja-oscura_perfil_especialidad_horario letras sombreado">
             <br>
-           <h2>Especialidades</h2>
+           <h2>Especialidades | 
+                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal2"> ?</div>
+                <!-- The Modal para barberos -->
+                <div class="modal" id="myModal2">
+                    <div class="modal-dialog modal-large">
+                        <div class="modal-content letras ">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title"><b>Especialidades</b></h4>
+                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-justify">
+                            <h4><p>Se pueden ver las especialidades que tiene el barbero y un rango de precio.</p></h4>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer ">
+                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+           </h2>
            <table class="celda-larga">
                <tr>
                    <td class="tamaño">Peluquería</td>
@@ -72,7 +123,33 @@
                </tr>
             </table>
             <br><br><br>
-           <h2>Horarios</h2>
+           <h2>Horarios | 
+                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal3"> ?</div>
+                <!-- The Modal para barberos -->
+                <div class="modal" id="myModal3">
+                    <div class="modal-dialog modal-large">
+                        <div class="modal-content letras ">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title"><b>Horarios</b></h4>
+                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-justify">
+                            <h4><p>Se pueden ver los horarios que tiene el barbero.</p></h4>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer ">
+                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+           </h2>
            <table class="celda-larga">
                <tr>
                    <td class="tamaño">Lunes</td>
@@ -113,9 +190,90 @@
         @else
             <img class="foto_local sombreado" src="{{ url('/images/'. $user->url_wallpa) }}" alt="Foto barbero"><br><br>
         @endif
-        <h2>Ubicación</h2><br>
+        <h2>Ubicación |
+            <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal4"> ?</div>
+                <!-- The Modal para barberos -->
+                <div class="modal" id="myModal4">
+                    <div class="modal-dialog modal-large">
+                        <div class="modal-content letras ">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title"><b>Ubicación</b></h4>
+                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-justify">
+                            <h4><p>Se da la posición más acertada del lugar de trabajo del barbero(a) por medio de Google Maps.</p></h4>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer ">
+                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </h2><br>
         <iframe class="mapa_google sombreado" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15938.151498328249!2d-75.3062321!3d2.948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1594932655980!5m2!1ses!2sco"  allowfullscreen="" aria-hidden="true" tabindex="0"></iframe><br><br>
-        <h2>Comentarios</h2>
+        <h2>Comentarios |
+            @if(Auth::user()->role_id == 1)
+                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal5"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal5">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Comentarios</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Para el usuario-barbero, sólo puede ver los comentarios hechos.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal5"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal5">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Comentarios</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Para el usuario-cliente, puede hacer la acción de crear un nuevo comentario.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+        </h2>
         @if(Auth::user()->role_id == 1)
             <div class="comentarios letras-negras btn sombreado" data-toggle="modal" data-target="#myModal">Click para ver los comentarios.</div>
             <!-- The Modal para barberos -->
@@ -187,7 +345,33 @@
 
         <div><br><br>
             @if(Auth::user()->role_id == 1)
-                <h2>Valoración del Barbero</h2>
+                <h2>Valoración del Barbero | 
+                    <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal6"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal6">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Valoración</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Para el usuario-barbero, sólo puede ver la valoración ya calculada.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </h2>
                 <div class="valoracion">
                     <i class="fas fa-star fa-3x checked"></i>
                     <i class="fas fa-star fa-3x checked"></i>
@@ -196,7 +380,33 @@
                     <i class="fas fa-star fa-3x checked"></i>
                 </div>
             @else
-                <h2>Valoración cliente</h2>
+                <h2>Valoración cliente |
+                    <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal6"> ?</div>
+                        <!-- The Modal para barberos -->
+                        <div class="modal" id="myModal6">
+                            <div class="modal-dialog modal-large">
+                                <div class="modal-content letras ">
+    
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title"><b>Valoración</b></h4>
+                                    <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                    </div>
+    
+                                    <!-- Modal body -->
+                                    <div class="modal-body text-justify">
+                                    <h4><p>Para el usuario-cliente, puede hacer la acción de valorar al usuario.</p></h4>
+                                    </div>
+    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer ">
+                                    <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                </h2>
                 <div class="valoracion">
                     <input id="radio1" type="radio" name="estrellas" value="5">
                     <label for="radio1"><i class="fas fa-star "></i></label>
@@ -217,7 +427,33 @@
         </div>
 
         <div class="trabajos"><br>
-            <h2>Trabajos</h2>
+            <h2>Trabajos |
+                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal7"> ?</div>
+                        <!-- The Modal para barberos -->
+                        <div class="modal" id="myModal7">
+                            <div class="modal-dialog modal-large">
+                                <div class="modal-content letras ">
+    
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title"><b>Trabajos</b></h4>
+                                    <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                    </div>
+    
+                                    <!-- Modal body -->
+                                    <div class="modal-body text-justify">
+                                    <h4><p>Se pueden ver las imágenes que el barbero sube en su dashboard o portafolio.</p></h4>
+                                    </div>
+    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer ">
+                                    <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+            </h2>
             <div class="comentarios letras-negras btn sombreado" data-toggle="modal" data-target="#myModa2">Click para ver los trabajos.</div>
             <!-- The Modal -->
             <div class="modal" id="myModa2">
@@ -288,7 +524,33 @@
 
 
     <div class="caja-perfil letras sombreado">
-        <h2 class="text-center">Servicios por Especialidad</h2><br><br><br>
+        <h2 class="text-center">Servicios por Especialidad |
+            <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal8"> ?</div>
+            <!-- The Modal para barberos -->
+            <div class="modal" id="myModal8">
+                <div class="modal-dialog modal-large">
+                    <div class="modal-content letras ">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title"><b>Servicios por Especialidad</b></h4>
+                        <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body text-justify">
+                        <h4><p>EL usuario puede observar las especialidades que el barbero ha elegido, con una imagen y descripción.</p></h4>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer ">
+                        <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </h2><br>
         <div class="row">
             <div class="column2-perfil letras  " >
                 <h3>Peluquería</h3><br>

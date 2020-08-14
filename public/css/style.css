@@ -699,6 +699,17 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   margin-top: -35%;
   margin-left: 50%;
 }
+.color-manual-barberos{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+  margin-top: -10%;
+  margin-left: 97%;
+  position: static;
+}
 
 .valoracion2 {
   display: flex;

@@ -1,20 +1,69 @@
 <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid  radio_logo sombreado " alt="Responsive image" width="1100" >
 <div class="caja">
+    
 
         {!! Form::open(array('url'=>(Auth::user()->role_id === 1) ? 'barberos' : 'home','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
             <div class="form-inline buscador">
                 <input class="form-control mr-sm-2 redondeo alargar_buscador" type="search" placeholder="Buscar" aria-label="Search" name="buscar" value="{{$buscar}}">
                 <button class="btn color-botom-2 my-2 my-sm-0 redondeo letras" type="submit">Buscar</button>
+                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal1">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Buscador</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Buscador de barberos, nombre o apellido.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
             </div>
         {{Form::close()}}
+        <div class="btn color-manual-barberos redondeo sombreado" data-toggle="modal" data-target="#myModal2"> ?</div>
+    <!-- The Modal para barberos -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog modal-large">
+            <div class="modal-content letras ">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title"><b>Barberos</b></h4>
+                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-justify">
+                <h4><p>Lista de todos los barberos registrados, con foto, nombre, valoración de este y un botón para ver el perfil.</p></h4>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer ">
+                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
 
 
         <div class="row">
-
-
                 @if ($users)
                     @foreach ($users as $user)
 
