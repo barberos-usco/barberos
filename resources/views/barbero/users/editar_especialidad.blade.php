@@ -20,7 +20,33 @@
                 
                 {!! Form::model($horario,['method'=>'PATCH', 'action'=>['HorarioController@update', $horario->id], 'files'=>true], ['class'=>'form-inline']) !!}
                     <div class="section-title">
-                        <h2>Editar Horario</h2>
+                        <h2>Editar Horario |
+                            <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                            <!-- The Modal para barberos -->
+                            <div class="modal" id="myModal1">
+                                <div class="modal-dialog modal-large">
+                                    <div class="modal-content letras ">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                        <h4 class="modal-title"><b>Editar Horario</b></h4>
+                                        <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body text-justify">
+                                        <h4><p>En esta primera sección, podremos elegir los horarios fijos por días.</p></h4>
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer ">
+                                        <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
                     </div>
                     <div class="row">
                         <div class="column letras" >

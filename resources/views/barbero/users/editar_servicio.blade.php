@@ -15,7 +15,33 @@
             <div class="card-body ">
                 {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}
                 <div class="section-title">
-                    <h2>Editar Servicios por Especialidad</h2>
+                    <h2>Editar Servicios por Especialidad |
+                        <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                        <!-- The Modal para barberos -->
+                        <div class="modal" id="myModal1">
+                            <div class="modal-dialog modal-large">
+                                <div class="modal-content letras ">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title"><b>Editar Servicios por Especialidad</b></h4>
+                                    <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body text-justify">
+                                    <h4><p>En esta vista, podremos editar los servicios que elegimos anteriormente, podemos subir una imagen acorde al servicio y una descripción personalizada de ella; si el usuario-barbero no hace esta personalización, se le asignaría una imagen y texto genérico.</p></h4>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer ">
+                                    <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </h2>
                 </div>
                 <h5 class="blanco">** Las que no modifique, se le asignará imagen y texto por defecto **</h5> <br>
                 <div class="caja-oscura">

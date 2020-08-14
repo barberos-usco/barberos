@@ -11,7 +11,33 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-registro ">
-                <div class="card-header-registro letras sombreado"><h2>{{ __('Iniciar Sesión') }}</h2></div>
+                <div class="card-header-registro letras sombreado"><h2>{{ __('Iniciar Sesión') }}
+                    <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal1">
+                        <div class="modal-dialog modal-large">
+                            <div class="modal-content letras ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title"><b>Iniciar Sesión</b></h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-justify">
+                                <h4><p>Esta es la segunda vista, más sobria, para iniciar sesión, tiene los mismos campos.</p></h4>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </h2></div>
 
                 <div class="card-body-registro letras sombreado">
                     <form method="POST" action="{{ route('login') }}">
@@ -51,7 +77,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Recordar mi cuenta') }}
                                     </label>
                                 </div>
                             </div>

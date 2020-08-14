@@ -15,7 +15,33 @@
                         
                             {!! Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}
                                 <div class="section-title">
-                                    <h2>Editar Perfil</h2>
+                                    <h2>Editar Perfil |
+                                        <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                                        <!-- The Modal para barberos -->
+                                        <div class="modal" id="myModal1">
+                                            <div class="modal-dialog modal-large">
+                                                <div class="modal-content letras ">
+                    
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                    <h4 class="modal-title"><b>Editar Perfil</b></h4>
+                                                    <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                    
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body text-justify">
+                                                    <h4><p>En la vista de editar perfil, el usuario-barbero puede editar toda su información básica, la misma que fue suministrada a la hora de registrarse.</p></h4>
+                                                    </div>
+                    
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer ">
+                                                    <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h2>
                                 </div>
                                 <div class="subcaja sombreado row">
                                     <div class="col-md-12">
@@ -66,10 +92,61 @@
                             <div class="col-md-12 card-body  ">
                                 {!! Form::label('editar-especializacion', 'Editar Horarios y Especialización: ',['class'=>'letras']) !!}<br>
                                 <a class="btn color-botom sombreado" href="{{ route('barbero.users.edit.especialidad', $user->id) }}">Editar</a>
+                                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal2"> ?</div>
+                                <!-- The Modal para barberos -->
+                                <div class="modal" id="myModal2">
+                                    <div class="modal-dialog modal-large">
+                                        <div class="modal-content letras ">
+            
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title"><b>Editar Horarios y Especialización</b></h4>
+                                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                            </div>
+            
+                                            <!-- Modal body -->
+                                            <div class="modal-body text-justify">
+                                            <h4><p>En la vista de editar perfil, el usuario-cliente puede editar toda su información básica, la misma que fue suministrada a la hora de registrarse.</p></h4>
+                                            </div>
+            
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer ">
+                                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-12 card-body  ">
                                 {!! Form::label('editar-trabajos', 'Editar Servicios por Especialidad: ',['class'=>'letras']) !!}<br>
                                 <a class="btn color-botom sombreado" href="{{ route('barbero.users.edit.servicios', $user->id) }}">Editar</a>
+                                <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal3"> ?</div>
+                                <!-- The Modal para barberos -->
+                                <div class="modal" id="myModal3">
+                                    <div class="modal-dialog modal-large">
+                                        <div class="modal-content letras ">
+            
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title"><b>Editar Servicios por Especialidad</b></h4>
+                                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                            </div>
+            
+                                            <!-- Modal body -->
+                                            <div class="modal-body text-justify">
+                                            <h4><p>En la vista de editar perfil, el usuario-cliente puede editar toda su información básica, la misma que fue suministrada a la hora de registrarse.</p></h4>
+                                            </div>
+            
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer ">
+                                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>

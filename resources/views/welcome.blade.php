@@ -88,10 +88,23 @@
                             </div>
     
                             <div class="form-group row mb-0">
+                                
                                 <div class="col-md-8 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+    
+                                        <label class="form-check-label" for="remember">
+                                            {{ __('Recordar mi cuenta') }}
+                                        </label>
+                                    </div><br>
                                     <button type="submit" class="btn color-botom">
                                         {{ __('Ingresar') }}
                                     </button><wbr />
+                                    @if (Route::has('password.request'))
+                                        <a class="btn " href="{{ route('password.request') }}">
+                                            {{ __('Olvidé mi contrseña') }}
+                                        </a>
+                                     @endif
                                     <p>¿Aún no tienes cuenta?
                                     <a class="btn btn-link color-registrate " href="/register">
                                         {{ __('Regístrate') }}

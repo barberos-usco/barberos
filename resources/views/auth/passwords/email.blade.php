@@ -19,8 +19,34 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card-registro ">
-                <div class="card-header-registro letras sombreado"><h2>{{ __('Cambiar Contraseña') }}</h2></div>
+            <div class="card-registro "><br><br><br><br>
+                <div class="card-header-registro letras sombreado"><h2>{{ __('Olvidé mi contraseña') }} |
+                    <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                    <!-- The Modal para barberos -->
+                    <div class="modal" id="myModal1">
+                        <div class="modal-dialog modal-large">
+                        <div class="modal-content letras ">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title"><b>Olvidé mi contraseña</b></h4>
+                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-justify">
+                            <h4><p>En esta vista, podremos pedir al sistema que nos envíe al correo electrónico un enlace para hacer el cambio de contraseña.</p></h4>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer ">
+                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                </h2></div>
 
                 <div class="card-body-registro letras sombreado">
                     @if (session('status'))
@@ -61,10 +87,10 @@
 </div>
 @guest
     @if (Route::has('register'))
-              
+</main>   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     @endif
-        @include('barbero.users.partials.footer')
-        </main>             
+        @include('partials.footer')
+                    
     @else
 @endguest
 
