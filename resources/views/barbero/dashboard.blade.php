@@ -6,7 +6,31 @@
 	</div>
 	</div>
 	<div class="card-footer-home">
-		<h1 class="letras text-center"><b>Dashboard</b></h1>
+		<h1 class="letras text-center"><b>Dashboard</b> <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal"> ?</div>
+			<!-- The Modal para barberos -->
+			<div class="modal" id="myModal">
+				<div class="modal-dialog modal-large">
+					<div class="modal-content letras ">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+						<h4 class="modal-title"><b>Dashboard</b></h4>
+						<button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body text-justify">
+						  <h4><p>Primera vista del usuario-barbero, donde podrá hacer gestión de su trabajo y a la vez ver sus comentarios y valoraciones.</p></h4>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer ">
+						<button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+						</div>
+
+					</div>
+				</div>
+			</div></h1>
 	</div>	
 	<div class="row">
 		<div class="caja col-6">
@@ -47,7 +71,31 @@
 			
 		</div>
 		<div class="caja col-5">
-			<h2 class="letras">Comentarios</h2>
+			<h2 class="letras">Comentarios <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+				<!-- The Modal para barberos -->
+				<div class="modal" id="myModal1">
+					<div class="modal-dialog modal-large">
+						<div class="modal-content letras ">
+	
+							<!-- Modal Header -->
+							<div class="modal-header">
+							<h4 class="modal-title"><b>Comentarios</b></h4>
+							<button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+							</div>
+	
+							<!-- Modal body -->
+							<div class="modal-body text-justify">
+							  <h4><p>En esta sección, sólo se muestran los últimos 5 comentarios hechos por los clientes al barbero.</p></h4>
+							</div>
+	
+							<!-- Modal footer -->
+							<div class="modal-footer ">
+							<button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+							</div>
+	
+						</div>
+					</div>
+				</div></h2>
 			@if(count($comentarios) > 0)
 				@foreach($comentarios as $comentario)
 					<div class="comentarios letras-negras sombreado" style="overflow-wrap: break-word; word-wrap: break-word; width: 100%;">
@@ -61,7 +109,31 @@
 				<h5 class="letras">No hay comentarios.</h5>
 			@endif
 			<br/>
-			<h2 class="letras">Valoración</h2>
+			<h2 class="letras">Valoración <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal2"> ?</div>
+				<!-- The Modal para barberos -->
+				<div class="modal" id="myModal2">
+					<div class="modal-dialog modal-large">
+						<div class="modal-content letras ">
+	
+							<!-- Modal Header -->
+							<div class="modal-header">
+							<h4 class="modal-title"><b>Valoración</b></h4>
+							<button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+							</div>
+	
+							<!-- Modal body -->
+							<div class="modal-body text-justify">
+							  <h4><p>En esta sección, se calcula las valoraciones, se promedia y se expone el valor final.</p></h4>
+							</div>
+	
+							<!-- Modal footer -->
+							<div class="modal-footer ">
+							<button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+							</div>
+	
+						</div>
+					</div>
+				</div></h2>
 			<p class="card-text">
 				<div class="valoracion2 sombreado">
 					<i class="fas fa-star checked"></i>
@@ -73,6 +145,31 @@
 			</p>
 			<div class="card-footer-home">
 				<a href="{{ route('portafolio') }}" class="btn color-botom-home text-center" >Personalizar portafolio</a>
+				<div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal"> ?</div>
+                                <!-- The Modal para barberos -->
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog modal-large">
+                                        <div class="modal-content letras ">
+                    
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Incio Sesión</h4>
+                                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                            </div>
+                    
+                                            <!-- Modal body -->
+                                            <div class="modal-body text-justify">
+                                              <h4><p>Para iniciar sesión, se debe colocar el correo electrónico y la contraseña. <br> Si no tiene una cuenta, puede registrarse.</p></h4>
+                                            </div>
+                    
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer ">
+                                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
 			</div>
 		</div>
 		

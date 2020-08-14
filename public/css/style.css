@@ -672,6 +672,15 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
   border-radius: 13px;
 }
 
+.color-manual{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+}
+
 .valoracion2 {
   display: flex;
   display: inline-block;
@@ -778,7 +787,16 @@ border-radius: 12px;
   color: white;
   border-radius: 12px;
   /*margin-left: 22%;*/
-  display: flex;
+  width: 94%;
+  justify-content: center;
+
+}
+.color-botom-home-inline{
+  background-color:#7F6953;
+  color: white;
+  border-radius: 12px;
+  /*margin-left: 22%;*/
+  display: inline;
   justify-content: center;
 
 }
