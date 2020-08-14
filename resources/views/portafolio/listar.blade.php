@@ -1,0 +1,110 @@
+@extends('layouts.main')
+@section('title','Listar Portafolio')
+@section('content')
+@include('partials.barra-lateral')
+<main id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+              <h3 class="letras">Portafolio <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
+                <!-- The Modal para barberos -->
+                <div class="modal" id="myModal1">
+                    <div class="modal-dialog modal-large">
+                        <div class="modal-content letras ">
+    
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title"><b>Portafolio</b></h4>
+                            <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                            </div>
+    
+                            <!-- Modal body -->
+                            <div class="modal-body text-justify">
+                              <h4><p>En esta vista, el usuario-barbero podrá hacer gestión de las imagenes, agregar nuevas o pudiendolas editar en cada una de sus campos (Descripción o estado) o eliminarlas con una confirmación.</p></h4>
+                            </div>
+    
+                            <!-- Modal footer -->
+                            <div class="modal-footer ">
+                            <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div> | <a href="{{route('portafolio.create')}}"><button class="btn color-botom">Agregar</button></a></h3>
+            </div>
+          </div><br/>
+
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-condensed table-hover">
+                  <thead>
+                    <th class="letras" style="text-align:center;">Imagen</th>
+                    <th class="letras">Descripción</th>
+                    <th class="letras" style="text-align:center;">Estado</th>
+                    <th class="letras">Opciones</th>
+                  </thead>
+                  @foreach($portafolio as $item)
+                  <tr>
+                    <td>
+                        <div align="center">
+                          <img src="{{url('/images/'.$item->ruta_foto)}}" height="100px" width="100px" class="img-thumbnail">
+                        </div>
+                    </td>
+                    <td class="letras">{{ $item->descripcion }}</td>
+                    @if($item->activo == '1')
+                    <td>
+                        <div align="center">
+                          <i class="fa fa-check fa-3x" aria-hidden="true" style="color:rgb(40, 200, 40);"></i>
+                        </div>
+                    </td>
+                    @else
+                    <td>
+                        <div align="center">
+                          <i class="fa fa-times fa-3x" aria-hidden="true" style="color:rgb(168, 22, 22);"></i>
+                        </div>
+                    </td>
+                    @endif
+                    <td>
+                      <a href="{{URL::action('PortafolioController@edit',$item->id)}}"><button class="btn color-botom-home-inline">Editar</button></a>
+                      <div class="letras btn color-botom sombreado" data-toggle="modal" data-target="#myModa2">Eliminar</div>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModa2">
+                        <div class="modal-dialog letras">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title">Eliminar</h4>
+                                <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
+                                </div>
+                                {{Form::Open(array('action'=>array('PortafolioController@destroy',$item->id),'method'=>'delete'))}}
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  ¿Seguro que desea eliminar esta imagen?
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer ">
+                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">No</button>
+                                <button type="submit" class="btn color-botom-home">Sí</button>
+                                {{Form::Close()}}
+                                </div>
+
+                            </div>
+                        </div>
+                      </div><br>
+                    </td>
+                  </tr>
+                  @endforeach
+                </table>
+              </div>
+            </div>
+          </div>
+    </div>
+</main>
+@endsection
+
+
+
+

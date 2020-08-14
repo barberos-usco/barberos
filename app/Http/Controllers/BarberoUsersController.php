@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\UpdateRequest;
 use App\User;
 use App\Foto;
+use App\Horario;
 
 class BarberoUsersController extends Controller
 {
@@ -50,9 +51,9 @@ class BarberoUsersController extends Controller
             
             $archivo->move('images', $nombre);
 
-            $foto=Foto::create(['ruta_foto'=>$nombre]);
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
 
-            $entrada['url_fotoPerfil']=$foto->id;
+            $entrada['url_fotoPerfil']=$nombre;
         }
         if($archivo=$request->file('url_wallpa')){
 
@@ -60,9 +61,9 @@ class BarberoUsersController extends Controller
             
             $archivo->move('images', $nombre);
 
-            $foto=Foto::create(['ruta_foto'=>$nombre]);
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
 
-            $entrada['url_wallpa']=$foto->id;
+            $entrada['url_wallpa']=$nombre;
         }
        
 
@@ -86,6 +87,30 @@ class BarberoUsersController extends Controller
         //
     }
 
+    public function especialidad($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.editar_especialidad', compact('user'));
+    }
+    
+    public function horario($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.editar_especialidad', compact('user'));
+
+
+    }
+
+    public function servicio($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.editar_servicio', compact('user'));
+    }
+
+
     /**
      * Show thesds form for editing the specified resource.
      *
@@ -99,6 +124,14 @@ class BarberoUsersController extends Controller
         return view('barbero.users.edit', compact('user'));
     }
 
+
+    public function perfil($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('barbero.users.perfil', compact('user'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -106,17 +139,39 @@ class BarberoUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $user=User::findOrFail($id);
 
+        
         $entrada=$request->all();
+
+        if($archivo=$request->file('url_fotoPerfil')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
+
+            $entrada['url_fotoPerfil']=$nombre;
+        }
+        if($archivo=$request->file('url_wallpa')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
+
+            $entrada['url_wallpa']=$nombre;
+        }
 
         $user->update($entrada);
 
 
 
-        return redirect('/barbero/users');
+        return redirect('/home');
 
     }
 

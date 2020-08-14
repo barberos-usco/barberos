@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\UpdateRequest;
 use App\User;
 
 class ClienteUsersController extends Controller
@@ -23,6 +23,13 @@ class ClienteUsersController extends Controller
     {
         $users=User::all();
         return view('cliente.users.index', compact('users'));
+    }
+
+    public function perfil($id)
+    {
+        $user=User::findOrFail($id);
+
+        return view('cliente.users.perfil', compact('user'));
     }
 
     /**
@@ -93,7 +100,9 @@ class ClienteUsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user=User::findOrFail($id);
+
+        return view('cliente.users.edit', compact('user'));
     }
 
     /**
@@ -103,9 +112,40 @@ class ClienteUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
-        //
+        
+        $user=User::findOrFail($id);
+
+        
+        $entrada=$request->all();
+
+        if($archivo=$request->file('url_fotoPerfil')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=User::create(['url_fotoPerfil'=>$nombre]);
+
+            $entrada['url_fotoPerfil']=$nombre;
+        }
+        if($archivo=$request->file('url_wallpa')){
+
+            $nombre=$archivo->getClientOriginalName();
+            
+            $archivo->move('images', $nombre);
+
+            //$foto=Foto::create(['ruta_foto'=>$nombre]);
+
+            $entrada['url_wallpa']=$nombre;
+        }
+
+        $user->update($entrada);
+
+
+
+        return redirect('/home');
     }
 
     /**

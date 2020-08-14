@@ -33,6 +33,15 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+hr{
+  background-color: #463125;
+  position: absolute;
+  display: block;
+  top: 324px;
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+}
 
 a {
   color: #149ddd;
@@ -43,8 +52,14 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -226,12 +241,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
+
 /*--------------------------------------------------------------
 # Cajas contenedoras
 --------------------------------------------------------------*/
 .caja{
   border: 0px solid #7F6953;
-  background: #7F6953;
+  background: rgba(70,49,37,0.21);
   height: 80%;
   width: 96.9%;
   padding: 10px;
@@ -243,16 +260,13 @@ h1, h2, h3, h4, h5, h6 {
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
-.caja-clara{
-  
-  background: rgba(187, 156, 138, 0.52);	
-  
+.caja-especialidad{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.21);
   height: 80%;
-  width: 40%;
+  width: 96.9%;
   padding: 0px;
-  margin-right: 11%;
-  margin-top: 5%;
-  float: right;
+  margin: 10px;
   border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
@@ -260,29 +274,577 @@ box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
 }
+.subcaja{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: auto;
+  width: 100%;
+  padding: 25px;
+  margin: 10px;
+
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-webkit-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+-moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+}
+.subcaja2{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: auto;
+  width: auto;
+  padding: 25px;
+
+  margin-left: 10%;
+  margin-top: 33%;
+  float: right;
+  border-radius: 15px,
+}
+.subcaja3{
+  border: 0px solid #7F6953;
+  background: rgba(70,49,37,0.30);
+  height: auto;
+  width: 50%;
+  padding: 5%;
+  margin: auto;
+  border-radius: 15px;
+}
+.caja-clara{
+
+  background: rgba(187, 156, 138, 0.52);
+
+  height: 80%;
+  width: 40%;
+  padding: 0px;
+  margin-right: 11%;
+  margin-top: 5%;
+  float: right;
+  border-radius: 15px;
+}
+.caja-oscura{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 1000%;
+  width: 80%;
+  padding: 25px;
+  margin: 0%;
+  margin-left: 10%;
+  border-radius: 15px;
+}
+.caja-oscura_perfil_info{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 40%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 5%;
+  border-radius: 15px;
+}
+
+.caja-interna_perfil_titulo{
+
+  background: rgba(97, 87, 74, 1);
+  height: 10%;
+  width: 50%;
+  padding: 7px;
+  margin: 2%;
+  margin-left: 25%;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+
+.caja-interna_perfil_info{
+
+  background: rgba(97, 87, 74, 1);
+  height: 10%;
+  width: 40%;
+  padding: 7px;
+  margin: 2%;
+  margin-left: 5%;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.caja-oscura_perfil_especialidad_horario{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 47%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 2%;
+  border-radius: 15px;
+}
+
+.caja-oscura_perfil_foto_ubicacion{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 47%;
+  padding: 25px;
+  margin: 2%;
+  margin-left: 51%;
+  margin-top: -860px;
+  border-radius: 15px;
+}
+
+
+.caja-perfil{
+  border: 0px solid #7F6953;
+  background: rgba(107, 87, 66, 0.52);
+
+  width: 96%;
+  padding: 25px;
+  margin: 2%;
+  border-radius: 15px;
+  margin-left: 2%;
+  margin-top: 100px;
+
+}
+
+.comentarios{
+
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  padding: 7px;
+  margin: 1%;
+  margin-left: 0%;
+  border-radius: 15px;
+}
+.comentarios-nav{
+
+  background: rgba(107, 87, 66, 0.52);
+  width: 100%;
+  padding: auto;
+  margin: 10%;
+  margin-left: 0%;
+  border-radius: 15px;
+}
+
+.checked {
+  color: orange;
+
+}
+
+.letras{
+  color: rgba(216,216,216,1);
+}
+.letras-negras{
+  color: rgb(65, 52, 10);
+}
+.tamaño{
+  font-size: 16px;
+}
+
+.celda-larga{
+  width:140%;
+}
+.boton-centrado{
+  margin-left:10%;
+  margin-top: 80px;
+
+}
+.redondeo{
+  border-radius: 15px;
+}
+
+/*--------------------------------------------------------------
+# Imagen en perfil
+--------------------------------------------------------------*/
+.img-fluid-perfil {
+  max-width: 30%;
+  height: auto;
+  
+}
+
+.img-foto-perfil{
+  height: 150px !important;
+  width: 120px !important;
+}
+
+.profile-perfil img {
+  margin: 15px auto;
+  display: block;
+  width: auto;
+  border: 4px solid #463125;
+  margin-top: -74%;
+  margin-left: 25%;
+}
+
+.fondo-pg{
+  background-color: red;
+}
+
+.foto_wallpa_cliente{
+  width: 570px; 
+  height: 290px;
+  padding: 0px;
+  margin: 0%;
+  margin-left: 43.5%;
+  margin-top: -360px;
+  border-radius: 15px;
+}
+
+.caja-oscura_perfil_info_cliente{
+
+  background: rgba(107, 87, 66, 0.52);
+  height: 40%;
+  width: 40%;
+  padding: 25px;
+  margin: 2%;
+  
+  border-radius: 15px;
+}
 
 
 
+/*--------------------------------------------------------------
+# Caja de texto editar servicio por especialidad
+--------------------------------------------------------------*/
+
+.caja-texto{
+  border-radius: 15px;
+}
+
+.blanco{
+  color:#463125;
+}
+
+.blanco-close{
+  color:#ffff;
+}
+.cafe{
+  color:#463125;
+}
+
+/*--------------------------------------------------------------
+# Modals
+--------------------------------------------------------------*/
+
+.modal{
+  border-radius: 10px;
+}
+
+.modal-header
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #463125;
+        background-color: #61574A;
+    }
+
+.modal-body
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #463125;
+        background-color: #7F6953;
+    }
+.modal-footer
+    {
+        padding:9px 15px;
+        border-bottom:1px solid #7F6953;
+        background-color: #463125;
+    }
+
+.modal-lg {
+      max-width: 50% !important;
+}
+
+
+
+.card-header-registro {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #61574A;
+  border-bottom:1px solid #463125;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 15px;
+}
+
+.card{
+  border-radius: 15px;
+  background-color: #7F6953;
+  border-bottom:1px solid #463125;
+}
+.card-home{
+  border-radius: 15px;
+  background-color: #c3a585;
+  border-bottom:1px solid #463125;
+
+}
+
+.card-body-registro {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  border-bottom:1px solid #463125;
+  background-color: #7F6953;
+  border-radius: 15px;
+}
+
+
+
+.mensaje_perfil{
+  text-align: justify;
+  font-size: 15px;
+  margin: 15px;
+  margin-left: 0%;
+  margin-right: 0%;
+  line-height: 1.2em;
+}
+
+.collapse-content .fa.fa-heart:hover {
+  color: #f44336 !important;
+}
+.collapse-content .fa.fa-share-alt:hover {
+  color: #0d47a1 !important;
+}
+
+
+.mapa_google{
+  border-radius: 15px;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 0%;
+
+}
+.radio_logo{
+  border-radius: 15px;
+}
+.foto_local{
+  width: 445px; 
+  border-radius: 15px;
+  margin: 0%;
+  height: 300px;
+}
+
+.tamaño-espacio-nav{
+  width: 170px !important;
+  
+}
+
+.centro{
+  text-align: center;
+  font-size: 15px !important;
+}
+.foto_servicio_perfil{
+  width: 350px; 
+  border-radius: 30px;
+  margin: 1%;
+}
+
+:root {
+  --color-inactivo: #5f5050;
+  --color-hover: #ffa400;
+}
+.valoracion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  unicode-bidi: bidi-override;
+  margin-left: 27%;
+}
+
+.valoracion input {
+  position: absolute;
+  top: -100px;
+}
+
+
+.valoracion label {
+  float: right;
+  color: #ccb75b;
+  font-size: 30px; 
+}
+
+.valoracion label:hover,
+.valoracion label:hover ~ label,
+.valoracion input:checked ~ label {
+  color: #ff9100;
+}
+
+.card-footer-home {
+  padding: 0.75rem 1.25rem;
+  background-color: #61574A;
+
+  border-radius: 13px;
+}
+
+.color-manual{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+}
+.color-manual-nav{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+  margin-top: 100%;
+}
+.color-manual-Inicio{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+  margin-top: -35%;
+  margin-left: 50%;
+}
+.color-manual-barberos{
+  color: goldenrod;
+  background-color: rgb(70, 49, 37,0.5);
+  border: 2px solid goldenrod;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px;
+  margin-top: -10%;
+  margin-left: 97%;
+  position: static;
+}
+
+.valoracion2 {
+  display: flex;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+}
+.valoracion2 button {
+  background-color: initial;
+  border: 0;
+  color: var(--color-inactivo);
+  transition: 1s all;
+}
+.valoracion2 button:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+  transform: rotate(360deg);
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+
+}
+.column3 {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+
+}
+.column4 {
+  float: left;
+  width: 20%;
+  padding: 0px;
+  margin: 1%;
+  margin-left: 3.4%;
+
+}
+.tamaño-home{
+  width: 200px;
+    height: 250px;
+    
+    
+    
+    
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+   
+}
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+
+}
+.column2-perfil {
+  float: left;
+  width: 40%;
+  padding: 2%;
+  margin-left: 5%;
+
+}
+.column2-perfil-cliente {
+  float: left;
+  width: 45%;
+  padding: 2%;
+  margin-left: 2.5%;
+
+}
+.columna {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+
+}
+
+.alargar_buscador{
+  width: 230px !important;
+}
+.buscador{
+  padding: 20px;
+}
 .imagen-logo{
   width: 30%;
-  
+
   margin-left: 8%;
   margin-top: 3%;
 }
 .color-botom{
   background-color: rgba(70,49,37,1);
   color: white;
-  
+border-radius: 12px;
+}
+.color-botom-2{
+  background-color:rgba(70,49,37,1);
+  color: white;
+  border-radius: 12px;
+}
+.color-botom-home{
+  background-color:#7F6953;
+  color: white;
+  border-radius: 12px;
+  /*margin-left: 22%;*/
+  width: 94%;
+  justify-content: center;
+
+}
+.color-botom-home-inline{
+  background-color:#7F6953;
+  color: white;
+  border-radius: 12px;
+  /*margin-left: 22%;*/
+  display: inline;
+  justify-content: center;
+
+}
+.color-botom-borrar{
+  background-color: rgba(125,109,96,1);
+  color: white;
+  border-radius: 15px;
+
 }
 .color-registrate{
-  
+
   color: rgba(0,0,102,1);
   text-decoration: underline;
-  
+
 }
 
 .sombreado{
-  -moz-box-shadow: 8px 7px 10px -8px rgba(70,49,37,0.58);
+  -moz-box-shadow: 15px 15px 15px -15px rgba(70,49,37,0.58);
 box-shadow: 8px 7px 10px -8px rgb(70, 49, 37);
 }
 .titulo{
@@ -295,7 +857,7 @@ footer {
   padding: 3px;
   background-color: #463125;
   color: white;
-  
+
 }
 
 /*--------------------------------------------------------------
@@ -379,7 +941,9 @@ section {
 
 .section-title {
   padding-bottom: 30px;
+  padding: 2%;
 }
+
 
 .section-title h2 {
   font-size: 32px;
@@ -388,14 +952,14 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: white;
-  
+
 }
 .section-title-welcome {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  color: white;
-  
+  color: rgb(41, 38, 29);
+
 }
 
 .section-title h2::after {
@@ -407,7 +971,7 @@ section {
   background: #463125;
   bottom: 0;
   left: 0;
-  
+
 }
 
 .section-title p {
@@ -1207,4 +1771,8 @@ section {
 }
 .card img{
   width:100%;
+}
+.portfolio-image {
+  height: 500px;
+  
 }

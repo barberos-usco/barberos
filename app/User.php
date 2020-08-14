@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','apellidos','genero','fecha_nacimiento','ubicacion','role_id','url_fotoPerfil','url_wallpa'
+        'name', 'email', 'password','apellidos','genero','fecha_nacimiento','ubicacion','role_id','url_fotoPerfil','url_wallpa', 'horario_id'
     ];
 
     /**
@@ -42,8 +42,12 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
     public function foto(){
-
-        return $this->belongsTo('App\Foto');
+        
+        return $this->belongsTo('App\Foto', 'id');
     }
+    
+    public function horario(){
 
+        return $this->belongsTo('App\Horario');
+    }
 }
