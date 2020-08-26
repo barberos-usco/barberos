@@ -2,7 +2,7 @@
 
 {{-- @include('barbero.users.barra-lateral') --}}
 @section('title','Editar')
-    
+
 
 
 @section('content')
@@ -12,12 +12,12 @@
 <main id="main">
     <div class="container">
         <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid radio_logo sombreado " alt="Responsive image" width="1100" >
-    
+
         <div class="caja-especialidad container sombreado">
             <div class="card-body ">
                 @if ($horario)
-                    
-                
+
+
                 {!! Form::model($horario,['method'=>'PATCH', 'action'=>['HorarioController@update', $horario->id], 'files'=>true], ['class'=>'form-inline']) !!}
                     <div class="section-title">
                         <h2>Editar Horario |
@@ -35,7 +35,7 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body text-justify">
-                                        <h4><p>En esta primera sección, podremos elegir los horarios fijos por días.</p></h4>
+                                        <h6><p>En esta primera sección, podremos elegir los horarios fijos por días.</p></h6>
                                         </div>
 
                                         <!-- Modal footer -->
@@ -92,16 +92,16 @@
                             </div>
                         </div>
                         <div class="column letras" >
-                            
+
                             <div>
                                 {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                                 @if ($editado == true)
                                 <i class="fa fa-check fa-3x" aria-hidden="true" style="color:rgb(10, 250, 10);"></i>
                                 @endif
-                            </div>   
+                            </div>
                         </div>
                     </div>
-                {!! Form::close() !!}</br>  
+                {!! Form::close() !!}</br>
                 @endif
             </div>
         </div>
@@ -121,27 +121,27 @@
                                     <div class="modal" id="myModal2">
                                         <div class="modal-dialog modal-large">
                                             <div class="modal-content letras ">
-            
+
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
                                                 <h4 class="modal-title"><b>Editar Especialidades</b></h4>
                                                 <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                                 </div>
-            
+
                                                 <!-- Modal body -->
                                                 <div class="modal-body text-justify">
-                                                <h4><p>En esta vista, podremos hacer elección de las especialidades que queremos tener en el perfil usuario-barbero, de las que se seleccione aquí, se le activarán en "editar servicio por especialidad", donde podrá ser más específico. </p></h4>
+                                                <h6><p>En esta vista, podremos hacer elección de las especialidades que queremos tener en el perfil usuario-barbero, de las que se seleccione aquí, se le activarán en "editar servicio por especialidad", donde podrá ser más específico. </p></h6>
                                                 </div>
-            
+
                                                 <!-- Modal footer -->
                                                 <div class="modal-footer ">
                                                 <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
                                                 </div>
-            
+
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </h2>
                             </div>
                             <div>
@@ -174,13 +174,13 @@
 
 
                         {{--  <div class="column letras" >
-                            
+
                             <div>
                                 {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                             </div>
                         </div>--}}
                     </div>
-                {!! Form::close() !!}</br>  
+                {!! Form::close() !!}</br>
             </div>
         </div>
 

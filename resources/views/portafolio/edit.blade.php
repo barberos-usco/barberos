@@ -20,7 +20,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body text-justify">
-                          <h4><p>En esta vista, el usuario-barbero podrá editar la imágen que ha subido, el estado de ésta (activo muestra la imagen o inactivo no muestra la imagen en el portafolio) y la descripción corta menor a 200 carácteres, o si no quiere editar, dar en 'Atrás' y se sale.</p></h4>
+                          <h6><p>En esta vista, el usuario-barbero podrá editar la imágen que ha subido, el estado de ésta (activo muestra la imagen o inactivo no muestra la imagen en el portafolio) y la descripción corta menor a 200 carácteres, o si no quiere editar, dar en 'Atrás' y se sale.</p></h6>
                         </div>
 
                         <!-- Modal footer -->

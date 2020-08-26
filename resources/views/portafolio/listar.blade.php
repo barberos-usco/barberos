@@ -11,23 +11,23 @@
                 <div class="modal" id="myModal1">
                     <div class="modal-dialog modal-large">
                         <div class="modal-content letras ">
-    
+
                             <!-- Modal Header -->
                             <div class="modal-header">
                             <h4 class="modal-title"><b>Portafolio</b></h4>
                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                             </div>
-    
+
                             <!-- Modal body -->
                             <div class="modal-body text-justify">
-                              <h4><p>En esta vista, el usuario-barbero podrá hacer gestión de las imagenes, agregar nuevas o pudiendolas editar en cada una de sus campos (Descripción o estado) o eliminarlas con una confirmación.</p></h4>
+                              <h6><p>En esta vista, el usuario-barbero podrá hacer gestión de las imagenes, agregar nuevas o pudiendolas editar en cada una de sus campos (descripción o estado) o eliminarlas con una confirmación.</p></h6>
                             </div>
-    
+
                             <!-- Modal footer -->
                             <div class="modal-footer ">
                             <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
                             </div>
-    
+
                         </div>
                     </div>
                 </div> | <a href="{{route('portafolio.create')}}"><button class="btn color-botom">Agregar</button></a></h3>
@@ -86,8 +86,8 @@
 
                                 <!-- Modal footer -->
                                 <div class="modal-footer ">
-                                <button type="button" class="btn color-botom-home sombreado" data-dismiss="modal">No</button>
-                                <button type="submit" class="btn color-botom-home">Sí</button>
+                                <button type="button" class="btn color-botom-trabajo sombreado" data-dismiss="modal">No</button>
+                                <button type="submit" class="btn color-botom-trabajo">Sí</button>
                                 {{Form::Close()}}
                                 </div>
 

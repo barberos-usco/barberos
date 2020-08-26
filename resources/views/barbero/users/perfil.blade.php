@@ -27,7 +27,13 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body text-justify">
-                                <h4><p>Aquí se puede encontrar los datos básicos del usuario-barbero, como su edad, género, rol y una imagen del usuario.</p></h4>
+                                <h6><p>Aquí se puede encontrar los datos básicos del usuario-barbero:
+                                <ul>
+                                    <li>Su edad.</li>
+                                    <li>Género.</li>
+                                    <li>Rol en la plataforma</li>
+                                    <li>Imagen del usuario.</li>
+                                </ul></p></h6>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -65,7 +71,7 @@
     </div>
     <div class="caja-oscura_perfil_especialidad_horario letras sombreado">
             <br>
-           <h2>Especialidades | 
+           <h2>Especialidades |
                 <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal2"> ?</div>
                 <!-- The Modal para barberos -->
                 <div class="modal" id="myModal2">
@@ -80,7 +86,7 @@
 
                             <!-- Modal body -->
                             <div class="modal-body text-justify">
-                            <h4><p>Se pueden ver las especialidades que tiene el barbero y un rango de precio.</p></h4>
+                            <h6><p>Se pueden ver las especialidades que tiene el barbero y un rango de precio.</p></h6>
                             </div>
 
                             <!-- Modal footer -->
@@ -123,7 +129,7 @@
                </tr>
             </table>
             <br><br><br>
-           <h2>Horarios | 
+           <h2>Horarios |
                 <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal3"> ?</div>
                 <!-- The Modal para barberos -->
                 <div class="modal" id="myModal3">
@@ -138,7 +144,7 @@
 
                             <!-- Modal body -->
                             <div class="modal-body text-justify">
-                            <h4><p>Se pueden ver los horarios que tiene el barbero.</p></h4>
+                            <h6><p>Se pueden ver los horarios que tiene el barbero.</p></h6>
                             </div>
 
                             <!-- Modal footer -->
@@ -205,7 +211,7 @@
 
                             <!-- Modal body -->
                             <div class="modal-body text-justify">
-                            <h4><p>Se da la posición más acertada del lugar de trabajo del barbero(a) por medio de Google Maps.</p></h4>
+                            <h6><p>Se da la posición más acertada del lugar de trabajo del barbero(a) por medio de Google Maps.</p></h6>
                             </div>
 
                             <!-- Modal footer -->
@@ -234,7 +240,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body text-justify">
-                                <h4><p>Para el usuario-barbero, sólo puede ver los comentarios hechos.</p></h4>
+                                <h6><p>Para el usuario-barbero, sólo puede ver los comentarios hechos.</p></h6>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -260,7 +266,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body text-justify">
-                                <h4><p>Para el usuario-cliente, puede hacer la acción de crear un nuevo comentario.</p></h4>
+                                <h6><p>Para el usuario-cliente, puede hacer la acción de crear un nuevo comentario.</p></h6>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -345,7 +351,7 @@
 
         <div><br><br>
             @if(Auth::user()->role_id == 1)
-                <h2>Valoración del Barbero | 
+                <h2>Valoración del Barbero |
                     <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal6"> ?</div>
                     <!-- The Modal para barberos -->
                     <div class="modal" id="myModal6">
@@ -360,7 +366,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body text-justify">
-                                <h4><p>Para el usuario-barbero, sólo puede ver la valoración ya calculada.</p></h4>
+                                <h6><p>Para el usuario-barbero, sólo puede ver la valoración ya calculada.</p></h6>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -386,23 +392,23 @@
                         <div class="modal" id="myModal6">
                             <div class="modal-dialog modal-large">
                                 <div class="modal-content letras ">
-    
+
                                     <!-- Modal Header -->
                                     <div class="modal-header">
                                     <h4 class="modal-title"><b>Valoración</b></h4>
                                     <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                     </div>
-    
+
                                     <!-- Modal body -->
                                     <div class="modal-body text-justify">
-                                    <h4><p>Para el usuario-cliente, puede hacer la acción de valorar al usuario.</p></h4>
+                                    <h6><p>Para el usuario-cliente, puede hacer la acción de valorar al usuario.</p></h6>
                                     </div>
-    
+
                                     <!-- Modal footer -->
                                     <div class="modal-footer ">
                                     <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
@@ -433,23 +439,23 @@
                         <div class="modal" id="myModal7">
                             <div class="modal-dialog modal-large">
                                 <div class="modal-content letras ">
-    
+
                                     <!-- Modal Header -->
                                     <div class="modal-header">
                                     <h4 class="modal-title"><b>Trabajos</b></h4>
                                     <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                     </div>
-    
+
                                     <!-- Modal body -->
                                     <div class="modal-body text-justify">
-                                    <h4><p>Se pueden ver las imágenes que el barbero sube en su dashboard o portafolio.</p></h4>
+                                    <h6><p>Se pueden ver las imágenes que el barbero sube en su dashboard o portafolio.</p></h6>
                                     </div>
-    
+
                                     <!-- Modal footer -->
                                     <div class="modal-footer ">
                                     <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
@@ -506,7 +512,7 @@
 
                         <!-- Modal footer -->
                         <div class="modal-footer ">
-                        <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn color-botom-trabajo sombreado" data-dismiss="modal">Cerrar</button>
                         </div>
 
                     </div>
@@ -539,7 +545,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body text-justify">
-                        <h4><p>EL usuario puede observar las especialidades que el barbero ha elegido, con una imagen y descripción.</p></h4>
+                        <h6><p>EL usuario puede observar las especialidades que el barbero ha elegido, con una imagen y descripción.</p></h6>
                         </div>
 
                         <!-- Modal footer -->

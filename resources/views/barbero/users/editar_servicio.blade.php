@@ -2,7 +2,7 @@
 
 {{-- @include('barbero.users.barra-lateral') --}}
 @section('title','Editar')
-    
+
 
 
 @section('content')
@@ -30,7 +30,14 @@
 
                                     <!-- Modal body -->
                                     <div class="modal-body text-justify">
-                                    <h4><p>En esta vista, podremos editar los servicios que elegimos anteriormente, podemos subir una imagen acorde al servicio y una descripción personalizada de ella; si el usuario-barbero no hace esta personalización, se le asignaría una imagen y texto genérico.</p></h4>
+                                    <h6><p>En esta vista, podremos editar los servicios que elegimos anteriormente:
+
+                                    <ul>
+                                        <li>Podemos subir una imagen acorde al servicio.</li>
+                                        <li>Poner un rango de precio del servicio.</li>
+                                        <li>Disponer de una descripción personalizada del servicio.</li>
+                                    </ul>
+                                    Si el <b>usuario-barbero</b> no hace esta personalización, se le asignaría una imagen y texto genérico.</p></h6>
                                     </div>
 
                                     <!-- Modal footer -->
@@ -57,27 +64,29 @@
                                 <div class="modal" id="myModal">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Peluquería</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_peluqueria',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Peluqueria',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -94,27 +103,29 @@
                                 <div class="modal" id="myModal2">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Rasurado</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_rasurado',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Rasurado',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -131,27 +142,29 @@
                                 <div class="modal" id="myModal3">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Masajes y faciales</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_masajes_faciales',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Masajes_faciales',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -168,27 +181,29 @@
                                 <div class="modal" id="myModal4">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Cejas</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_cejas',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Cejas',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -205,27 +220,29 @@
                                 <div class="modal" id="myModal5">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Reporalización</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_repolarizacion',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Repolarizacion',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -242,27 +259,29 @@
                                 <div class="modal" id="myModal6">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Tratamiento Capilar</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_tratamiento_capilar',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Tratamiento_capilar',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -279,45 +298,47 @@
                                 <div class="modal" id="myModal7">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                        
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title">Depilación con Cera</h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                                            
+
                                             <!-- Modal body -->
                                             <div class="modal-body">
                                                 <div>
                                                     {!! Form::file('foto_depilacion_cera',['class'=>'form-control-file']) !!}<br>
+                                                    Precio:
+                                                    {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],null, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                     {!! Form::textarea('Depilacion_cera',null,['class'=>'form-control caja-texto']) !!}
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Cerrar</button>
                                             <button type="button" class="btn color-botom-2 sombreado" data-dismiss="modal">Guardar</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--<div class="boton-centrado letras" >
-                            
+
                             <div>
                                 {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                             </div>
                         </div>-->
                     </div>
                 </div>
-                {!! Form::close() !!}</br>  
+                {!! Form::close() !!}</br>
             </div>
         </div>
     </div><br><br><br><br><br>
-    
-</main>  
+    @include('partials.footer')
+</main>
 
 @endsection

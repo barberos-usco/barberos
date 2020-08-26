@@ -1,6 +1,6 @@
 <img src="{{ asset('/images/Logo.jpg') }}" class="img-fluid  radio_logo sombreado " alt="Responsive image" width="1100" >
 <div class="caja">
-    
+
 
         {!! Form::open(array('url'=>(Auth::user()->role_id === 1) ? 'barberos' : 'home','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
             <div class="form-inline buscador">
@@ -20,7 +20,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body text-justify">
-                                <h4><p>Buscador de barberos, nombre o apellido.</p></h4>
+                                <h6><p>Buscador de barberos, nombre o apellido.</p></h6>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -47,7 +47,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body text-justify">
-                <h4><p>Lista de todos los barberos registrados, con foto, nombre, valoración de este y un botón para ver el perfil.</p></h4>
+                <h6><p>Lista de todos los barberos registrados, con foto, nombre, valoración de este y un botón para ver el perfil.</p></h6>
                 </div>
 
                 <!-- Modal footer -->
@@ -68,12 +68,12 @@
                     @foreach ($users as $user)
 
                         <div class="card-home column4" style="">
-                            @if ($user->url_fotoPerfil == null) 
-                                <img src="{{ asset('images/profile.png') }}" class="img-fluid  radio_logo sombreado tamaño-home "  > 
+                            @if ($user->url_fotoPerfil == null)
+                                <img src="{{ asset('images/profile.png') }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
                             @else
                                 <img src="{{ asset('images/'. $user->url_fotoPerfil) }}" class="img-fluid  radio_logo sombreado tamaño-home "  >
                             @endif
-                            
+
                             <div class="card-body">
                                 <h5 class="card-title text-center" style="color: #352c23;"><b>{{ $user->name ." " . $user->apellidos  }}</b></h5>
                                 <div class="border-top my-3"></div>
@@ -122,5 +122,5 @@
         @if(count($users)<= 0 && $buscar == '')
             <h3 style="color: #900">No hay registros</h3>
         @endif
-        
+
 </div>

@@ -4,8 +4,8 @@
  </footer>
 
  <!-- Modales de la barra lateral -->
-	
-	
+
+
 	<!-- Modal Inicio para barbero (Dashboard) -->
 	<div class="modal" id="myModal02">
 		<div class="modal-dialog modal-large">
@@ -19,7 +19,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-barbero, éste enlace lo llevará al dashboard y podrá hacer gestión de sus imagenes y demás.</p></h4>
+				  <h6><p>Como usuario-barbero, éste enlace lo llevará al dashboard y podrá hacer gestión de sus imagenes y demás.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -44,7 +44,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-cliente, éste enlace lo llevará a la lista de barberos registrados.</p></h4>
+				  <h6><p>Como usuario-cliente, éste enlace lo llevará a la lista de barberos registrados.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -55,8 +55,8 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 	<!-- Modal Barberos para barberos -->
 	<div class="modal" id="myModal03">
 		<div class="modal-dialog modal-large">
@@ -70,7 +70,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-barbero, éste enlace lo llevará a la lista de barberos registrados, no aparecerá su perfil.</p></h4>
+				  <h6><p>Como usuario-barbero, éste enlace lo llevará a la lista de barberos registrados, no aparecerá su perfil.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -96,7 +96,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-barbero, éste enlace lo llevará a la vista donde podrá ver todo su perfil.</p></h4>
+				  <h6><p>Como usuario-barbero, éste enlace lo llevará a la vista donde podrá ver todo su perfil.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -121,7 +121,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-cliente, éste enlace lo llevará a la vista donde podrá ver todo su perfil.</p></h4>
+				  <h6><p>Como usuario-cliente, éste enlace lo llevará a la vista donde podrá ver todo su perfil.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -146,7 +146,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-barbero, éste enlace lo llevará a la vista donde podrá editar la información básica.</p></h4>
+				  <h6><p>Como usuario-barbero, éste enlace lo llevará a la vista donde podrá editar la información básica.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
@@ -157,8 +157,8 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 	<!-- Modal editar Perfil para clientes -->
 	<div class="modal" id="myModal005">
 		<div class="modal-dialog modal-large">
@@ -172,7 +172,7 @@
 
 				<!-- Modal body -->
 				<div class="modal-body text-justify">
-				  <h4><p>Como usuario-cliente, éste enlace lo llevará a la vista donde podrá editar la información básica.</p></h4>
+				  <h6><p>Como usuario-cliente, éste enlace lo llevará a la vista donde podrá editar la información básica.</p></h6>
 				</div>
 
 				<!-- Modal footer -->
