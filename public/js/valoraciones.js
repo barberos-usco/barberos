@@ -11,7 +11,7 @@
 		// Filtro para seleccionar un marcador de la lista de marcadores
 		var filtro="["+atributo+"='valor']";
 		// Elemento con el que se crea cada marcador
-		var estrella_vacia='<i class="fa icono estrella" style="margin-left:2px"></i>';
+		var estrella_vacia='<i class="fa fa-2x icono estrella" style="margin-left:10px"></i>';
 		// Clase que representa un marcador activado
 		var class_llena='icono activa';
 		// Clase que representa un marcador desactivado

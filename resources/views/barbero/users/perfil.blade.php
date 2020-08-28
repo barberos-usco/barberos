@@ -414,40 +414,7 @@
                         </div>
                 </h2>
                 <div class="valoracion">
-                    <input id="radio1" type="radio" name="estrellas" value="5">
-                    <label for="radio1"><i class="fas fa-star "></i></label>
-
-                    <input id="radio2" type="radio" name="estrellas" value="4">
-                    <label for="radio2"><i class="fas fa-star"></i></label>
-
-                    <input id="radio3" type="radio" name="estrellas" value="3">
-                    <label for="radio3"><i class="fas fa-star "></i></label>
-
-                    <input id="radio4" type="radio" name="estrellas" value="2">
-                    <label for="radio4"><i class="fas fa-star "></i></label>
-
-                    <input id="radio5" type="radio" name="estrellas" value="1">
-                    <label for="radio5"><i class="fas fa-star "></i></label>
-
-
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <th>Valor<br>Inicial</th>
-                                <th>Valor<br>Actual</th>
-                                <th>Valor<br>Máximo</th>
-                            </thead>
-                            <tbody>
-                                <td class="defecto">0</td>
-                                <td class="valor1">0</td>
-                                <td class="defecto">5</td>
-                            </tbody>
-                        </table>
-
-                        <div id="puntos_1"></div>
-
-
-
-
+                    <div id="puntos_1"></div>
                 </div>
             @endif
         </div>

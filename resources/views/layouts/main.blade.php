@@ -19,7 +19,7 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/iconos.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+
     <script src="{{ asset('js/valoraciones.min.js') }}"></script>
     <script src="{{ asset('js/valoraciones.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
