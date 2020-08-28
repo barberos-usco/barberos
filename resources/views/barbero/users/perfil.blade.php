@@ -428,6 +428,26 @@
 
                     <input id="radio5" type="radio" name="estrellas" value="1">
                     <label for="radio5"><i class="fas fa-star "></i></label>
+
+
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <th>Valor<br>Inicial</th>
+                                <th>Valor<br>Actual</th>
+                                <th>Valor<br>Máximo</th>
+                            </thead>
+                            <tbody>
+                                <td class="defecto">0</td>
+                                <td class="valor1">0</td>
+                                <td class="defecto">5</td>
+                            </tbody>
+                        </table>
+
+                        <div id="puntos_1"></div>
+
+
+
+
                 </div>
             @endif
         </div>
