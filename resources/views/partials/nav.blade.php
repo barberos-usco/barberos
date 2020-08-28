@@ -6,7 +6,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Barra de búsqueda -->
-                    
+
 
                     <!-- Authentication Linksss -->
                     @guest
@@ -28,13 +28,13 @@
                                     <a class="dropdown-item redondeo" href="{{ route('barbero.users.password') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fa fa-unlock-alt"></i></span>
                                         {{ __('Cambiar Contraseña') }}
                                     </a>
-                                    
+
                                     <a class="dropdown-item redondeo" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-sign-out-alt"></i></span>
                                         {{ __('Cerrar Sesión') }}
                                     </a>
-                                   
+
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -47,23 +47,26 @@
                                 <div class="modal" id="myModal0">
                                     <div class="modal-dialog modal-large">
                                         <div class="modal-content letras ">
-                    
+
                                             <!-- Modal Header -->
                                             <div class="modal-header">
                                             <h4 class="modal-title"><b>Barra de navegación</b></h4>
                                             <button type="button" class="close blanco-close" data-dismiss="modal">&times;</button>
                                             </div>
-                    
+
                                             <!-- Modal body -->
                                             <div class="modal-body text-justify">
-                                              <h4><p>Donde el usuario podrá hacer dos acciones, al dar click en su nombre o flecha, se le dará la opción de cambio de contraseña o de cerrar sesión, los llevará a la vista correspondiente.</p></h4>
+                                              <p>Donde el usuario podrá hacer dos acciones:</p>
+                                              <ul>
+                                                <li>Podrá hacer cambio de contraseña.</li>
+                                                <li>Podrá cerrar sesión.</li>
                                             </div>
-                    
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer ">
                                             <button type="button" class="btn color-botom-home-inline sombreado" data-dismiss="modal">Cerrar</button>
                                             </div>
-                    
+
                                         </div>
                                     </div>
                                 </div>

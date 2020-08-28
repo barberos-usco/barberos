@@ -33,7 +33,7 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body text-justify">
-                                        <h4><p>En esta primera sección, podremos elegir los horarios fijos por días.</p></h4>
+                                        <h6><p>En esta primera sección, podremos elegir los horarios fijos por días.</p></h6>
                                         </div>
 
                                         <!-- Modal footer -->
@@ -128,7 +128,7 @@
 
                                                 <!-- Modal body -->
                                                 <div class="modal-body text-justify">
-                                                <h4><p>En esta vista, podremos hacer elección de las especialidades que queremos tener en el perfil usuario-barbero, de las que se seleccione aquí, se le activarán en "editar servicio por especialidad", donde podrá ser más específico. </p></h4>
+                                                <h6><p>En esta vista, podremos hacer elección de las especialidades que queremos tener en el perfil usuario-barbero, de las que se seleccione aquí, se le activarán en "editar servicio por especialidad", donde podrá ser más específico. </p></h6>
                                                 </div>
 
                                                 <!-- Modal footer -->

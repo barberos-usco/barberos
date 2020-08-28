@@ -29,7 +29,14 @@
 
                                     <!-- Modal body -->
                                     <div class="modal-body text-justify">
-                                    <h4><p>En esta vista, podremos editar los servicios que elegimos anteriormente, podemos subir una imagen acorde al servicio y una descripción personalizada de ella; si el usuario-barbero no hace esta personalización, se le asignaría una imagen y texto genérico.</p></h4>
+                                    <h6><p>En esta vista, podremos editar los servicios que elegimos anteriormente:
+
+                                    <ul>
+                                        <li>Podemos subir una imagen acorde al servicio.</li>
+                                        <li>Poner un rango de precio del servicio.</li>
+                                        <li>Disponer de una descripción personalizada del servicio.</li>
+                                    </ul>
+                                    Si el <b>usuario-barbero</b> no hace esta personalización, se le asignaría una imagen y texto genérico.</p></h6>
                                     </div>
 
                                     <!-- Modal footer -->
@@ -70,6 +77,8 @@
                                                     <div>
                                                         {!! Form::hidden('especialidad_id',$especialidad->especialidad_id) !!}
                                                         {!! Form::file('imagen',['class'=>'form-control-file']) !!}<br>
+                                                        Precio:
+                                                        {!! Form::select('precio', ['5.000 - 10.000' => '5.000 - 10.000', '10.000 - 15.000' => '10.000 - 15.000', '15.000 - 20.000' => '15.000 - 20.000', '20.000 - 30.000' => '20.000 - 30.000'],$especialidad->precio, ['class'=>'form-control sombreado redondeo', 'required']) !!}<br>
                                                         {!! Form::textarea('descripcion',$especialidad->descripcion,['class'=>'form-control caja-texto']) !!}
                                                     </div>
                                                 </div>

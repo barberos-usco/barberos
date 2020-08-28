@@ -20,7 +20,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body text-justify">
-                          <h4><p>En esta vista, el usuario-barbero podrá agregar una imágen, el estado de ésta (activo muestra la imagen o inactivo no muestra la imagen en el portafolio) y una descripción corta menor a 200 carácteres.</p></h4>
+                          <h6><p>En esta vista, el usuario-barbero podrá agregar una imágen, el estado de ésta (activo muestra la imagen o inactivo no muestra la imagen en el portafolio) y una descripción corta menor a 200 carácteres.</p></h6>
                         </div>
 
                         <!-- Modal footer -->

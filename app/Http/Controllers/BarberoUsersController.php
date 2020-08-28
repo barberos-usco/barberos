@@ -129,7 +129,7 @@ class BarberoUsersController extends Controller
 
             $especialidadBarbero->imagen = $nombre;
         }
-
+        $especialidadBarbero->precio = $request->precio;
         $especialidadBarbero->descripcion = $request->descripcion;
         $especialidadBarbero->save();
 

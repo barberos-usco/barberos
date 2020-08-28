@@ -5,11 +5,11 @@
     <div class="profile">
       @if(Auth::user()->url_fotoPerfil == null)
                         <img src="{{ asset('images/profile.png') }}" alt="" class="img-fluid rounded-circle " style="width:140px; height:170px;">
-                    
+
                     @else
                     <img src="{{ asset('images/'.Auth::user()->url_fotoPerfil ) }}" alt="" class="img-fluid rounded-circle " style="width:140px; height:170px;">
                     @endif
-      
+
       <h1 class="text-light"><a href="{{ route('perfil', Auth::user()->id) }}"> {{ Auth::user()->name . " " .Auth::user()->apellidos}}</a> <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal01"> ?</div>
         <!-- The Modal para barberos -->
         <div class="modal" id="myModal01">
@@ -24,7 +24,7 @@
 
                     <!-- Modal body -->
                     <div class="modal-body text-justify">
-                      <h4><p>Ya iniciado sesión, se puede observar el nombre del mismo y la imagen de perfil.</p></h4>
+                      <h6><p>Ya iniciado sesión, se puede observar el nombre del mismo y la imagen de perfil.</p></h6>
                     </div>
 
                     <!-- Modal footer -->
@@ -43,7 +43,7 @@
         <li><a href="{{ route('home') }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-home"></i></span> <span>Inicio</span></a>
         @if(Auth::user()->role_id == 1)
           <div class="btn color-manual-Inicio redondeo sombreado" data-toggle="modal" data-target="#myModal02"> ?</div>
-          
+
         @else
           <div class="btn color-manual-Inicio redondeo sombreado" data-toggle="modal" data-target="#myModal002"> ?</div>
         @endif</li>
@@ -57,7 +57,7 @@
         <li><a href="{{ route('perfil', Auth::user()->id) }}"><span style="font-size: 1.2em; color: #463125;"><i class="	fas fa-user-alt"></i></span> <span>Perfil</span></a>
           @if(Auth::user()->role_id == 1)
             <div class="btn color-manual-Inicio redondeo sombreado" data-toggle="modal" data-target="#myModal04"> ?</div>
-            
+
           @else
             <div class="btn color-manual-Inicio redondeo sombreado" data-toggle="modal" data-target="#myModal004"> ?</div>
           @endif
@@ -75,8 +75,8 @@
             @endif
           </li>
         @endif
-        
-        
+
+
       </ul>
     </nav><!-- .nav-menu -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
