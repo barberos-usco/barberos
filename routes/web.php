@@ -49,17 +49,24 @@ Route::resource('cliente/users', 'ClienteUsersController', [
 Route::get('barbero/users/{user}/edit/especialidad', 'HorarioController@edit')->name('barbero.users.edit.especialidad');
 Route::patch('barbero/users/{user}/edit/especialidad', 'HorarioController@update')->name('barbero.users.update.especialidad');
 
-
 Route::get('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.edit.servicios');
-Route::patch('barbero/users/{user}/edit/servicios', 'BarberoUsersController@servicio')->name('barbero.users.update.servicios');
+Route::patch('barbero/users/{user}/edit/servicios', 'BarberoUsersController@editarServicio')->name('barbero.users.update.servicios');
 
 Route::get('barbero/users/{user}/perfil','BarberoUsersController@perfil')->name('barbero.users.perfil');
 
 Route::get('cliente/users/{user}/perfil','ClienteUsersController@perfil')->name('cliente.users.perfil');
 
-
-
-
 Route::get('/barbero/users/inicio', function () {
     return view('barbero.users.inicio');
 });
+
+// Rutas para especialidades
+Route::patch('barbero/users/{user}/edit/especialidadbarbero', 'HorarioController@updateEspecialidades')->name('barbero.users.update.especialidadbarbero');
+
+
+
+
+
+
+
+
