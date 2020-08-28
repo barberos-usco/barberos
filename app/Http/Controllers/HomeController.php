@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Comentario;
+use App\EspecialidadBarbero;
 use App\Hoario;
+use App\Horario;
 use App\Http\Requests\ComentarioFormRequest;
 use App\Portafolio;
 use App\User;
@@ -12,7 +14,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Validator;
-use App\Horario;
 
 
 
@@ -72,8 +73,11 @@ class HomeController extends Controller
     public function perfil($id)
     {
         $user=User::findOrFail($id);
+
         $portafolio = Portafolio::withoutTrashed()
             ->where(['barbero_id' => $user->id, 'activo' => 1])->get();
+
+        $servicios = EspecialidadBarbero::with('especialidad')->where('barbero_id', $id)->orderBy('especialidad_id', 'ASC')->get();
 
         if($user->role_id === 1){
             $comentarios = Comentario::with('cliente')->where('barbero_id', $user->id)
@@ -85,7 +89,7 @@ class HomeController extends Controller
             $horarios = 1;
         }
 
-        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios, "horarios" => $horarios]);
+        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios, "horarios" => $horarios, "servicios" => $servicios]);
     }
 
     public function guardarComentario(ComentarioFormRequest $request){
@@ -100,9 +104,8 @@ class HomeController extends Controller
 
     public function horario($id)
     {
-        $user=User::findOrFail($id);
-        $horario = Horario::where('barbero', $user->id)->get();
-        
+        $user = User::findOrFail($id);
+        $horario = Horario::where('barbero', $id)->get();
 
         return view('barbero.users.edit.especialidad', compact('user'));
     }

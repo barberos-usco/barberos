@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\UpdateRequest;
-use App\User;
+use App\EspecialidadBarbero;
 use App\Foto;
 use App\Horario;
+use App\Http\Requests\UpdateRequest;
+use App\User;
+use Illuminate\Http\Request;
 
 class BarberoUsersController extends Controller
 {
@@ -48,7 +49,7 @@ class BarberoUsersController extends Controller
         if($archivo=$request->file('url_fotoPerfil')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=User::create(['url_fotoPerfil'=>$nombre]);
@@ -58,14 +59,14 @@ class BarberoUsersController extends Controller
         if($archivo=$request->file('url_wallpa')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=Foto::create(['ruta_foto'=>$nombre]);
 
             $entrada['url_wallpa']=$nombre;
         }
-       
+
 
         $entrada['password']=bcrypt($request->password);
 
@@ -93,7 +94,7 @@ class BarberoUsersController extends Controller
 
         return view('barbero.users.editar_especialidad', compact('user'));
     }
-    
+
     public function horario($id)
     {
         $user=User::findOrFail($id);
@@ -106,10 +107,34 @@ class BarberoUsersController extends Controller
     public function servicio($id)
     {
         $user=User::findOrFail($id);
+        $especialidadesBarbero = EspecialidadBarbero::with('especialidad')
+            ->where('barbero_id', $id)->orderBy('especialidad_id', 'ASC')->get();
 
-        return view('barbero.users.editar_servicio', compact('user'));
+        return view(
+            'barbero.users.editar_servicio',
+            [
+                "user" => $user,
+                "especialidadesBarbero" => $especialidadesBarbero
+            ]
+        );
     }
 
+    public function editarServicio(Request $request, $id){
+        $especialidadBarbero = EspecialidadBarbero::where(['barbero_id' => $id, 'especialidad_id' => $request->especialidad_id])->first();
+
+        if($request->file('imagen')){
+            $archivo = $request->file('imagen');
+            $nombre=$archivo->getClientOriginalName();
+            $archivo->move('images', $nombre);
+
+            $especialidadBarbero->imagen = $nombre;
+        }
+        $especialidadBarbero->precio = $request->precio;
+        $especialidadBarbero->descripcion = $request->descripcion;
+        $especialidadBarbero->save();
+
+        return self::servicio($id);
+    }
 
     /**
      * Show thesds form for editing the specified resource.
@@ -143,13 +168,13 @@ class BarberoUsersController extends Controller
     {
         $user=User::findOrFail($id);
 
-        
+
         $entrada=$request->all();
 
         if($archivo=$request->file('url_fotoPerfil')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=User::create(['url_fotoPerfil'=>$nombre]);
@@ -159,7 +184,7 @@ class BarberoUsersController extends Controller
         if($archivo=$request->file('url_wallpa')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=Foto::create(['ruta_foto'=>$nombre]);

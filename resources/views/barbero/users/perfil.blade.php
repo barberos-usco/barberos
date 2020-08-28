@@ -99,34 +99,16 @@
                 </div>
            </h2>
            <table class="celda-larga">
-               <tr>
-                   <td class="tamaño">Peluquería</td>
-                   <td class="tamaño">10.000 - 25.000</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Rasurado</td>
-                   <td class="tamaño">10.000 - 25.000</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Masajes faciales</td>
-                   <td class="tamaño">35.000 - 50.000</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Cejas</td>
-                   <td class="tamaño">10.000 - 25.000</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Repolarización</td>
-                   <td class="tamaño">No disponible.</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Tratamiento Capilar</td>
-                   <td class="tamaño">No disponible.</td>
-               </tr>
-               <tr>
-                   <td class="tamaño">Depilación con Cera</td>
-                   <td class="tamaño">No disponible.</td>
-               </tr>
+              @foreach($servicios as $servicio)
+                <tr>
+                  <td class="tamaño">{{ $servicio->especialidad->nombre }}</td>
+                  @if($servicio->precio)
+                    <td class="tamaño">($) {{ $servicio->precio }}</td>
+                  @else
+                    <td class="tamaño">No disponible.</td>
+                  @endif
+                </tr>
+              @endforeach
             </table>
             <br><br><br>
            <h2>Horarios |
@@ -545,30 +527,22 @@
             </div>
         </h2><br>
         <div class="row">
-            <div class="column2-perfil letras  " >
-                <h3>Peluquería</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/Peluqueria.png') }}" alt="Peluquería"><br>
-                <p class="mensaje_perfil">Me Destaco en el arte del corte masculino preguntando siempre a mi cliente qué tipo de motilado desea;
-                    sugiriendo uno adecuado a su fisionomía, actitud y cantidad de cabello; tomo mi tiempo y siempre dejo
-                    a mi cliente satisfecho.</p>
-            </div>
-            <div class="column2-perfil letras  " >
-                <h3>Rasurado</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{  url('/images/Rasurado.png') }}" alt="Rasurado"><br>
-                <p class="mensaje_perfil">Utilizo productos para suavizar la piel de mis clientes y la tradicional toalla con agua caliente. Diseño y corte de barba y bigote, recordando que para cada tipo de rostro hay un tipo de corte de barba y de bigote adecuado.</p>
-            </div>
-            <div class="column2-perfil letras  " >
-                <h3>Masajes Faciales</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{  url('/images/Masaje_Facial.png')  }}" alt="Masajes Faciales"><br>
-                <p class="mensaje_perfil">Si quieres disminuir los efectos de factores como la contaminación, estrés y el inevitable paso de los años, además de verse atractivos para sus momentos importantes.</p>
-            </div>
-            <div class="column2-perfil letras  " >
-                <h3>Cejas</h3><br>
-                <img class="foto_servicio_perfil sombreado" src="{{ url('/images/Ceja.png')  }}" alt="Cejas"><br>
-                <p class="mensaje_perfil">Tengo gran experiencia en la depilación de cejas para hombre, con los mejores productos para que puedas lucirla correctamente, dependiendo de la forma de tu cara.</p>
-            </div>
-        </div>
+          @foreach($servicios as $servicio)
+            <div class="column2-perfil letras">
+                <h3>{{ $servicio->especialidad->nombre }}</h3><br>
+                @if($servicio->imagen)
+                  <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->imagen) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                @else
+                  <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->especialidad->imagen_default) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                @endif
 
+                @if($servicio->descripcion)
+                  <p class="mensaje_perfil">{{$servicio->descripcion}}</p>
+                @else
+                  <p class="mensaje_perfil">{{$servicio->especialidad->descripcion_default}}</p>
+                @endif
+            </div>
+          @endforeach
     </div>
     <br><br>
     @include('partials.footer')

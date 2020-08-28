@@ -16,8 +16,6 @@
         <div class="caja-especialidad container sombreado">
             <div class="card-body ">
                 @if ($horario)
-
-
                 {!! Form::model($horario,['method'=>'PATCH', 'action'=>['HorarioController@update', $horario->id], 'files'=>true], ['class'=>'form-inline']) !!}
                     <div class="section-title">
                         <h2>Editar Horario |
@@ -108,7 +106,7 @@
 
         <div class="caja-especialidad container sombreado">
             <div class="card-body ">
-                {{-- {!!Form::model($user,['method'=>'PATCH', 'action'=>['BarberoUsersController@update', $user->id], 'files'=>true], ['class'=>'form-inline']) !!}--}}
+                {!!Form::model(Auth::user(),['method'=>'PATCH', 'action'=>['HorarioController@updateEspecialidades', Auth::user()->id]], ['class'=>'form-inline']) !!}
                     <div class="row">
                         <div class="columna letras" >
                             <img src="{{ asset('/images/especialidad-izq.png') }}" class="img-fluid  " alt="Responsive image" width="100%" >
@@ -143,28 +141,24 @@
                                     </div>
 
                                 </h2>
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Peluqueria', 'Peluqueria') !!} Peluqueria
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Rasurado', 'Rasurado') !!} Rasurado
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Masajes y faciales', 'Masajes y faciales') !!} Masajes y faciales
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Cejas', 'Cejas') !!} Cejas
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Reporalizacion', 'Reporalizacion') !!} Reporalización
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Tratamiento Capilar', 'Tratamiento Capilar') !!} Tratamiento Capilar
-                            </div>
-                            <div>
-                               {!! Form::checkbox('Depilación con Cera', 'Depilación con Cera') !!} Depilación con Cera
-                            </div><br><br>
+                            <?php $sum = 1; ?>
+                            @foreach($especialidades as $especialidad)
+                                <div>
+                                    <?php
+                                        $isChecked = array_search($especialidad->id, $especialidadesBarbero);
+                                    ?>
+
+                                    {!!
+                                        Form::checkbox(
+                                            'check'.$sum++,
+                                            $especialidad->id,
+                                            ($isChecked === false) ? '' : 'checked'
+                                        )
+                                    !!}
+                                    {{ $especialidad->nombre }}
+                                </div>
+                            @endforeach
+                            </div><br /><br />
                             {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                             {!! Form::reset('Borrar', ['class'=>'btn color-botom-borrar sombreado']) !!}
                         </div>
