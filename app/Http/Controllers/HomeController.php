@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comentario;
+use App\Calificacion;
 use App\EspecialidadBarbero;
 use App\Hoario;
 use App\Horario;
@@ -98,6 +99,15 @@ class HomeController extends Controller
         $comentario->barbero_id = $request->get('user_id');
         $comentario->comentario = $request->get('comentario');
         $comentario->save();
+
+        return self::perfil($request->get('user_id'));
+    }
+    public function guardarCalificacion(Request $request){
+        $calificacion = new Calificacion;
+        $calificacion->cliente_id = Auth::user()->id;
+        $calificacion->barbero_id = $request->get('user_id');
+        $calificacion->$calificacion = $request->get('calificacion');
+        $calificacion->save();
 
         return self::perfil($request->get('user_id'));
     }
