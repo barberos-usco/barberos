@@ -99,16 +99,32 @@
                 </div>
            </h2>
            <table class="celda-larga">
-              @foreach($servicios as $servicio)
-                <tr>
-                  <td class="tamaño">{{ $servicio->especialidad->nombre }}</td>
-                  @if($servicio->precio)
-                    <td class="tamaño">($) {{ $servicio->precio }}</td>
-                  @else
-                    <td class="tamaño">No disponible.</td>
-                  @endif
-                </tr>
-              @endforeach
+             <?php $contador = 1; ?>
+             @if(count($servicios) > 0)
+                <?php $contador = count($servicios); ?>
+               @foreach($servicios as $servicio)
+                 <tr>
+                   <td class="tamaño">{{ $servicio->especialidad->nombre }}</td>
+                   @if($servicio->precio)
+                     <td class="tamaño">($) {{ $servicio->precio }}</td>
+                   @else
+                     <td class="tamaño">No disponible.</td>
+                   @endif
+                 </tr>
+               @endforeach
+             @else
+
+             <tr>
+               <td class="tamaño">No hay ninguna especialidad.</td>
+             </tr>
+             @endif
+
+             @for ($i = 1; $i <= (7-(int)$contador); $i++)
+             <tr>
+               <td class="tamaño">&nbsp;</td>
+                 <td class="tamaño">&nbsp;</td>
+             </tr>
+            @endfor
             </table>
             <br><br><br>
            <h2>Horarios |
@@ -560,22 +576,26 @@
             </div>
         </h2><br>
         <div class="row">
-          @foreach($servicios as $servicio)
-            <div class="column2-perfil letras">
-                <h3>{{ $servicio->especialidad->nombre }}</h3><br>
-                @if($servicio->imagen)
-                  <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->imagen) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
-                @else
-                  <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->especialidad->imagen_default) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
-                @endif
+          @if(count($servicios) > 0)
+            @foreach($servicios as $servicio)
+              <div class="column2-perfil letras">
+                  <h3>{{ $servicio->especialidad->nombre }}</h3><br>
+                  @if($servicio->imagen)
+                    <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->imagen) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                  @else
+                    <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->especialidad->imagen_default) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                  @endif
 
-                @if($servicio->descripcion)
-                  <p class="mensaje_perfil">{{$servicio->descripcion}}</p>
-                @else
-                  <p class="mensaje_perfil">{{$servicio->especialidad->descripcion_default}}</p>
-                @endif
-            </div>
-          @endforeach
+                  @if($servicio->descripcion)
+                    <p class="mensaje_perfil">{{$servicio->descripcion}}</p>
+                  @else
+                    <p class="mensaje_perfil">{{$servicio->especialidad->descripcion_default}}</p>
+                  @endif
+              </div>
+            @endforeach
+          @else
+            <h3>No hay ninguna especialidad.</h3>
+          @endif
     </div>
     <br><br>
     @include('partials.footer')

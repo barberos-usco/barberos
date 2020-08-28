@@ -17,7 +17,7 @@ class CreateEspecialidadesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('imagen_default');
-            $table->string('descripcion_default');
+            $table->string('descripcion_default', 1000);
             $table->timestamps();
         });
     }
