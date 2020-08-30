@@ -411,8 +411,24 @@
                             </div>
                         </div>
                 </h2>
-                <div class="valoracion">
-                    <div id="puntos_1"></div>
+                <div class="clasificacion">
+
+                    <input type="checkbox" id="radio1" name="estrellas" value="5">
+                    <label for="radio1" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio2" name="estrellas" value="4">
+                    <label for="radio2" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio3" name="estrellas" value="3">
+                    <label for="radio3" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio4" name="estrellas" value="2">
+                    <label for="radio4" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio5" name="estrellas" value="1">
+                    <label for="radio5" class="fas fa-star fa-3x "></label>
+
+
                 </div>
             @endif
         </div>

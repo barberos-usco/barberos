@@ -826,6 +826,27 @@ border-radius: 12px;
   justify-content: center;
 
 }
+/*
+**
+**  Con el Display none, se oculta el checkbox
+**
+*/
+input[type="checkbox"] {
+    display: none;
+  }
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+
+  input[type="checkbox"]:checked ~ label {
+    color: orange;
+  }
 .color-botom-home-inline{
   background-color:#7F6953;
   color: white;

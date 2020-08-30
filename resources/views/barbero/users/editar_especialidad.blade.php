@@ -94,7 +94,7 @@
                             <div>
                                 {!! Form::submit('Guardar', ['class'=>'btn color-botom sombreado centrado']) !!}
                                 @if ($editado == true)
-                                <i class="fa fa-check fa-3x" aria-hidden="true" style="color:rgb(10, 250, 10);"></i>
+                                <i class="fa fa-check fa-3x contenido" aria-hidden="true" style="color:rgb(10, 250, 10);"></i>
                                 @endif
                             </div>
                         </div>
