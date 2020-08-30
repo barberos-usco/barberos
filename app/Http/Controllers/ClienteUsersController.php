@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Foto;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateRequest;
 use App\User;
@@ -55,7 +55,7 @@ class ClienteUsersController extends Controller
         if($archivo=$request->file('url_fotoPerfil')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             $foto=Foto::create(['ruta_foto'=>$nombre]);
@@ -65,14 +65,14 @@ class ClienteUsersController extends Controller
         if($archivo=$request->file('url_wallpa')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             $foto=Foto::create(['ruta_foto'=>$nombre]);
 
             $entrada['url_wallpa']=$foto->id;
         }
-       
+
 
         $entrada['password']=bcrypt($request->password);
 
@@ -114,16 +114,16 @@ class ClienteUsersController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        
+
         $user=User::findOrFail($id);
 
-        
+
         $entrada=$request->all();
 
         if($archivo=$request->file('url_fotoPerfil')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=User::create(['url_fotoPerfil'=>$nombre]);
@@ -133,7 +133,7 @@ class ClienteUsersController extends Controller
         if($archivo=$request->file('url_wallpa')){
 
             $nombre=$archivo->getClientOriginalName();
-            
+
             $archivo->move('images', $nombre);
 
             //$foto=Foto::create(['ruta_foto'=>$nombre]);
