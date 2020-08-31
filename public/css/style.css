@@ -832,9 +832,7 @@ border-radius: 12px;
 **  Con el Display none, se oculta el checkbox
 **
 */
-.check-oculto {
-    display: none;
-  }
+input[type = "radio"]{ display:none;}
   .clasificacion {
     direction: rtl;
     unicode-bidi: bidi-override;
@@ -845,7 +843,7 @@ border-radius: 12px;
     color: orange;
   }
 
-  input[type="checkbox"]:checked ~ label {
+  input[type="radio"]:checked ~ label {
     color: orange;
   }
 .color-botom-home-inline{

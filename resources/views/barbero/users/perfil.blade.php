@@ -412,19 +412,19 @@
                 </h2>
                 <div class="clasificacion">
 
-                    <input type="checkbox" id="radio1" name="estrellas" class="check-oculto" value="5">
+                    <input type="radio" id="radio1" name="estrellas" class="check-oculto" value="5">
                     <label for="radio1" class="fas fa-star fa-3x "></label>
 
-                    <input type="checkbox" id="radio2" name="estrellas" class="check-oculto" value="4">
+                    <input type="radio" id="radio2" name="estrellas" class="check-oculto" value="4">
                     <label for="radio2" class="fas fa-star fa-3x "></label>
 
-                    <input type="checkbox" id="radio3" name="estrellas" class="check-oculto" value="3">
+                    <input type="radio" id="radio3" name="estrellas" class="check-oculto" value="3">
                     <label for="radio3" class="fas fa-star fa-3x "></label>
 
-                    <input type="checkbox" id="radio4" name="estrellas" class="check-oculto" value="2">
+                    <input type="radio" id="radio4" name="estrellas" class="check-oculto" value="2">
                     <label for="radio4" class="fas fa-star fa-3x "></label>
 
-                    <input type="checkbox" id="radio5" name="estrellas" class="check-oculto" value="1">
+                    <input type="radio" id="radio5" name="estrellas" class="check-oculto" value="1">
                     <label for="radio5" class="fas fa-star fa-3x "></label>
 
 
