@@ -84,13 +84,26 @@ class HomeController extends Controller
             $comentarios = Comentario::with('cliente')->where('barbero_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
             $horarios = Horario::withoutTrashed()->where('id_barbero' , $user->id)->first();
+            $calificacion = Calificacion::where(['barbero_id' => $id, 'cliente_id' => Auth::user()->id])->first();
         }else{
             $comentarios = Comentario::with('barbero')->where('cliente_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
             $horarios = 1;
         }
 
-        return view('perfil', compact('user'), ["portafolio"=>$portafolio, "activo"=>'active', 'sumador'=> '0', "comentarios" => $comentarios, "horarios" => $horarios, "servicios" => $servicios]);
+        return view(
+          'perfil',
+          compact('user'),
+          [
+            "portafolio"=>$portafolio,
+            "activo"=>'active',
+            'sumador'=> '0',
+            "comentarios" => $comentarios,
+            "horarios" => $horarios,
+            "servicios" => $servicios,
+            "calificacion" => $calificacion
+          ]
+        );
     }
 
     public function guardarComentario(ComentarioFormRequest $request){
@@ -102,14 +115,32 @@ class HomeController extends Controller
 
         return self::perfil($request->get('user_id'));
     }
-    public function guardarCalificacion(Request $request){
-        $calificacion = new Calificacion;
+
+    /**
+     * Guarda la calificación sumistrada por usuario hacia un barbero.
+     *
+     * @param  array  $request
+     * @return self::perfil(barbero_id);
+     */
+    public function guardarValoracion(Request $request){
+
+        $calificacion = Calificacion::where(['cliente_id' => Auth::user()->id, 'barbero_id' => $request->input('barbero_id') ])
+          ->first();
+
+        if($request->input('is_checked') === false){
+          $calificacion->delete();
+        }
+
+        if(empty($calificacion)){
+            $calificacion = new Calificacion;
+        }
+
         $calificacion->cliente_id = Auth::user()->id;
-        $calificacion->barbero_id = $request->get('user_id');
-        $calificacion->$calificacion = $request->get('calificacion');
+        $calificacion->barbero_id = (int)$request->input('barbero_id');
+        $calificacion->calificacion = (int)$request->input('calificacion');
         $calificacion->save();
 
-        return self::perfil($request->get('user_id'));
+        return response()->json(array('data'=> $request->input()), 200);
     }
 
     public function horario($id)
