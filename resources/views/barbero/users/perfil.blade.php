@@ -375,12 +375,15 @@
                         </div>
                     </div>
                 </h2>
+                <h3> {{ $calificacionPromedio->calificacion }} </h3>
                 <div class="valoracion">
-                    <i class="fas fa-star fa-3x checked"></i>
-                    <i class="fas fa-star fa-3x checked"></i>
-                    <i class="fas fa-star fa-3x checked"></i>
-                    <i class="fas fa-star fa-3x checked"></i>
-                    <i class="fas fa-star fa-3x checked"></i>
+                    @for($i = 1; $i <= 5; $i++)
+                      @if($i <= $calificacionPromedio->calificacion_redondeada)
+                        <i class="fas fa-star fa-3x checked"></i>
+                      @else
+                        <i class="fas fa-star fa-3x"></i>
+                      @endif
+                    @endfor
                 </div>
             @else
                 <h2>Valoración cliente |

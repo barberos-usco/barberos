@@ -45,21 +45,45 @@ class HomeController extends Controller
                 $portafolio = Portafolio::withoutTrashed()
                     ->where(['barbero_id' => Auth::user()->id, 'activo' => '1'])
                     ->get();
+
                 $comentarios = Comentario::with('cliente')->where('barbero_id', Auth::user()->id)
                 ->orderBy('created_at', 'DESC')->limit(3)->get();
-                    return view('home', ["portafolio"=>$portafolio, "comentarios" => $comentarios, "ocultarDashboard"=>$ocultarDashboard, "activo"=>'active', 'sumador'=> '0']);
+
+                $calificacionPromedio = self::obtenerPromedioCalificaciones(Auth::user()->id);
+
+                return view(
+                  'home',
+                  [
+                    "portafolio" => $portafolio,
+                    "comentarios" => $comentarios,
+                    "ocultarDashboard" => $ocultarDashboard,
+                    "activo" => 'active',
+                    'sumador' => '0',
+                    'calificacionPromedio' => $calificacionPromedio
+                  ]
+                );
             }else{
                 // Ver barberos
                 $users=User::where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
-                    ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
-                    ->get()->whereNotIn('id', [Auth::user()->id])->where('role_id', 1);
-                    return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
+                  ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
+                  ->get()->whereNotIn('id', [Auth::user()->id])->where('role_id', 1);
+
+                foreach ($users as $user) {
+                  $user->calificacionPromedio = self::obtenerPromedioCalificaciones($user->id);
+                }
+
+                return view('home', ["users"=>$users,"ocultarDashboard"=>$ocultarDashboard, "buscar"=>$query]);
             }
         }// Clientes
         else if(Auth::user()->role_id === 2){
             $users=User::where('name', 'Like', '%'.$query.'%')->orWhere('apellidos', 'Like', '%'.$query.'%')
                 ->orWhere(DB::raw("CONCAT(name, ' ', apellidos)"), 'LIKE', "%".$query."%")
                 ->get()->where('role_id', 1);
+
+            foreach ($users as $user) {
+              $user->calificacionPromedio = self::obtenerPromedioCalificaciones($user->id);
+            }
+
             return view('home', ["users"=>$users,"buscar"=>$query]);
         }else{
             return 'Error 404';
@@ -83,27 +107,44 @@ class HomeController extends Controller
         if($user->role_id === 1){
             $comentarios = Comentario::with('cliente')->where('barbero_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
+
             $horarios = Horario::withoutTrashed()->where('id_barbero' , $user->id)->first();
+
             $calificacion = Calificacion::where(['barbero_id' => $id, 'cliente_id' => Auth::user()->id])->first();
+
         }else{
             $comentarios = Comentario::with('barbero')->where('cliente_id', $user->id)
                 ->orderBy('created_at', 'DESC')->limit(5)->get();
             $horarios = 1;
+            $calificacion = Calificacion::with('barbero')->where('cliente_id', $user->id)->get();
+            $calificacionPromedio = null;
         }
 
         return view(
           'perfil',
           compact('user'),
           [
-            "portafolio"=>$portafolio,
-            "activo"=>'active',
-            'sumador'=> '0',
-            "comentarios" => $comentarios,
-            "horarios" => $horarios,
-            "servicios" => $servicios,
-            "calificacion" => $calificacion
+            "portafolio"            => $portafolio,
+            "activo"                => 'active',
+            'sumador'               => '0',
+            "comentarios"           => $comentarios,
+            "horarios"              => $horarios,
+            "servicios"             => $servicios,
+            "calificacion"          => $calificacion,
+            "calificacionPromedio"  => self::obtenerPromedioCalificaciones($id)
           ]
         );
+    }
+
+    public function obtenerPromedioCalificaciones($idBarbero){
+      $calificacionPromedio = Calificacion::where('barbero_id', $idBarbero)
+        ->get([
+            DB::raw('CAST(AVG(calificacion) AS DECIMAL(10,1)) AS calificacion'),
+            DB::raw('ROUND(CAST(AVG(calificacion) AS DECIMAL(10,1))) AS calificacion_redondeada')
+          ])
+        ->first();
+
+        return $calificacionPromedio;
     }
 
     public function guardarComentario(ComentarioFormRequest $request){

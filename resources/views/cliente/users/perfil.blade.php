@@ -13,7 +13,7 @@
     <div class="caja-oscura_perfil_info_cliente row">
 
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
-              <b>  {{ $user->name ." ". $user->apellidos }}  
+              <b>  {{ $user->name ." ". $user->apellidos }}
                 <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
                 <!-- The Modal para barberos -->
                 <div class="modal" id="myModal1">
@@ -106,7 +106,7 @@
 
                     </div>
                 </div>
-            </div>    
+            </div>
         </b></h1><br>
         <div class="row">
 
@@ -177,26 +177,24 @@
                         </div>
                     </div>
                 </h2>
-                <div class="comentarios letras-negras sombreado">
-                    <b>Andrés: </b><br>
-                    <div class="valoracion2">
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x "></i>
-                    </div>
-                </div>
-                <div class="comentarios letras-negras sombreado">
-                    <b>Camilo: </b><br>
-                    <div class="valoracion2">
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x checked"></i>
-                        <i class="fas fa-star fa-2x "></i>
-                    </div>
-                </div>
+                @if(count($calificacion) > 0)
+                    @foreach($calificacion as $calificacion)
+                      <div class="comentarios letras-negras sombreado">
+                          <b>{{ $comentario->barbero->name." ".$comentario->barbero->apellidos }} </b><br>
+                          <div class="valoracion2">
+                              @for($i = 1; $i <= 5; $i++)
+                                @if($i <= $calificacion->calificacion)
+                                  <i class="fas fa-star fa-2x checked"></i>
+                                @else
+                                  <i class="fas fa-star fa-2x"></i>
+                                @endif
+                              @endfor
+                          </div>
+                      </div>
+                    @endforeach
+                @else
+                    <h5 class="letras">No hay calificaciones.</h5>
+                @endif
             </div>
 
         </div>
