@@ -168,7 +168,6 @@ class BarberoUsersController extends Controller
     {
         $user=User::findOrFail($id);
 
-
         $entrada=$request->all();
 
         if($archivo=$request->file('url_fotoPerfil')){
@@ -194,11 +193,9 @@ class BarberoUsersController extends Controller
 
         $user->update($entrada);
 
-
-
         return redirect('/home');
-
     }
+
 
     /**
      * Remove the specified resource from storage.

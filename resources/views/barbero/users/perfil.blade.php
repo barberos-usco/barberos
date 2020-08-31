@@ -10,7 +10,6 @@
 @include('partials.barra-lateral')
 <main id="main">
     <div class="caja-oscura_perfil_info row">
-
             <div class="caja-interna_perfil_titulo letras text-center sombreado">
               <b>  {{ $user->name ." ". $user->apellidos }}  </b>
               <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal1"> ?</div>
@@ -221,7 +220,7 @@
                     </div>
                 </div>
         </h2><br>
-        <iframe class="mapa_google sombreado" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15938.151498328249!2d-75.3062321!3d2.948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1594932655980!5m2!1ses!2sco"  allowfullscreen="" aria-hidden="true" tabindex="0"></iframe><br><br>
+        <iframe class="mapa_google sombreado" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{ urlencode($user->ubicacion) }}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><br><br>
         <h2>Comentarios |
             @if(Auth::user()->role_id == 1)
                 <div class="btn color-manual redondeo sombreado" data-toggle="modal" data-target="#myModal5"> ?</div>
