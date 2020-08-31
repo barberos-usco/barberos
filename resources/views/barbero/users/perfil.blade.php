@@ -155,31 +155,31 @@
            </h2>
            <table class="celda-larga">
                <tr>
-                   <td class="tamaño">Lunes</td>
+                   <td class="tamaño"><b>Lunes</b></td>
                    <td class="tamaño">{{ $horarios->lunes }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Martes</td>
+                   <td class="tamaño"><b>Martes</b></td>
                    <td class="tamaño">{{ $horarios->martes }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Miércoles</td>
+                   <td class="tamaño"><b>Miércoles</b></td>
                    <td class="tamaño">{{ $horarios->miercoles }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Jueves</td>
+                   <td class="tamaño"><b>Jueves</b></td>
                    <td class="tamaño">{{ $horarios->jueves }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Viérnes</td>
+                   <td class="tamaño"><b>Viérnes</b></td>
                    <td class="tamaño">{{ $horarios->viernes }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Sábado</td>
+                   <td class="tamaño"><b>Sábado</b></td>
                    <td class="tamaño">{{ $horarios->sabado }}</td>
                </tr>
                <tr>
-                   <td class="tamaño">Domingo</td>
+                   <td class="tamaño"><b>Domingo</b></td>
                    <td class="tamaño">{{ $horarios->domingo }}</td>
                </tr>
             </table>
@@ -506,7 +506,7 @@
                                 </a>
                                 </div>
                             @else
-                                <h3 class="letras">No hay imágenes en el portafolio.</h3><br/>
+                                <h6 class="letras">No hay imágenes en el portafolio.</h6><br/>
                             @endif
                         </div>
 
@@ -558,26 +558,27 @@
             </div>
         </h2><br>
         <div class="row">
-          @if(count($servicios) > 0)
-            @foreach($servicios as $servicio)
-              <div class="column2-perfil letras">
-                  <h3>{{ $servicio->especialidad->nombre }}</h3><br>
-                  @if($servicio->imagen)
-                    <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->imagen) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
-                  @else
-                    <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->especialidad->imagen_default) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
-                  @endif
+            @if(count($servicios) > 0)
+                @foreach($servicios as $servicio)
+                <div class="column2-perfil letras">
+                    <h3>{{ $servicio->especialidad->nombre }}</h3><br>
+                    @if($servicio->imagen)
+                        <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->imagen) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                    @else
+                        <img class="foto_servicio_perfil sombreado" src="{{ url('/images/'.$servicio->especialidad->imagen_default) }}" alt="{{ $servicio->especialidad->nombre }}"><br>
+                    @endif
 
-                  @if($servicio->descripcion)
-                    <p class="mensaje_perfil">{{$servicio->descripcion}}</p>
-                  @else
-                    <p class="mensaje_perfil">{{$servicio->especialidad->descripcion_default}}</p>
-                  @endif
-              </div>
-            @endforeach
-          @else
-            <h3>No hay ninguna especialidad.</h3>
-          @endif
+                    @if($servicio->descripcion)
+                        <p class="mensaje_perfil">{{$servicio->descripcion}}</p>
+                    @else
+                        <p class="mensaje_perfil">{{$servicio->especialidad->descripcion_default}}</p>
+                    @endif
+                </div>
+                @endforeach
+            @else
+                <h5>No hay ninguna especialidad.</h5>
+            @endif
+        </div>
     </div>
     <br><br>
     @include('partials.footer')

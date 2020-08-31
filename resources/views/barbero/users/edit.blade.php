@@ -156,7 +156,7 @@
             </div>
         </div>
 
-
+        @include('partials.footer')
     </main>
 
 @endsection
