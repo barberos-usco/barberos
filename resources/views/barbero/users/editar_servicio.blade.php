@@ -104,7 +104,7 @@
             </div>
         </div>
     </div><br><br><br><br><br>
-
+@include('partials.footer')
 </main>
 
 @endsection

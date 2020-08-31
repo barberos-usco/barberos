@@ -180,7 +180,7 @@
                 @if(count($calificacion) > 0)
                     @foreach($calificacion as $calificacion)
                       <div class="comentarios letras-negras sombreado">
-                          <b>{{ $comentario->barbero->name." ".$comentario->barbero->apellidos }} </b><br>
+                          <b>{{ $calificacion->barbero->name." ".$calificacion->barbero->apellidos }} </b><br>
                           <div class="valoracion2">
                               @for($i = 1; $i <= 5; $i++)
                                 @if($i <= $calificacion->calificacion)
