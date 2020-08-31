@@ -59,10 +59,6 @@
         </div>
     </div>
 
-
-
-
-
         <div class="row">
                 @if ($users)
                     @foreach ($users as $user)
@@ -78,35 +74,13 @@
                                 <h5 class="card-title text-center" style="color: #352c23;"><b>{{ $user->name ." " . $user->apellidos  }}</b></h5>
                                 <div class="border-top my-3"></div>
                                 <p class="card-text"> <div class="valoracion2">
-
-                                    <!-- La idea es porner un foreach para que se haga las estrellas que tenga en la valoracion ;) -->
-
-                                    <!-- Estrella 1 -->
-
-                                        <i class="fas fa-star checked"></i>
-
-
-                                    <!-- Estrella 2 -->
-
-                                        <i class="fas fa-star checked"></i>
-
-
-                                    <!-- Estrella 3 -->
-
-                                        <i class="fas fa-star checked"></i>
-
-
-                                    <!-- Estrella 4 -->
-
-                                        <i class="fas fa-star checked"></i>
-
-
-                                    <!-- Estrella 5 -->
-
-                                        <i class="fas fa-star "></i>
-
-
-
+                                  @for($i = 1; $i <= 5; $i++)
+                                    @if($i <= $user->calificacionPromedio->calificacion_redondeada)
+                                      <i class="fas fa-star checked"></i>
+                                    @else
+                                      <i class="fas fa-star"></i>
+                                    @endif
+                                  @endfor
                                 </div></p>
                             </div>
                             <div class="card-footer-home">

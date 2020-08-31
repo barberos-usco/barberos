@@ -136,11 +136,13 @@
 				</div></h2>
 			<p class="card-text">
 				<div class="valoracion2 sombreado">
-					<i class="fas fa-star checked"></i>
-					<i class="fas fa-star checked"></i>
-					<i class="fas fa-star checked"></i>
-					<i class="fas fa-star checked"></i>
-					<i class="fas fa-star "></i>
+					@for($i = 1; $i <= 5; $i++)
+						@if($i <= $calificacionPromedio->calificacion_redondeada)
+							<i class="fas fa-star checked"></i>
+						@else
+							<i class="fas fa-star"></i>
+						@endif
+					@endfor
 				</div>
 			</p>
 			<div class="card-footer-home">
