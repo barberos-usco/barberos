@@ -48,6 +48,14 @@
             }
         });
         });
-        </script>
+
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $(".contenido").fadeOut(1500);
+        },1500);
+    });
+
+    </script>
 </body>
 </html>

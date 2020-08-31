@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Horario;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -68,14 +69,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'apellidos' => $data['apellidos'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'role_id' => $data['role_id'],
-            'genero' => $data['genero'],
-            'fecha_nacimiento' => $data['fecha_nacimiento'],
-        ]);
+        $usuario = User::create(
+            [
+                'name' => $data['name'],
+                'apellidos' => $data['apellidos'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role_id' => $data['role_id'],
+                'genero' => $data['genero'],
+                'fecha_nacimiento' => $data['fecha_nacimiento'],
+            ]);
+        if($usuario->role_id == 1){
+            Horario::create(
+                [
+                    'lunes' => 'Cerrado',
+                    'martes' => 'Cerrado',
+                    'miercoles' => 'Cerrado',
+                    'jueves' => 'Cerrado',
+                    'viernes' => 'Cerrado',
+                    'sabado' => 'Cerrado',
+                    'domingo' => 'Cerrado',
+                    'id_barbero' => $usuario->id,
+                ]
+                );
+        }
+
+        return $usuario;
     }
 }
