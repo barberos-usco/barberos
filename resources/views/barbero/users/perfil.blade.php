@@ -411,6 +411,7 @@
                         </div>
                 </h2>
                 <div class="clasificacion">
+<<<<<<< HEAD
 
                     <input type="radio" id="radio1" name="estrellas" class="check-oculto" value="5">
                     <label for="radio1" class="fas fa-star fa-3x "></label>
@@ -425,6 +426,21 @@
                     <label for="radio4" class="fas fa-star fa-3x "></label>
 
                     <input type="radio" id="radio5" name="estrellas" class="check-oculto" value="1">
+=======
+                    <input type="checkbox" id="radio1" name="estrellas" class="check-oculto" onclick="valorar(this.value, this.checked)" value="5">
+                    <label for="radio1" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio2" name="estrellas" class="check-oculto" onclick="valorar(this.value, this.checked)" value="4">
+                    <label for="radio2" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio3" name="estrellas" class="check-oculto" onclick="valorar(this.value, this.checked)" value="3">
+                    <label for="radio3" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio4" name="estrellas" class="check-oculto" onclick="valorar(this.value, this.checked)" value="2">
+                    <label for="radio4" class="fas fa-star fa-3x "></label>
+
+                    <input type="checkbox" id="radio5" name="estrellas" class="check-oculto" onclick="valorar(this.value, this.checked)" value="1">
+>>>>>>> 8f47fee891131628549246dc0e66fbe59b121dbb
                     <label for="radio5" class="fas fa-star fa-3x "></label>
 
 
@@ -583,5 +599,48 @@
     <br><br>
     @include('partials.footer')
 </main><!-- End #main -->
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script>
+    $( document ).ready(function() {
+      var numero = {{ $calificacion->calificacion }};
+      switch (numero) {
+        case 1:
+          numero = 5;
+          break;
+        case 2:
+          numero = 4;
+          break;
+        case 3:
+          numero = 3;
+          break;
+        case 4:
+          numero = 2;
+          break;
+        case 5:
+          numero = 1;
+          break;
+        default:
+
+      }
+      $('#radio'+numero).prop('checked', true);
+    });
+
+    function valorar(valor, isChecked){
+      $.ajax({
+        url: '../valoracion',
+        type: 'post',
+        headers: { "X-CSRF-TOKEN": '{{ csrf_token() }}' },
+        data: {
+          "barbero_id": {{ $user->id }},
+          "calificacion": valor,
+          "is_checked": isChecked
+        },
+        // en caso de éxito de la petición
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    }
+</script>
 
 @endsection

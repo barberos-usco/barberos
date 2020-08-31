@@ -29,6 +29,7 @@ Route::post('/portafolio', 'PortafolioController@store')->name('portafolio.store
 Route::patch('/portafolio/{id}', 'PortafolioController@update')->name('portafolio.update');
 Route::delete('/portafolio/{id}', 'PortafolioController@destroy')->name('portafolio.destroy');
 Route::post('/comentario', 'HomeController@guardarComentario')->name('guardarcomentario');
+Route::post('/valoracion', 'HomeController@guardarValoracion')->name('guardarvaloracion');
 
 Route::get('/password', 'HomeController@password')->name('barbero.users.password');
 Route::post('/updatepassword', 'HomeController@updatePassword');
@@ -62,11 +63,3 @@ Route::get('/barbero/users/inicio', function () {
 
 // Rutas para especialidades
 Route::patch('barbero/users/{user}/edit/especialidadbarbero', 'HorarioController@updateEspecialidades')->name('barbero.users.update.especialidadbarbero');
-
-
-
-
-
-
-
-
