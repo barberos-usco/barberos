@@ -585,8 +585,8 @@
 <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 <script>
     $( document ).ready(function() {
-      var numero = {{ ($calificacion) ? $calificacion->calificacion : null }};
-      if(numero){
+      var numero = {{ ($calificacion) ? $calificacion->calificacion : 0 }};
+      if(numero !== 0){
         switch (numero) {
           case 1:
             numero = 5;
