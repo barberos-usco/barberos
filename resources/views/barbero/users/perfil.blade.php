@@ -603,26 +603,28 @@
 <script>
     $( document ).ready(function() {
       var numero = {{ $calificacion->calificacion }};
-      switch (numero) {
-        case 1:
-          numero = 5;
-          break;
-        case 2:
-          numero = 4;
-          break;
-        case 3:
-          numero = 3;
-          break;
-        case 4:
-          numero = 2;
-          break;
-        case 5:
-          numero = 1;
-          break;
-        default:
+      if(numero){
+        switch (numero) {
+          case 1:
+            numero = 5;
+            break;
+          case 2:
+            numero = 4;
+            break;
+          case 3:
+            numero = 3;
+            break;
+          case 4:
+            numero = 2;
+            break;
+          case 5:
+            numero = 1;
+            break;
+          default:
 
+        }
+        $('#radio'+numero).prop('checked', true);
       }
-      $('#radio'+numero).prop('checked', true);
     });
 
     function valorar(valor, isChecked){
