@@ -831,7 +831,7 @@ border-radius: 12px;
 **  Con el Display none, se oculta el checkbox
 **
 */
-input[type="checkbox"] {
+.check-oculto {
     display: none;
   }
   .clasificacion {
